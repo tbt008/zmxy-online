@@ -6,6 +6,8 @@
 [ext_resource path="res://local_assets/images/hd/levels/level_static_bg/level_static_1_bg.png" type="Texture2D" id="4"]
 [ext_resource path="res://local_assets/images/hd/interface/scenes/scene_create_role/role_sel_preview_1.pvr.png" type="Texture2D" id="5"]
 [ext_resource path="res://local_assets/images/hd/interface/enemy_avatar.pvr.png" type="Texture2D" id="6"]
+[ext_resource path="res://local_assets/images/hd/interface/cut_in/cut_in_role_1.png" type="Texture2D" id="7"]
+[ext_resource path="res://local_assets/images/hd/interface/cut_in/cut_in_enemy_spr.png" type="Texture2D" id="8"]
 [sub_resource type="RectangleShape2D" id="PlayerShape"]
 size = Vector2(64, 110)
 [sub_resource type="RectangleShape2D" id="GroundShape"]
@@ -14,9 +16,6 @@ size = Vector2(1280, 80)
 size = Vector2(90, 90)
 [sub_resource type="RectangleShape2D" id="EnemyShape"]
 size = Vector2(56, 80)
-[sub_resource type="AtlasTexture" id="PlayerTexture"]
-atlas = ExtResource("5")
-region = Rect2(0, 0, 256, 341)
 
 [node name="Prototype" type="Node2D"]
 script = ExtResource("1")
@@ -30,8 +29,8 @@ script = ExtResource("2")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("PlayerShape")
 [node name="Sprite" type="Sprite2D" parent="Player"]
-texture = SubResource("PlayerTexture")
-scale = Vector2(0.32, 0.32)
+texture = ExtResource("7")
+scale = Vector2(0.52, 0.52)
 [node name="AttackFlash" type="Polygon2D" parent="Player"]
 polygon = PackedVector2Array(0, -28, 55, -12, 72, 0, 55, 12, 0, 28)
 color = Color(1, 0.85, 0.25, 1)
@@ -43,7 +42,6 @@ visible = false
 [node name="AttackArea" type="Area2D" parent="Player"]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/AttackArea"]
 shape = SubResource("AttackShape")
-[node name="Camera2D" type="Camera2D" parent="Player"]
 
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(640, 650)
@@ -60,8 +58,8 @@ script = ExtResource("3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Enemy1"]
 shape = SubResource("EnemyShape")
 [node name="Sprite" type="Sprite2D" parent="Enemies/Enemy1"]
-texture = ExtResource("6")
-scale = Vector2(0.5, 0.5)
+texture = ExtResource("8")
+scale = Vector2(0.32, 0.32)
 [node name="HealthBar" type="ProgressBar" parent="Enemies/Enemy1"]
 position = Vector2(-32, -62)
 size = Vector2(64, 8)
@@ -73,8 +71,8 @@ script = ExtResource("3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Enemy2"]
 shape = SubResource("EnemyShape")
 [node name="Sprite" type="Sprite2D" parent="Enemies/Enemy2"]
-texture = ExtResource("6")
-scale = Vector2(0.5, 0.5)
+texture = ExtResource("8")
+scale = Vector2(0.32, 0.32)
 [node name="HealthBar" type="ProgressBar" parent="Enemies/Enemy2"]
 position = Vector2(-32, -62)
 size = Vector2(64, 8)
@@ -86,8 +84,8 @@ script = ExtResource("3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Enemy3"]
 shape = SubResource("EnemyShape")
 [node name="Sprite" type="Sprite2D" parent="Enemies/Enemy3"]
-texture = ExtResource("6")
-scale = Vector2(0.5, 0.5)
+texture = ExtResource("8")
+scale = Vector2(0.32, 0.32)
 [node name="HealthBar" type="ProgressBar" parent="Enemies/Enemy3"]
 position = Vector2(-32, -62)
 size = Vector2(64, 8)
@@ -101,7 +99,7 @@ text = "西游闯关原型"
 theme_override_font_sizes/font_size = 28
 [node name="Instructions" type="Label" parent="HUD"]
 position = Vector2(32, 66)
-text = "A/D 或方向键移动    空格跳跃    J/X 攻击    R 重开"
+text = "A/D 或方向键移动    K 跳跃    J 攻击    L 技能    R 重开"
 [node name="Counter" type="Label" parent="HUD"]
 position = Vector2(1000, 30)
 [node name="Skill" type="Label" parent="HUD"]

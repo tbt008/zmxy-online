@@ -31,15 +31,15 @@ func _physics_process(delta: float) -> void:
 		$Sprite.scale.x = facing
 	velocity.x = move_toward(velocity.x, direction * move_speed, move_speed * 8.0 * delta)
 
-	if (Input.is_key_pressed(KEY_SPACE)) and is_on_floor() and not _jump_was_down:
+	if Input.is_key_pressed(KEY_K) and is_on_floor() and not _jump_was_down:
 		velocity.y = jump_velocity
-	_jump_was_down = Input.is_key_pressed(KEY_SPACE)
+	_jump_was_down = Input.is_key_pressed(KEY_K)
 	if (Input.is_key_pressed(KEY_J) or Input.is_key_pressed(KEY_X)) and not _attack_was_down:
 		attack()
-	if Input.is_key_pressed(KEY_K) and not _skill_was_down:
+	if Input.is_key_pressed(KEY_L) and not _skill_was_down:
 		cast_skill()
 	_attack_was_down = Input.is_key_pressed(KEY_J) or Input.is_key_pressed(KEY_X)
-	_skill_was_down = Input.is_key_pressed(KEY_K)
+	_skill_was_down = Input.is_key_pressed(KEY_L)
 
 	move_and_slide()
 

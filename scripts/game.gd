@@ -14,7 +14,7 @@ func _ready() -> void:
 	_update_counter()
 
 func _process(_delta: float) -> void:
-	skill_label.text = "技能 K：" + ("就绪" if player.skill_timer <= 0.0 else "冷却 %.1f" % player.skill_timer)
+	skill_label.text = "技能 L：" + ("就绪" if player.skill_timer <= 0.0 else "冷却 %.1f" % player.skill_timer)
 	if Input.is_key_pressed(KEY_R):
 		get_tree().reload_current_scene()
 
