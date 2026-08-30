@@ -3,6 +3,7 @@
 [ext_resource path="res://scripts/game.gd" type="Script" id="1"]
 [ext_resource path="res://scripts/player.gd" type="Script" id="2"]
 [ext_resource path="res://scripts/enemy.gd" type="Script" id="3"]
+[ext_resource path="res://local_assets/images/hd/levels/level_static_bg/level_static_1_bg.png" type="Texture2D" id="4"]
 [sub_resource type="RectangleShape2D" id="PlayerShape"]
 size = Vector2(64, 110)
 [sub_resource type="RectangleShape2D" id="GroundShape"]
@@ -14,6 +15,10 @@ size = Vector2(56, 80)
 
 [node name="Prototype" type="Node2D"]
 script = ExtResource("1")
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("4")
+position = Vector2(640, 360)
+z_index = -10
 [node name="Player" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(220, 500)
 script = ExtResource("2")
