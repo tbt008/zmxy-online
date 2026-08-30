@@ -21,7 +21,7 @@ func _physics_process(delta: float) -> void:
 	if distance > attack_range:
 		var direction := signf(player.global_position.x - global_position.x)
 		velocity.x = move_toward(velocity.x, direction * move_speed, 700.0 * delta)
-		$DebugBody.scale.x = direction if direction != 0 else 1
+		$Sprite.scale.x = direction if direction != 0 else 1
 	else:
 		velocity.x = move_toward(velocity.x, 0.0, 1000.0 * delta)
 		if attack_timer == 0.0 and player.has_method("apply_damage"):
@@ -37,4 +37,3 @@ func apply_damage(amount: int, direction := Vector2.ZERO) -> void:
 	if current_health == 0:
 		defeated.emit()
 		queue_free()
-
