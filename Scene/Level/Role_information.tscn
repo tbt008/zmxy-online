@@ -523,7 +523,6 @@ script/source = "extends Node2D
 #}
 #名字，伤害，伤害类型，持续时间，减速量
 #做的时候： 加图标，Roleinformation加变量，加判断，global加变量
-class_name AddMyEffect
 var Ini_Speed = 0
 var EffectInfo = []
 var Ice#冰冻动画控制

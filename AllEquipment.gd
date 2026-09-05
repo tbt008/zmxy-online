@@ -1665,5 +1665,3 @@ func get_wx():
 		var aa = randi_range(0,4)
 		new_list.push_back(wx_lst[aa])
 		return new_list
-
-

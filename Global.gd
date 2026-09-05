@@ -153,7 +153,9 @@ var BaseBuff_ = preload("res://Scene/Base/BaseBuff.tscn")
 var BuffIcon_ = preload("res://Scene/OtherScene/BuffIcon.tscn")
 var Buffinfor = preload("res://Scene/OtherScene/buff_information.tscn")
 var Aura_ = preload("res://Scene/OtherScene/Auras.tscn")
-var Monster65Bullet = preload("res://Scene/Monster/Monster65bullet.tscn")
+# The archive does not include Monster 65's source texture. Keep this optional
+# so the global singleton can still load and the rest of the game remains usable.
+var Monster65Bullet: PackedScene = null
 var ChoosePlayer = preload("res://Scene/Main_menu/ChoosePlayer.tscn")
 var RoleBullet_ = preload("res://Scene/Hero/RoleBullet.tscn")
 var RoleSpecialEffect_ = preload("res://Scene/Hero/RoleSpecialEffect.tscn")
@@ -544,6 +546,8 @@ func AddChoosePlayer(parent,position_):
 	target.position = position_
 	return target
 func AddMonster65Bullet(parent,position_):
+	if Monster65Bullet == null:
+		return null
 	var target = instance_scene(Monster65Bullet,parent)
 	target.position = position_
 	return target
