@@ -76,7 +76,7 @@ func _physics_process(_delta: float) -> void:
 			MainMusic.ADDMusic()
 			GameSet_.MusicIsChange = false
 
-func _on_begin_game_pressed() -> void:
+func _on_begin_game_pressed(_pressed = null) -> void:
 	if MainSet.set_data.has("FileValue"):
 		if float(MainSet.set_data["FileValue"]) > float(Global.FileNum):
 			Global.AddMessageShow(get_parent(),"当前游戏不是最新版本，请使用最新版本游戏！！！",1.5,Vector2(470,340))
@@ -92,18 +92,18 @@ func _on_begin_game_pressed() -> void:
 
 
 
-func _on_music_pressed() -> void:
+func _on_music_pressed(_pressed = null) -> void:
 	Global.addBGM_(self,"res://Music/MainSceneMusic/2_SD_xz.mp3")
 	music_jm = Global.add_music_set(Music_set,Vector2(0,0))
 
 
 
-func _on_gmae_help_pressed() -> void:
+func _on_gmae_help_pressed(_pressed = null) -> void:
 	Global.addBGM_(self,"res://Music/MainSceneMusic/2_SD_xz.mp3")
 	Global.add_gm_infor(self,Vector2(0,0))
 
 
-func _on_tiaoguo_pressed() -> void:
+func _on_tiaoguo_pressed(_pressed = null) -> void:
 	Global.addBGM_(self,"res://Music/MainSceneMusic/2_SD_xz.mp3")
 	if MainSet.set_data["剧情跳过"]:
 		MainSet.set_data["剧情跳过"] = false
@@ -113,17 +113,17 @@ func _on_tiaoguo_pressed() -> void:
 		Global.AddMessageShow(get_parent(),"将会跳过结束剧情！！",1.5,Vector2(470,340))
 	MemoryClass.main_bc()
 
-func _on_change_bg_pressed() -> void:
+func _on_change_bg_pressed(_pressed = null) -> void:
 	Global.addBGM_(self,"res://Music/MainSceneMusic/2_SD_xz.mp3")
 	Global.add_change_bg(BGset,Vector2(0,0))
 
 
-func _on_game_set_pressed() -> void:
+func _on_game_set_pressed(_pressed = null) -> void:
 	Global.addBGM_(self,"res://Music/MainSceneMusic/2_SD_xz.mp3")
 	GameSet_ = Global.Add_GameSet_(self,Vector2(0,0))
 
 
-func _on_game_warn_pressed() -> void:
+func _on_game_warn_pressed(_pressed = null) -> void:
 	Global.addBGM_(self,"res://Music/MainSceneMusic/2_SD_xz.mp3")
 	Global.addGameNeedKnow(self,Vector2(0,0))
 	
@@ -202,6 +202,6 @@ func RefreshTime(DataList):
 	MemoryClass.main_bc()
 
 
-func _on_letter_pressed() -> void:
+func _on_letter_pressed(_pressed = null) -> void:
 	Global.addBGM_(self,"res://Music/MainSceneMusic/2_SD_xz.mp3")
 	Global.AddLetterForPlayer(self,Vector2(0,0))

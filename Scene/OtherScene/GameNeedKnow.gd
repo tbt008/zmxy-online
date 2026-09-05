@@ -15,7 +15,7 @@ func _physics_process(delta: float) -> void:
 		button.disabled = true
 		
 
-func _on_button_pressed(_pressed := false) -> void:
+func _on_button_pressed(_pressed = null) -> void:
 	MainSet.set_data["FristGame"] = false
 	MemoryClass.main_bc()
 	self.queue_free()
