@@ -4,10 +4,8 @@ extends Node2D
 @onready var button: Button = $Button
 
 func _ready() -> void:
-	if MainSet.set_data["FristGame"]:
-		read_cd.start(21)
-	else:
-		read_cd.start(0)
+	# The notice should not block the first interaction for a fixed countdown.
+	read_cd.start(0)
 func _physics_process(delta: float) -> void:
 	cd.text = "(" + str(snapped(read_cd.get_time_left(),0)) + "s)"
 	if read_cd.get_time_left() <= 0:
@@ -17,7 +15,7 @@ func _physics_process(delta: float) -> void:
 		button.disabled = true
 		
 
-func _on_button_pressed() -> void:
+func _on_button_pressed(_pressed := false) -> void:
 	MainSet.set_data["FristGame"] = false
 	MemoryClass.main_bc()
 	self.queue_free()
