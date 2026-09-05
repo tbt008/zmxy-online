@@ -1,0 +1,319 @@
+[gd_scene load_steps=14 format=3]
+
+[ext_resource type="Script" path="res://Scene/OtherScene/ALetterForAllPlayers.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dtpabyqxlt0x5" path="res://Art/Skill/509.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://ci5u8c0lxrrk5" path="res://Art/show_text/LetterBG.png" id="3"]
+[ext_resource type="FontFile" uid="uid://bicgw4numqquw" path="res://Font/HYZhuZiMeiXinTiW.ttf" id="4"]
+[ext_resource type="FontFile" uid="uid://ond0o3n8a00i" path="res://Font/华康宋体W3.ttc" id="5"]
+[ext_resource type="Texture2D" uid="uid://dy6di5exxa3sk" path="res://Art/LDL/86.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://cmaxhcvx6roda" path="res://Art/LDL/87.png" id="7"]
+[ext_resource type="FontFile" uid="uid://2rjpff4w8bmb" path="res://Font/华康海报体W12 &amp; 华康海报体W12(P).ttc" id="8"]
+
+[sub_resource type="StyleBoxEmpty" id="1"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="2"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="3"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="4"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="5"]
+script = null
+
+[node name="ALetterForAllPlayers" type="Node2D"]
+script = ExtResource( "1" )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -217.0
+offset_top = -83.0
+offset_right = 1186.0
+offset_bottom = 668.0
+color = Color(0, 0, 0, 0)
+metadata/_edit_lock_ = true
+
+[node name="509" type="Sprite2D" parent="."]
+position = Vector2(470, 294)
+texture = ExtResource( "2" )
+
+[node name="ColorRect2" type="ColorRect" parent="509"]
+offset_left = -419.0
+offset_top = -227.0
+offset_right = 416.0
+offset_bottom = 221.0
+color = Color(0, 0, 0, 0.278431)
+metadata/_edit_lock_ = true
+
+[node name="LetterBg" type="Sprite2D" parent="509"]
+position = Vector2(23.5, 21)
+scale = Vector2(1.71, 1.29255)
+texture = ExtResource( "3" )
+metadata/_edit_lock_ = true
+
+[node name="Title" type="Label" parent="509"]
+visible = false
+offset_left = -283.0
+offset_top = -195.0
+offset_right = -108.0
+offset_bottom = -166.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource( "4" )
+theme_override_font_sizes/font_size = 25
+text = "给玩家的一封信"
+metadata/_edit_lock_ = true
+
+[node name="Title2" type="Label" parent="509"]
+visible = false
+offset_left = -375.0
+offset_top = -163.0
+offset_right = -249.0
+offset_bottom = -141.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 18
+text = "亲爱的朋友们："
+metadata/_edit_lock_ = true
+
+[node name="Title3" type="Label" parent="509"]
+visible = false
+offset_left = -341.0
+offset_top = -138.0
+offset_right = -27.0
+offset_bottom = -116.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 18
+text = "首先，非常感谢大家愿意去玩我制作的"
+autowrap_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Title4" type="Label" parent="509"]
+visible = false
+offset_left = -375.0
+offset_top = -116.0
+offset_right = -32.0
+offset_bottom = -72.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 18
+text = "游戏，感谢这么久以来的支持与帮助，游戏到目前为止，已经做到了天庭篇了，应该说内容算是比较多了，所以，我想趁这个机会，跟大家聊一聊。"
+autowrap_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Title5" type="Label" parent="509"]
+visible = false
+offset_left = -341.0
+offset_top = -29.0
+offset_right = -27.0
+offset_bottom = -7.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 18
+text = "我是大概从2023年12月末左右开始有制"
+autowrap_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Title6" type="Label" parent="509"]
+visible = false
+offset_left = -375.0
+offset_top = -7.0
+offset_right = -32.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 18
+text = "作游戏的想法的，因为小时候就一直在想，造梦2没有金箍棒，要是造梦1打完可以带着装备接着打下一个版本该多好，可以一直打到天庭，显然，这只能是个幻想，因为无论是制作难度或者是成本，都要高得多，而且还要考虑数值，难度等等因素，可以说是工作量非常大。不过出于新奇和爱好，所以最终还是决定试试，不过当时因为没用过Flash，也没用过任何游戏制作引擎，没有代码"
+autowrap_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Title7" type="Label" parent="509"]
+visible = false
+offset_left = 40.0
+offset_top = -204.0
+offset_right = 383.0
+offset_bottom = 192.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 18
+text = "经验，可以说是一点头绪也没有，对于这个游戏引擎，网上的教学也是少的可怜，好不容易有，基本上也是英文的，听起来也很吃力，所以基本上就只能没日没夜的翻，从每个教程里找一点适合自己，用的上的，也是最终成功开始做了，不过显然问题并没有这么简单，由于经验的匮乏，一开始用来做角色的节点用什么呢？也不知道，只能一个一个试，把游戏写好，删了，重新写，因为代码经验少，又不知道继承，所以也没有写基类，基本上就是写一个怪物，重写一次代码，后来了解了基类与继承，可是造梦1已经写的差不多了，但考虑可持续性，又把游戏删了重写，期间也不知道经历了多少次的重写，删除，重写，删除，因为素材问题，删了，因为代码问题，删了，因为…………删了，总之当时快要崩溃了。不过好在最终坚持了下来，搭建了一个算是比较合适的基础"
+autowrap_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Title8" type="Label" parent="509"]
+visible = false
+offset_left = -372.0
+offset_top = -204.0
+offset_right = -29.0
+offset_bottom = 192.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 18
+text = "框架，但是素材又是个问题，后来有人（这里就不具体提是谁了，不知道让不让……），找我，说可以给我提供素材，这才最终得以继续制作，不然造梦1完结都难。
+    当然，这只是非常小的一部分，因为你还要考虑数值，boss的AI，我是一个比较喜欢有挑战性游戏的玩家，所以基本上我都会把boss的机制进行改动，这点你们在游戏里应该也可以发现的。不过带来的问题就是，我要自己开始做boss了，因为语言和引擎的缘故，原版的代码基本上毫无参考价值。
+    因为经验不足，所以对于数值方面，我也是只能靠自己一次一次的通关来测试，找到一个最舒服的路线，一个角色还好，可是后面角色越来越多，关卡越来越多，测试的难度也越来越大。
+    说这么多，也不是为了装可怜，这确实是我在制作过程中真实经历的，说句实话，"
+autowrap_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Title9" type="Label" parent="509"]
+visible = false
+offset_left = 35.0
+offset_top = -204.0
+offset_right = 378.0
+offset_bottom = 192.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 18
+text = "（可能不太好听），作为玩家，大部分都是只考虑结果的，期间制作的过程他们并不会考虑，说这些肯定会招来怨恨，但确实是真实存在的情况。
+   在制作差不多的时候，我发了一些视频在b站上，有非常多的玩家说想体验一下我制作的游戏，但我知道，这个游戏本身漏洞就很大，效果肯定不好，我也不想丢这个人，另外从一开始我也没打算发，只是给自己童年一个交代，最主要的是，这也算是一个改版游戏，本质上就是个不合理的东西，发出来问题少不了，但是呼声太大了，最终，我建了一个群，打算还是分享一下。
+  噩梦也是从这时候开始的，一开始，人比较少，基本上也没什么问题，也管的过来，但是我没想到后面会来这么多人，于是突然有一天（没多久），就有人私自将游戏发布到其他地方，当时我很生气，但也没想那么"
+autowrap_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Title10" type="Label" parent="509"]
+visible = false
+offset_left = -372.0
+offset_top = -204.0
+offset_right = -29.0
+offset_bottom = 192.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 18
+text = "多，简单的批评一下，让他把文件删了，这事就过去了，不过显然我高估了网友的素质，就在不久后，就开始有人开挂，还洋洋自得，公然在群里发自己的角色属性图，我随即就说不再继续更新，并把人清理了，但是还是心慈手软，继续做下去了，但是好景不长，很快，修改的人接二连三，令我不解的是，私下里去改，也就算了，就非要跳脸发到群里吗？并且还搞的自己很占理，甚至怂恿他人开挂，我知道这是单机游戏摆脱不了的问题，但这个游戏我是从零开始做的，期间经历的辛苦我太清楚了，这游戏对我来说，就像我的孩子一样，所以我接受不了别人篡改，更何况是当着你的面去篡改，随即，我就解除了群聊，但令我想不到的是，平时群里那些人竟然开始反过来骂我，说我事太多，当然我也清楚，跟他们说制作的辛苦也不会被理解，我也懒得去管这些。"
+autowrap_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Title11" type="Label" parent="509"]
+visible = false
+offset_left = 38.0
+offset_top = -203.0
+offset_right = 381.0
+offset_bottom = 193.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 18
+text = "但就在不久后，倒卖的现象就出现了，想都不用想就是那些人开始报复，故意恶心人的，并且接二连三的来b站跳脸，期间有很多粉丝帮忙打压，但是我当时也不清楚情况，于是在过了一阵子后，我宣布了永久停止更新，不过很快又出现了一些人开始骂我狼心狗肺，我很不理解，我并没有要求任何人帮助我打压，只不过希望自己玩的同时抵制一下，所以我很奇怪，不过后来也是了解到当时是有很多人帮忙抵制的，甚至建群帮忙收拢人心，于是我便继续做了。
+    有人说你说这些有什么意义呢？管这么多干嘛，改版作者又不止你一个，怎么就你整天说这个说那个的，对此我只觉得可笑，原来大部分人都觉得修改，倒卖，是一种应该被理解的东西，反而作者不接受这些成了千古罪人，其实只要自己平时看到的时候说一句公道话，或者自己不去做这些事，这个"
+autowrap_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Title12" type="Label" parent="509"]
+offset_left = -373.0
+offset_top = -203.0
+offset_right = -30.0
+offset_bottom = 193.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 18
+text = "圈子是可以很好的，就是因为这个环境，导致很多人的思维发生了潜移默化的改版，于是恶性循环，败坏了氛围。
+    我不是什么圣母，所以我没有必要看着自己在没有任何好处的情况下，还要顶着压力去做这些事，只是为了大众高兴，我没有这么伟大，而且我的目的也不在此，从始至终我就没说过我是给大众做游戏，只是给自己童年一个交代，一个礼物。更不是为了什么流量，钱。所以你用这些来跟我讲是没有任何意义的。
+    我知道，我说这些改变不了任何事情，我只是把我自己经历的，想说的说出来，不想压在心里，还被人扭曲，歪解，对于修改，倒卖等等破坏环境的事，不可能消失，我只想说好自为之，不要哪天把自己也坑了，那样就更没意义了。说这么多也不是为了要求大家去主动抵制，只希望保护好自己，别"
+autowrap_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Title13" type="Label" parent="509"]
+offset_left = 38.0
+offset_top = -203.0
+offset_right = 381.0
+offset_bottom = 193.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 18
+text = "上当受骗。
+    关于游戏的问题，我经验不足，一个人能力有限，不可能面面俱到，不可能把每个人的要求和想法做出来，没能力，也没精力，如果觉得不好，我也希望你不要去破坏他，直接点击，删除即可，我也会很感谢你的支持！
+    最后，本游戏从未收费，也永远不会收费，唯一正版作者只有B站早春樱花，希望大家不要上当受骗！！
+
+
+
+
+
+
+
+                          B站早春樱花"
+autowrap_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Close" type="TextureButton" parent="."]
+offset_left = 860.0
+offset_top = 14.0
+offset_right = 914.0
+offset_bottom = 34.0
+texture_normal = ExtResource( "6" )
+texture_pressed = ExtResource( "6" )
+texture_hover = ExtResource( "7" )
+texture_disabled = ExtResource( "7" )
+metadata/_edit_lock_ = true
+
+[node name="LastPage" type="Button" parent="."]
+offset_left = 247.0
+offset_top = 535.0
+offset_right = 345.0
+offset_bottom = 585.0
+theme_override_colors/font_hover_color = Color(1, 0.423529, 0, 1)
+theme_override_fonts/font = ExtResource( "8" )
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource( "1" )
+theme_override_styles/hover = SubResource( "2" )
+theme_override_styles/pressed = SubResource( "3" )
+theme_override_styles/disabled = SubResource( "4" )
+theme_override_styles/focus = SubResource( "5" )
+text = "上一页"
+metadata/_edit_lock_ = true
+
+[node name="Page" type="Label" parent="."]
+offset_left = 416.0
+offset_top = 545.0
+offset_right = 470.0
+offset_bottom = 584.0
+theme_override_fonts/font = ExtResource( "8" )
+theme_override_font_sizes/font_size = 35
+text = "1/4"
+metadata/_edit_lock_ = true
+
+[node name="NextPage" type="Button" parent="."]
+offset_left = 539.0
+offset_top = 537.0
+offset_right = 637.0
+offset_bottom = 587.0
+theme_override_colors/font_hover_color = Color(1, 0.423529, 0, 1)
+theme_override_fonts/font = ExtResource( "8" )
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource( "1" )
+theme_override_styles/hover = SubResource( "2" )
+theme_override_styles/pressed = SubResource( "3" )
+theme_override_styles/disabled = SubResource( "4" )
+theme_override_styles/focus = SubResource( "5" )
+text = "下一页"
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed" flags=18]
+[connection signal="pressed" from="LastPage" to="." method="_on_last_page_pressed" flags=18]
+[connection signal="pressed" from="NextPage" to="." method="_on_next_page_pressed" flags=18]

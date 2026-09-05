@@ -1,0 +1,110 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Texture2D" uid="uid://dcrqm7eossius" path="res://Art/BackPack/ClothesChange/56.png" id="1"]
+[ext_resource type="Script" path="res://Scene/OtherScene/TransmogtifiedBox.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://d2k3842dybokc" path="res://Art/BackPack/ClothesChange/53.png" id="3"]
+[ext_resource type="PackedScene" uid="uid://b3qof5s6nwscy" path="res://Scene/BackPack/Box_1.tscn" id="4"]
+[ext_resource type="FontFile" uid="uid://ond0o3n8a00i" path="res://Font/华康宋体W3.ttc" id="5"]
+[ext_resource type="FontFile" uid="uid://0bcwbxanna5n" path="res://Font/Aa文徵明琴赋小楷_mianfeiziti.com.ttf" id="6"]
+[ext_resource type="Texture2D" uid="uid://dv4doowpoy4s3" path="res://Art/BackPack/ClothesChange/58.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://e413jpxmlkiy" path="res://Art/BackPack/ClothesChange/64.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://c1p00p3misd5k" path="res://Art/BackPack/ClothesChange/62.png" id="9"]
+[ext_resource type="FontFile" uid="uid://ditoj1gsqibd3" path="res://Font/金桥简中圆.TTF" id="10"]
+[ext_resource type="Texture2D" uid="uid://di5lftui6pu6l" path="res://Art/BackPack/ClothesChange/68.png" id="11"]
+
+[node name="TransmogtifiedBox" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource( "1" )
+script = ExtResource( "2" )
+
+[node name="Box_wk" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 36.0
+offset_right = 103.0
+offset_bottom = 92.0
+texture = ExtResource( "3" )
+metadata/_edit_lock_ = true
+
+[node name="ShowBox" parent="." instance=ExtResource( "4" )]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 39.0
+offset_right = 100.0
+offset_bottom = 89.0
+metadata/_edit_lock_ = true
+
+[node name="Eq_name" type="Label" parent="."]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 15.0
+offset_right = 132.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 11
+theme_override_fonts/font = ExtResource( "5" )
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="HaveOrNot" type="Label" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 91.0
+offset_right = 141.0
+offset_bottom = 114.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource( "6" )
+theme_override_font_sizes/font_size = 15
+text = "未拥有"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="change" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 114.0
+offset_right = 109.0
+offset_bottom = 142.0
+texture_normal = ExtResource( "7" )
+texture_pressed = ExtResource( "8" )
+texture_hover = ExtResource( "9" )
+metadata/_edit_lock_ = true
+
+[node name="cdorxx" type="Label" parent="change"]
+layout_mode = 0
+offset_right = 62.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource( "10" )
+theme_override_font_sizes/font_size = 13
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="cdinfor" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 27.0
+offset_top = 36.0
+offset_right = 47.0
+offset_bottom = 96.0
+texture = ExtResource( "11" )
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="change" to="." method="_on_change_pressed" flags=18]

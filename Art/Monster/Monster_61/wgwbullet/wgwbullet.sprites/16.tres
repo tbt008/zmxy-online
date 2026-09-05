@@ -1,0 +1,8 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3]
+
+[ext_resource type="Texture2D" uid="uid://crq1ux6077fkf" path="res://Art/Monster/Monster_61/wgwbullet/wgwbullet.png" id="1"]
+
+[resource]
+atlas = ExtResource( "1" )
+region = Rect2(10, 246, 576, 98)
+script = null

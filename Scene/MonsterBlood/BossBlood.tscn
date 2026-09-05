@@ -1,0 +1,290 @@
+[gd_scene load_steps=35 format=3]
+
+[ext_resource type="Texture2D" uid="uid://dogvfeh8sqdwd" path="res://Art/HeroPicture/RoleProperiesBox/128.png" id="1"]
+[ext_resource type="Script" path="res://Script/Monster/BossBlood.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://cun57bs348jst" path="res://Art/HeroPicture/RoleProperiesBox/124.png" id="3"]
+[ext_resource type="FontFile" uid="uid://2rjpff4w8bmb" path="res://Font/华康海报体W12 &amp; 华康海报体W12(P).ttc" id="4"]
+[ext_resource type="FontFile" uid="uid://mq0cfa3t1vbr" path="res://Font/8_FZCuYuan-M03S.ttf" id="5"]
+[ext_resource type="Texture2D" uid="uid://f8wfo0xplyj" path="res://Art/blood/3f6eddd8be6d616c93f13b2bfd1f892c.png" id="6"]
+[ext_resource type="Script" path="res://Scene/MonsterBlood/BuffList.gd" id="7"]
+[ext_resource type="PackedScene" uid="uid://dn22m14lo87w5" path="res://Scene/OtherScene/BuffIcon.tscn" id="8"]
+[ext_resource type="Texture2D" uid="uid://85h8r6j10qhq" path="res://Art/AddEffect/Buff_icon/Bleed.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://ceft70lnj6p73" path="res://Art/AddEffect/Buff_icon/BloodFix.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://bs35kuy1g4ik3" path="res://Art/AddEffect/Buff_icon/Boundground.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://bofar7inrkk7i" path="res://Art/AddEffect/Buff_icon/DeadLink.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://kmcytcdm2iur" path="res://Art/AddEffect/Buff_icon/DefeReduce.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://bqtcrx03wyeom" path="res://Art/AddEffect/Buff_icon/EyeFix.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://bpfkn7h4fy28t" path="res://Art/AddEffect/Buff_icon/Fire.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://x6t5mevqwvyb" path="res://Art/AddEffect/Buff_icon/Ice.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://ckpp58otthvkn" path="res://Art/AddEffect/Buff_icon/Immobilize.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://cujt17o2i7ubd" path="res://Art/AddEffect/Buff_icon/nlls.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://ccou8ejfgwgc8" path="res://Art/AddEffect/Buff_icon/poision.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://cesqiym7mqp8s" path="res://Art/AddEffect/Buff_icon/silent.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://df8xa8v5fsr7f" path="res://Art/AddEffect/Buff_icon/speed_down.png" id="21"]
+[ext_resource type="Texture2D" uid="uid://bbjyutt1tfhnb" path="res://Art/AddEffect/Buff_icon/stun.png" id="22"]
+[ext_resource type="Texture2D" uid="uid://cpc7w2f5xctxm" path="res://Art/AddEffect/Buff_icon/Scary.png" id="23"]
+[ext_resource type="Texture2D" uid="uid://b2wybjp7l3fce" path="res://Art/AddEffect/Buff_icon/SuperArmor.png" id="24"]
+[ext_resource type="Texture2D" uid="uid://dgmubkcv5kpcm" path="res://Art/AddEffect/Buff_icon/Indestructible.png" id="25"]
+[ext_resource type="Texture2D" uid="uid://ci1euvw7npo78" path="res://Art/AddEffect/Buff_icon/DoubleFallPro.png" id="26"]
+[ext_resource type="Texture2D" uid="uid://bg2evufhq8xp1" path="res://Art/AddEffect/Buff_icon/Voodoo.png" id="27"]
+[ext_resource type="Texture2D" uid="uid://bnp7pns8tra3f" path="res://Art/AddEffect/Buff_icon/PoisionBody.png" id="28"]
+[ext_resource type="Texture2D" uid="uid://bohd4ucrskfb5" path="res://Art/AddEffect/Buff_icon/slzbuff.png" id="29"]
+[ext_resource type="Texture2D" uid="uid://lrgqa2x4up6h" path="res://Art/AddEffect/Buff_icon/lpzbuff.png" id="30"]
+[ext_resource type="Texture2D" uid="uid://car8bo7a7exv7" path="res://Art/AddEffect/Buff_icon/tszbuff.png" id="31"]
+[ext_resource type="Texture2D" uid="uid://cob2o8eqcn7lb" path="res://Art/AddEffect/Buff_icon/lljybuff.png" id="32"]
+[ext_resource type="Texture2D" uid="uid://bjudf3ggrwu32" path="res://Art/AddEffect/Buff_icon/NoDeBuff.png" id="33"]
+[ext_resource type="Texture2D" uid="uid://c0hkjk8lj7m8b" path="res://Art/AddEffect/Buff_icon/flls.png" id="34"]
+
+[node name="BossBlood" type="TextureProgressBar"]
+custom_minimum_size = Vector2(0, 60)
+offset_top = 11.0
+offset_right = 340.0
+offset_bottom = 53.0
+max_value = 1.0
+step = 0.0
+value = 0.705
+texture_progress = ExtResource( "1" )
+texture_progress_offset = Vector2(-2.5, 3.5)
+script = ExtResource( "2" )
+
+[node name="BloodUnder" type="TextureRect" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_top = 3.0
+offset_right = 340.0
+offset_bottom = 37.0
+texture = ExtResource( "3" )
+metadata/_edit_lock_ = true
+
+[node name="MonsterName" type="Label" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = -277.0
+offset_top = 4.0
+offset_right = 23.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource( "4" )
+theme_override_font_sizes/font_size = 29
+horizontal_alignment = 2
+metadata/_edit_lock_ = true
+
+[node name="BloodValue" type="Label" parent="."]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 11.0
+offset_right = 331.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 14
+text = "39/20(58.93%)"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="BloodUderBar" type="TextureProgressBar" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -1.0
+offset_right = 339.0
+offset_bottom = 29.0
+max_value = 1.0
+step = 0.0
+value = 0.82
+texture_progress = ExtResource( "6" )
+texture_progress_offset = Vector2(-2.5, 3.5)
+tint_progress = Color(1, 1, 0, 0.513726)
+metadata/_edit_lock_ = true
+
+[node name="ProtectBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 340.0
+offset_bottom = 33.0
+max_value = 1.0
+step = 0.0
+texture_progress = ExtResource( "6" )
+texture_progress_offset = Vector2(-2.5, 0)
+
+[node name="ProtectUnder" type="TextureRect" parent="ProtectBar"]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 340.0
+offset_bottom = 34.0
+texture = ExtResource( "3" )
+metadata/_edit_lock_ = true
+
+[node name="ProtectName" type="Label" parent="ProtectBar"]
+visible = false
+layout_mode = 0
+offset_left = -277.0
+offset_top = 4.0
+offset_right = 23.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource( "4" )
+theme_override_font_sizes/font_size = 24
+text = "护盾"
+horizontal_alignment = 2
+metadata/_edit_lock_ = true
+
+[node name="ProtectValue" type="Label" parent="ProtectBar"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 6.0
+offset_right = 331.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="BuffList" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 32.0
+offset_right = 332.0
+offset_bottom = 66.0
+script = ExtResource( "7" )
+metadata/_edit_lock_ = true
+
+[node name="Bleed" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "9" )
+
+[node name="BloodFix" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "10" )
+
+[node name="Boundground" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "11" )
+
+[node name="DeadLink" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "12" )
+
+[node name="DefeReduce" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "13" )
+
+[node name="EyeFix" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "14" )
+
+[node name="Fire" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "15" )
+
+[node name="Ice" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "16" )
+
+[node name="Immobilize" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "17" )
+
+[node name="nlls" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "18" )
+
+[node name="poision" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "19" )
+
+[node name="silent" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "20" )
+
+[node name="speed_down" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "21" )
+
+[node name="stun" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "22" )
+
+[node name="Scary" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "23" )
+
+[node name="SuperArmor" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "24" )
+
+[node name="Indestructible" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "25" )
+
+[node name="DoubleFallPro" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "26" )
+
+[node name="Voodoo" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "27" )
+
+[node name="PoisionBody" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "28" )
+
+[node name="slzbuff" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "29" )
+
+[node name="lpzbuff" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "30" )
+
+[node name="tszbuff" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "31" )
+
+[node name="lljybuff" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "32" )
+
+[node name="NoDeBuff" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "33" )
+
+[node name="flls" parent="BuffList" instance=ExtResource( "8" )]
+visible = false
+layout_mode = 2
+texture = ExtResource( "34" )

@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://Script/Pellet/PelletSysPic.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bdclfxssoh48n" path="res://Art/show_text/502.png" id="2"]
+[ext_resource type="FontFile" uid="uid://ond0o3n8a00i" path="res://Font/华康宋体W3.ttc" id="3"]
+
+[node name="PelletSysPic" type="Node2D"]
+script = ExtResource( "1" )
+
+[node name="BBG" type="ColorRect" parent="."]
+offset_left = -798.0
+offset_top = -441.0
+offset_right = 793.0
+offset_bottom = 438.0
+color = Color(0, 0, 0, 0.301961)
+metadata/_edit_lock_ = true
+
+[node name="SysHelp" type="Sprite2D" parent="."]
+texture = ExtResource( "2" )
+metadata/_edit_lock_ = true
+
+[node name="SysPicTitle" type="Label" parent="SysHelp"]
+offset_left = -49.0
+offset_top = -169.0
+offset_right = 51.0
+offset_bottom = -140.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource( "3" )
+theme_override_font_sizes/font_size = 25
+text = "合成图鉴"
+metadata/_edit_lock_ = true

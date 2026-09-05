@@ -1,0 +1,122 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="Script" path="res://Scene/OtherScene/ReturnBackMap.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://c6gwvs1vil6cf" path="res://Art/Game_3/OtherMapButton/hdgqbg.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dr6it1uxqyj7x" path="res://Art/Game_3/OtherMapButton/nmg_1.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://b2cswx062pd6p" path="res://Art/Game_3/OtherMapButton/nmg_2.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://rdych5ix4th0" path="res://Art/Game_3/OtherMapButton/zld_1.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://41gh0dlxkcp4" path="res://Art/Game_3/OtherMapButton/zld_2.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://3ie6hqrfnkqx" path="res://Art/Game_3/OtherMapButton/sssl_1.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://c1o56h2d0js5w" path="res://Art/Game_3/OtherMapButton/sssl_2.png" id="8"]
+[ext_resource type="FontFile" uid="uid://krgdoxujrl1q" path="res://Font/194_宋体.ttf" id="9"]
+[ext_resource type="FontFile" uid="uid://ond0o3n8a00i" path="res://Font/华康宋体W3.ttc" id="10"]
+[ext_resource type="Texture2D" uid="uid://cyj0u440761su" path="res://Art/Game_3/OtherMapButton/close_1.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://ygfvpmsis70q" path="res://Art/Game_3/OtherMapButton/close_2.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://6mkuamw0mkl5" path="res://Art/Game_3/OtherMapButton/cy_2.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://cplwk0wocmi55" path="res://Art/Game_3/OtherMapButton/cy_1.png" id="14"]
+
+[node name="ReturnBackMap" type="Node2D"]
+script = ExtResource( "1" )
+metadata/_edit_horizontal_guides_ = [16.0]
+metadata/_edit_vertical_guides_ = [161.0]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -244.0
+offset_top = -222.0
+offset_right = 1181.0
+offset_bottom = 864.0
+color = Color(0, 0, 0, 0.027451)
+metadata/_edit_lock_ = true
+
+[node name="Hdgqbg" type="Sprite2D" parent="."]
+position = Vector2(492, 254)
+texture = ExtResource( "2" )
+metadata/_edit_lock_ = true
+
+[node name="ButtonList" type="HBoxContainer" parent="Hdgqbg"]
+offset_left = -309.0
+offset_top = -155.0
+offset_right = 287.0
+offset_bottom = 54.0
+theme_override_constants/separation = -10
+metadata/_edit_lock_ = true
+
+[node name="ReturnNMG" type="TextureButton" parent="Hdgqbg/ButtonList"]
+layout_mode = 2
+texture_normal = ExtResource( "3" )
+texture_pressed = ExtResource( "3" )
+texture_hover = ExtResource( "4" )
+texture_disabled = ExtResource( "3" )
+
+[node name="ReturnZLD" type="TextureButton" parent="Hdgqbg/ButtonList"]
+layout_mode = 2
+texture_normal = ExtResource( "5" )
+texture_pressed = ExtResource( "5" )
+texture_hover = ExtResource( "6" )
+texture_disabled = ExtResource( "5" )
+
+[node name="ReturnSSSL" type="TextureButton" parent="Hdgqbg/ButtonList"]
+layout_mode = 2
+texture_normal = ExtResource( "7" )
+texture_pressed = ExtResource( "7" )
+texture_hover = ExtResource( "8" )
+texture_disabled = ExtResource( "7" )
+
+[node name="LastTimes" type="Label" parent="Hdgqbg"]
+offset_left = 211.0
+offset_top = 63.0
+offset_right = 212.0
+offset_bottom = 94.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource( "9" )
+theme_override_font_sizes/font_size = 20
+text = "∞"
+metadata/_edit_lock_ = true
+
+[node name="StageInfo" type="Label" parent="Hdgqbg"]
+offset_left = -281.0
+offset_top = 92.0
+offset_right = 264.0
+offset_bottom = 167.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource( "10" )
+theme_override_font_sizes/font_size = 16
+text = "搜遍了整个天庭，都找不到玉帝。唯一的可能就是玉帝被人挟持，通过混沌之门传送到另一个世界里了。而要进入那个世界必须拥有通天令牌和足够强的实力。斩妖除魔，找到罪魁祸首，加油挑战自我吧！"
+autowrap_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Close" type="TextureButton" parent="Hdgqbg"]
+offset_left = 281.0
+offset_top = -227.0
+offset_right = 326.0
+offset_bottom = -183.0
+texture_normal = ExtResource( "11" )
+texture_pressed = ExtResource( "11" )
+texture_hover = ExtResource( "12" )
+texture_disabled = ExtResource( "11" )
+metadata/_edit_lock_ = true
+
+[node name="Challenge" type="TextureButton" parent="Hdgqbg"]
+offset_left = -89.0
+offset_top = 169.0
+offset_right = 51.0
+offset_bottom = 235.0
+texture_normal = ExtResource( "13" )
+texture_pressed = ExtResource( "13" )
+texture_hover = ExtResource( "14" )
+texture_disabled = ExtResource( "13" )
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="Hdgqbg/ButtonList/ReturnNMG" to="." method="_on_return_nmg_pressed" flags=18]
+[connection signal="pressed" from="Hdgqbg/ButtonList/ReturnZLD" to="." method="_on_return_zld_pressed" flags=18]
+[connection signal="pressed" from="Hdgqbg/ButtonList/ReturnSSSL" to="." method="_on_return_sssl_pressed" flags=18]
+[connection signal="pressed" from="Hdgqbg/Close" to="." method="_on_close_pressed" flags=18]
+[connection signal="pressed" from="Hdgqbg/Challenge" to="." method="_on_challenge_pressed" flags=18]

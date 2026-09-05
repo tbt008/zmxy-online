@@ -1,0 +1,70 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://Script/Other_Menu/change_back_ground.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://c2vfl4clw7pa5" path="res://Art/set_menu/653.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dhkfcv61a0hkl" path="res://Art/BackPack/49.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://eqob07i5mlve" path="res://Art/MagicWeapon/222.png" id="4"]
+[ext_resource type="FontFile" uid="uid://2rjpff4w8bmb" path="res://Font/华康海报体W12 &amp; 华康海报体W12(P).ttc" id="5"]
+
+[node name="Change_BackGround" type="Node2D"]
+script = ExtResource( "1" )
+
+[node name="Bg" type="Sprite2D" parent="."]
+texture = ExtResource( "2" )
+metadata/_edit_lock_ = true
+
+[node name="Close" type="TextureButton" parent="Bg"]
+offset_left = 109.0
+offset_top = -157.0
+offset_right = 150.0
+offset_bottom = -116.0
+texture_normal = ExtResource( "3" )
+texture_pressed = ExtResource( "3" )
+texture_hover = ExtResource( "4" )
+metadata/_edit_lock_ = true
+
+[node name="ButtonList" type="VBoxContainer" parent="Bg"]
+offset_left = -141.0
+offset_top = -107.0
+offset_right = 134.0
+offset_bottom = 90.0
+theme_override_constants/separation = 22
+metadata/_edit_lock_ = true
+
+[node name="TItle" type="Label" parent="Bg/ButtonList"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.623529, 0, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 25
+text = "点击按钮切换主菜单背景"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="game_1_bg" type="Button" parent="Bg/ButtonList"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(1, 0.466667, 0, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 25
+text = "切换为造梦1背景"
+
+[node name="game_2_bg" type="Button" parent="Bg/ButtonList"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(1, 0.466667, 0, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 25
+text = "切换为造梦2背景"
+
+[node name="game_3_bg" type="Button" parent="Bg/ButtonList"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(1, 0.466667, 0, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 25
+text = "切换为造梦3背景"
+
+[connection signal="pressed" from="Bg/Close" to="." method="_on_close_pressed" flags=18]
+[connection signal="pressed" from="Bg/ButtonList/game_1_bg" to="." method="_on_game_1_bg_pressed" flags=18]
+[connection signal="pressed" from="Bg/ButtonList/game_2_bg" to="." method="_on_game_2_bg_pressed" flags=18]
+[connection signal="pressed" from="Bg/ButtonList/game_3_bg" to="." method="_on_game_3_bg_pressed" flags=18]

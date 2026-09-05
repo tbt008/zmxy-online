@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Texture2D" uid="uid://bisqd7afixajk" path="res://Art/MainGame/ChoosePlayer/xx_1.png" id="1"]
+[ext_resource type="Script" path="res://Scene/OtherScene/star.gd" id="2"]
+
+[node name="Star" type="TextureRect"]
+offset_right = 42.0
+offset_bottom = 40.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource( "1" )
+script = ExtResource( "2" )

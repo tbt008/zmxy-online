@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Texture2D" uid="uid://duy30wr6boyk7" path="res://Art/BackPack/AllItems/empty.png" id="1"]
+[ext_resource type="Script" path="res://Script/BackPack/Box_1.gd" id="2"]
+[ext_resource type="FontFile" uid="uid://mq0cfa3t1vbr" path="res://Font/8_FZCuYuan-M03S.ttf" id="3"]
+
+[sub_resource type="StyleBoxEmpty" id="1"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="2"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="3"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="4"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="5"]
+script = null
+
+[node name="box_1" type="Button"]
+offset_left = -22.0
+offset_right = 28.0
+offset_bottom = 50.0
+focus_mode = 0
+mouse_filter = 1
+theme_override_styles/normal = SubResource( "1" )
+theme_override_styles/hover = SubResource( "2" )
+theme_override_styles/pressed = SubResource( "3" )
+theme_override_styles/disabled = SubResource( "4" )
+theme_override_styles/focus = SubResource( "5" )
+icon = ExtResource( "1" )
+script = ExtResource( "2" )
+
+[node name="item_number" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 27.0
+offset_right = 49.0
+offset_bottom = 50.0
+mouse_filter = 0
+theme_override_colors/font_color = Color(1, 0.466667, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource( "3" )
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 2
+vertical_alignment = 2
+metadata/_edit_lock_ = true
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited" flags=18]
+[connection signal="pressed" from="." to="." method="_on_pressed" flags=18]

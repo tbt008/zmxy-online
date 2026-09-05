@@ -1,0 +1,89 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Texture2D" uid="uid://by3loe6prvg3o" path="res://Art/Monster/MonsterHead/ui_suoyaota_guaiwutouxiang.png" id="1"]
+[ext_resource type="Script" path="res://Scene/OtherScene/MonsterHeadInfo.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://bfnw5v86bhoh8" path="res://Art/Monster/MonsterHead/hy.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://ojorq2g6uh5q" path="res://Art/Monster/MonsterHead/zlsz.png" id="4"]
+[ext_resource type="FontFile" uid="uid://bicgw4numqquw" path="res://Font/HYZhuZiMeiXinTiW.ttf" id="5"]
+[ext_resource type="FontFile" uid="uid://bpxndwys2y6cp" path="res://Font/1_fonts.FZCY_FZCuYuan-M03.ttf" id="6"]
+
+[sub_resource type="StyleBoxEmpty" id="1"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="2"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="3"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="4"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="5"]
+script = null
+
+[node name="MonsterHeadInfo" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource( "1" )
+script = ExtResource( "2" )
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 88.0
+offset_bottom = 92.0
+color = Color(1, 1, 1, 0)
+metadata/_edit_lock_ = true
+
+[node name="Hy" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(42, 43)
+scale = Vector2(0.14, 0.14)
+texture = ExtResource( "3" )
+metadata/_edit_lock_ = true
+
+[node name="pic" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(42, 41)
+scale = Vector2(1.17, 1.17)
+texture = ExtResource( "4" )
+metadata/_edit_lock_ = true
+
+[node name="Boss" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 26.0
+offset_right = 48.0
+offset_bottom = 46.0
+rotation = -0.599621
+theme_override_colors/font_color = Color(1, 0.431373, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource( "5" )
+text = "Boss"
+metadata/_edit_lock_ = true
+
+[node name="MonsterName" type="Button" parent="."]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 58.0
+offset_right = 88.0
+offset_bottom = 75.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.392157, 0, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource( "6" )
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource( "1" )
+theme_override_styles/hover = SubResource( "2" )
+theme_override_styles/pressed = SubResource( "3" )
+theme_override_styles/disabled = SubResource( "4" )
+theme_override_styles/focus = SubResource( "5" )
+disabled = true
+text = "转轮使者"
+metadata/_edit_lock_ = true

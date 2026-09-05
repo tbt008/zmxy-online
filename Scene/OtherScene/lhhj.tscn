@@ -1,0 +1,689 @@
+[gd_scene load_steps=13 format=3]
+
+[ext_resource type="Script" path="res://Scene/OtherScene/lhhj.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bdclfxssoh48n" path="res://Art/show_text/502.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dv4yf8mjadsck" path="res://Art/Level/Game3Level/Level_Hide/chongwupk.jpg" id="3"]
+[ext_resource type="FontFile" uid="uid://2rjpff4w8bmb" path="res://Font/华康海报体W12 &amp; 华康海报体W12(P).ttc" id="4"]
+[ext_resource type="Texture2D" uid="uid://be4vhehdc4mkf" path="res://Art/MagicWeapon/68.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://cepttdqbtggkg" path="res://Art/MagicWeapon/70.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://gw1iaqf6aii5" path="res://Art/MagicWeapon/145.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://dpdtihxpfwn8k" path="res://Art/MagicWeapon/149.png" id="8"]
+[ext_resource type="FontFile" uid="uid://ond0o3n8a00i" path="res://Font/华康宋体W3.ttc" id="9"]
+[ext_resource type="FontFile" uid="uid://mq0cfa3t1vbr" path="res://Font/8_FZCuYuan-M03S.ttf" id="10"]
+[ext_resource type="Texture2D" uid="uid://53nfd2lciosi" path="res://Art/BackPack/ClothesChange/8.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://swh2omidwyei" path="res://Art/BackPack/ClothesChange/10.png" id="12"]
+
+[node name="lhhj" type="Node2D"]
+script = ExtResource( "1" )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -157.0
+offset_top = -111.0
+offset_right = 1060.0
+offset_bottom = 716.0
+color = Color(0, 0, 0, 0.231373)
+metadata/_edit_lock_ = true
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(461, 282)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource( "2" )
+metadata/_edit_lock_ = true
+
+[node name="BBG" type="Sprite2D" parent="BG"]
+position = Vector2(-1, -0.500031)
+scale = Vector2(0.478014, 0.45)
+texture = ExtResource( "3" )
+metadata/_edit_lock_ = true
+
+[node name="Title" type="Label" parent="BG"]
+offset_left = -338.0
+offset_top = -175.0
+offset_right = 335.0
+offset_bottom = -136.0
+theme_override_colors/font_color = Color(1, 0.384314, 0.0431373, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource( "4" )
+theme_override_font_sizes/font_size = 30
+text = "轮回幻境"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Help" type="TextureButton" parent="BG"]
+offset_left = 73.0
+offset_top = -175.0
+offset_right = 113.0
+offset_bottom = -135.0
+texture_normal = ExtResource( "5" )
+texture_pressed = ExtResource( "5" )
+texture_hover = ExtResource( "6" )
+texture_disabled = ExtResource( "5" )
+metadata/_edit_lock_ = true
+
+[node name="Challenge" type="TextureButton" parent="BG"]
+offset_left = -50.0
+offset_top = 136.0
+offset_right = 43.0
+offset_bottom = 171.0
+texture_normal = ExtResource( "7" )
+texture_pressed = ExtResource( "7" )
+texture_hover = ExtResource( "8" )
+texture_disabled = ExtResource( "7" )
+metadata/_edit_lock_ = true
+
+[node name="text" type="Label" parent="BG/Challenge"]
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource( "4" )
+text = "进入挑战"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="BG"]
+offset_left = -317.0
+offset_top = -135.0
+offset_right = 317.0
+offset_bottom = 116.0
+color = Color(0, 0.568627, 1, 0.184314)
+metadata/_edit_lock_ = true
+
+[node name="Text" type="Label" parent="BG/ColorRect"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 16.0
+offset_right = 131.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(1, 0.454902, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.454902, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource( "9" )
+theme_override_font_sizes/font_size = 14
+text = "目前可召唤的列表"
+metadata/_edit_lock_ = true
+
+[node name="TotalList" type="ScrollContainer" parent="BG/ColorRect/Text"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = 13.0
+offset_right = 10.0
+offset_bottom = 212.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+metadata/_edit_lock_ = true
+
+[node name="BossList1" type="VBoxContainer" parent="BG/ColorRect/Text/TotalList"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Text2" type="Label" parent="BG/ColorRect"]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 16.0
+offset_right = 267.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(1, 0.454902, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.454902, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource( "9" )
+theme_override_font_sizes/font_size = 14
+text = "已添加的Boss列表"
+metadata/_edit_lock_ = true
+
+[node name="TotalList" type="ScrollContainer" parent="BG/ColorRect/Text2"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = 13.0
+offset_right = 10.0
+offset_bottom = 212.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+metadata/_edit_lock_ = true
+
+[node name="BossList" type="VBoxContainer" parent="BG/ColorRect/Text2/TotalList"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Text3" type="Label" parent="BG/ColorRect"]
+layout_mode = 0
+offset_left = 275.0
+offset_top = 16.0
+offset_right = 628.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(1, 0.454902, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.454902, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource( "9" )
+theme_override_font_sizes/font_size = 14
+text = "设置部分属性"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="TotalList" type="ScrollContainer" parent="BG/ColorRect/Text3"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 11.0
+offset_top = 13.0
+offset_right = -180.0
+offset_bottom = 212.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+metadata/_edit_lock_ = true
+
+[node name="BossList" type="GridContainer" parent="BG/ColorRect/Text3/TotalList"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/v_separation = 3
+
+[node name="Name" type="LineEdit" parent="BG/ColorRect/Text3/TotalList/BossList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource( "4" )
+theme_override_font_sizes/font_size = 12
+alignment = 1
+
+[node name="Hp" type="Label" parent="BG/ColorRect/Text3/TotalList/BossList/Name"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "4" )
+text = "名字："
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Level" type="LineEdit" parent="BG/ColorRect/Text3/TotalList/BossList"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource( "10" )
+theme_override_font_sizes/font_size = 12
+alignment = 1
+
+[node name="Hp" type="Label" parent="BG/ColorRect/Text3/TotalList/BossList/Level"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "4" )
+text = "等级："
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="SHp" type="LineEdit" parent="BG/ColorRect/Text3/TotalList/BossList"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource( "10" )
+theme_override_font_sizes/font_size = 12
+alignment = 1
+
+[node name="Hp" type="Label" parent="BG/ColorRect/Text3/TotalList/BossList/SHp"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "4" )
+text = "生命："
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="def" type="LineEdit" parent="BG/ColorRect/Text3/TotalList/BossList"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource( "10" )
+theme_override_font_sizes/font_size = 12
+alignment = 1
+
+[node name="Hp" type="Label" parent="BG/ColorRect/Text3/TotalList/BossList/def"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "4" )
+text = "物防："
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="mdef" type="LineEdit" parent="BG/ColorRect/Text3/TotalList/BossList"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource( "10" )
+theme_override_font_sizes/font_size = 12
+alignment = 1
+
+[node name="Hp" type="Label" parent="BG/ColorRect/Text3/TotalList/BossList/mdef"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "4" )
+text = "魔防："
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="crit" type="LineEdit" parent="BG/ColorRect/Text3/TotalList/BossList"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource( "10" )
+theme_override_font_sizes/font_size = 12
+alignment = 1
+
+[node name="Hp" type="Label" parent="BG/ColorRect/Text3/TotalList/BossList/crit"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "4" )
+text = "暴击："
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="miss" type="LineEdit" parent="BG/ColorRect/Text3/TotalList/BossList"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource( "10" )
+theme_override_font_sizes/font_size = 12
+alignment = 1
+
+[node name="Hp" type="Label" parent="BG/ColorRect/Text3/TotalList/BossList/miss"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "4" )
+text = "闪避："
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="power" type="LineEdit" parent="BG/ColorRect/Text3/TotalList/BossList"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource( "10" )
+theme_override_font_sizes/font_size = 12
+alignment = 1
+
+[node name="Hp" type="Label" parent="BG/ColorRect/Text3/TotalList/BossList/power"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "4" )
+text = "伤害："
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="TotalList2" type="ScrollContainer" parent="BG/ColorRect/Text3"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 188.0
+offset_top = 13.0
+offset_right = -3.0
+offset_bottom = 212.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+metadata/_edit_lock_ = true
+
+[node name="BossList" type="GridContainer" parent="BG/ColorRect/Text3/TotalList2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/v_separation = 3
+
+[node name="ebol" type="LineEdit" parent="BG/ColorRect/Text3/TotalList2/BossList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource( "4" )
+theme_override_font_sizes/font_size = 12
+alignment = 1
+
+[node name="Hp" type="Label" parent="BG/ColorRect/Text3/TotalList2/BossList/ebol"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "4" )
+text = "吸血："
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="lucky" type="LineEdit" parent="BG/ColorRect/Text3/TotalList2/BossList"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource( "10" )
+theme_override_font_sizes/font_size = 12
+alignment = 1
+
+[node name="Hp" type="Label" parent="BG/ColorRect/Text3/TotalList2/BossList/lucky"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "4" )
+text = "幸运："
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Critreduce" type="LineEdit" parent="BG/ColorRect/Text3/TotalList2/BossList"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource( "10" )
+theme_override_font_sizes/font_size = 12
+alignment = 1
+
+[node name="Hp" type="Label" parent="BG/ColorRect/Text3/TotalList2/BossList/Critreduce"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "4" )
+text = "暴免："
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Toughness" type="LineEdit" parent="BG/ColorRect/Text3/TotalList2/BossList"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource( "10" )
+theme_override_font_sizes/font_size = 12
+alignment = 1
+
+[node name="Hp" type="Label" parent="BG/ColorRect/Text3/TotalList2/BossList/Toughness"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "4" )
+text = "韧性："
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="ar" type="LineEdit" parent="BG/ColorRect/Text3/TotalList2/BossList"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource( "10" )
+theme_override_font_sizes/font_size = 12
+alignment = 1
+
+[node name="Hp" type="Label" parent="BG/ColorRect/Text3/TotalList2/BossList/ar"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "4" )
+text = "破甲："
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="sp" type="LineEdit" parent="BG/ColorRect/Text3/TotalList2/BossList"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource( "10" )
+theme_override_font_sizes/font_size = 12
+alignment = 1
+
+[node name="Hp" type="Label" parent="BG/ColorRect/Text3/TotalList2/BossList/sp"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "4" )
+text = "破魔："
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="speed" type="LineEdit" parent="BG/ColorRect/Text3/TotalList2/BossList"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource( "10" )
+theme_override_font_sizes/font_size = 12
+alignment = 1
+
+[node name="Hp" type="Label" parent="BG/ColorRect/Text3/TotalList2/BossList/speed"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "4" )
+text = "移速："
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="self_rhp" type="LineEdit" parent="BG/ColorRect/Text3/TotalList2/BossList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource( "4" )
+theme_override_font_sizes/font_size = 12
+alignment = 1
+
+[node name="Hp" type="Label" parent="BG/ColorRect/Text3/TotalList2/BossList/self_rhp"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "4" )
+text = "自我治疗："
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BG/ColorRect/Text3"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 223.333
+offset_right = 451.0
+offset_bottom = 258.333
+scale = Vector2(0.6, 0.6)
+metadata/_edit_lock_ = true
+
+[node name="RemoveBoss" type="TextureButton" parent="BG/ColorRect/Text3/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource( "7" )
+texture_pressed = ExtResource( "7" )
+texture_hover = ExtResource( "8" )
+texture_disabled = ExtResource( "7" )
+metadata/_edit_lock_ = true
+
+[node name="text" type="Label" parent="BG/ColorRect/Text3/HBoxContainer/RemoveBoss"]
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource( "4" )
+text = "移除该Boss"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="RemoveProp" type="TextureButton" parent="BG/ColorRect/Text3/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource( "7" )
+texture_pressed = ExtResource( "7" )
+texture_hover = ExtResource( "8" )
+texture_disabled = ExtResource( "7" )
+metadata/_edit_lock_ = true
+
+[node name="text" type="Label" parent="BG/ColorRect/Text3/HBoxContainer/RemoveProp"]
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource( "4" )
+text = "重设属性"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="AddAll" type="TextureButton" parent="BG/ColorRect/Text3/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource( "7" )
+texture_pressed = ExtResource( "7" )
+texture_hover = ExtResource( "8" )
+texture_disabled = ExtResource( "7" )
+metadata/_edit_lock_ = true
+
+[node name="text" type="Label" parent="BG/ColorRect/Text3/HBoxContainer/AddAll"]
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource( "4" )
+text = "添加所有"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="RemoveAll" type="TextureButton" parent="BG/ColorRect/Text3/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource( "7" )
+texture_pressed = ExtResource( "7" )
+texture_hover = ExtResource( "8" )
+texture_disabled = ExtResource( "7" )
+metadata/_edit_lock_ = true
+
+[node name="text" type="Label" parent="BG/ColorRect/Text3/HBoxContainer/RemoveAll"]
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource( "4" )
+text = "移除所有"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Close" type="TextureButton" parent="BG"]
+offset_left = 291.0
+offset_top = -193.0
+offset_right = 349.0
+offset_bottom = -137.0
+texture_normal = ExtResource( "11" )
+texture_pressed = ExtResource( "11" )
+texture_hover = ExtResource( "12" )
+texture_disabled = ExtResource( "11" )
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="BG/Help" to="." method="_on_help_pressed" flags=18]
+[connection signal="pressed" from="BG/Challenge" to="." method="_on_challenge_pressed" flags=18]
+[connection signal="text_changed" from="BG/ColorRect/Text3/TotalList/BossList/Name" to="." method="_on_name_text_changed" flags=18]
+[connection signal="text_changed" from="BG/ColorRect/Text3/TotalList/BossList/Level" to="." method="_on_dj_text_changed" flags=18]
+[connection signal="text_changed" from="BG/ColorRect/Text3/TotalList/BossList/SHp" to="." method="_on_hp_text_changed" flags=18]
+[connection signal="text_changed" from="BG/ColorRect/Text3/TotalList/BossList/def" to="." method="_on_def_text_changed" flags=18]
+[connection signal="text_changed" from="BG/ColorRect/Text3/TotalList/BossList/mdef" to="." method="_on_mdef_text_changed" flags=18]
+[connection signal="text_changed" from="BG/ColorRect/Text3/TotalList/BossList/crit" to="." method="_on_crit_text_changed" flags=18]
+[connection signal="text_changed" from="BG/ColorRect/Text3/TotalList/BossList/miss" to="." method="_on_miss_text_changed" flags=18]
+[connection signal="text_changed" from="BG/ColorRect/Text3/TotalList/BossList/power" to="." method="_on_power_text_changed" flags=18]
+[connection signal="text_changed" from="BG/ColorRect/Text3/TotalList2/BossList/ebol" to="." method="_on_ebol_text_changed" flags=18]
+[connection signal="text_changed" from="BG/ColorRect/Text3/TotalList2/BossList/lucky" to="." method="_on_lucky_text_changed" flags=18]
+[connection signal="text_changed" from="BG/ColorRect/Text3/TotalList2/BossList/Critreduce" to="." method="_on_critreduce_text_changed" flags=18]
+[connection signal="text_changed" from="BG/ColorRect/Text3/TotalList2/BossList/Toughness" to="." method="_on_toughness_text_changed" flags=18]
+[connection signal="text_changed" from="BG/ColorRect/Text3/TotalList2/BossList/ar" to="." method="_on_ar_text_changed" flags=18]
+[connection signal="text_changed" from="BG/ColorRect/Text3/TotalList2/BossList/sp" to="." method="_on_sp_text_changed" flags=18]
+[connection signal="text_changed" from="BG/ColorRect/Text3/TotalList2/BossList/speed" to="." method="_on_speed_text_changed" flags=18]
+[connection signal="text_changed" from="BG/ColorRect/Text3/TotalList2/BossList/self_rhp" to="." method="_on_self_rhp_text_changed" flags=18]
+[connection signal="pressed" from="BG/ColorRect/Text3/HBoxContainer/RemoveBoss" to="." method="_on_remove_boss_pressed" flags=18]
+[connection signal="pressed" from="BG/ColorRect/Text3/HBoxContainer/RemoveProp" to="." method="_on_remove_prop_pressed" flags=18]
+[connection signal="pressed" from="BG/ColorRect/Text3/HBoxContainer/AddAll" to="." method="_on_add_all_pressed" flags=18]
+[connection signal="pressed" from="BG/ColorRect/Text3/HBoxContainer/RemoveAll" to="." method="_on_remove_all_pressed" flags=18]
+[connection signal="pressed" from="BG/Close" to="." method="_on_close_pressed" flags=18]

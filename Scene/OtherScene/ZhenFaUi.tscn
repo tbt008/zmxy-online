@@ -1,0 +1,270 @@
+[gd_scene load_steps=21 format=3]
+
+[ext_resource type="Script" path="res://Scene/OtherScene/ZhenFaUi.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://yusirhr8rng6" path="res://Art/TwentyEightConstellations/59.png" id="2"]
+[ext_resource type="FontFile" uid="uid://0bcwbxanna5n" path="res://Font/Aa文徵明琴赋小楷_mianfeiziti.com.ttf" id="3"]
+[ext_resource type="FontFile" uid="uid://bicgw4numqquw" path="res://Font/HYZhuZiMeiXinTiW.ttf" id="4"]
+[ext_resource type="Texture2D" uid="uid://hjhdfgqr0vyg" path="res://Art/TwentyEightConstellations/58.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://bjmmbtltaoaq" path="res://Art/TwentyEightConstellations/57.png" id="6"]
+[ext_resource type="FontFile" uid="uid://ond0o3n8a00i" path="res://Font/华康宋体W3.ttc" id="7"]
+[ext_resource type="Texture2D" uid="uid://s0kne1rnj3c" path="res://Art/TwentyEightConstellations/42.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://53nfd2lciosi" path="res://Art/BackPack/ClothesChange/8.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://swh2omidwyei" path="res://Art/BackPack/ClothesChange/10.png" id="10"]
+
+[sub_resource type="StyleBoxEmpty" id="1"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="2"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="3"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="4"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="5"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="6"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="7"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="8"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="9"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="10"]
+script = null
+
+[node name="ZhenFaUI" type="Node2D"]
+script = ExtResource( "1" )
+metadata/_edit_horizontal_guides_ = [166.0]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -270.0
+offset_top = -98.0
+offset_right = 1072.0
+offset_bottom = 632.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(471, 292)
+texture = ExtResource( "2" )
+metadata/_edit_lock_ = true
+
+[node name="CurrentEq" type="Label" parent="BG"]
+offset_left = 72.0
+offset_top = -261.0
+offset_right = 396.0
+offset_bottom = -208.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 7
+theme_override_fonts/font = ExtResource( "3" )
+theme_override_font_sizes/font_size = 24
+text = "当前佩戴阵法："
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="CurName" type="Label" parent="BG/CurrentEq"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 15.0
+offset_right = 326.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource( "4" )
+theme_override_font_sizes/font_size = 22
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="ChangeGongNengList" type="HBoxContainer" parent="BG"]
+offset_left = -424.0
+offset_top = -259.0
+offset_right = 60.0
+offset_bottom = -207.0
+theme_override_constants/separation = 22
+metadata/_edit_lock_ = true
+
+[node name="zfxq" type="TextureButton" parent="BG/ChangeGongNengList"]
+layout_mode = 2
+texture_normal = ExtResource( "5" )
+texture_pressed = ExtResource( "5" )
+texture_hover = ExtResource( "6" )
+texture_disabled = ExtResource( "5" )
+
+[node name="text" type="Label" parent="BG/ChangeGongNengList/zfxq"]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 131.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(1, 0.466667, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.466667, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource( "3" )
+theme_override_font_sizes/font_size = 25
+text = "阵法详情"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="zysj" type="TextureButton" parent="BG/ChangeGongNengList"]
+layout_mode = 2
+texture_normal = ExtResource( "5" )
+texture_pressed = ExtResource( "5" )
+texture_hover = ExtResource( "6" )
+texture_disabled = ExtResource( "5" )
+
+[node name="text" type="Label" parent="BG/ChangeGongNengList/zysj"]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 131.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(1, 0.466667, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.466667, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource( "3" )
+theme_override_font_sizes/font_size = 25
+text = "阵眼升级"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="zftp" type="TextureButton" parent="BG/ChangeGongNengList"]
+layout_mode = 2
+texture_normal = ExtResource( "5" )
+texture_pressed = ExtResource( "5" )
+texture_hover = ExtResource( "6" )
+texture_disabled = ExtResource( "5" )
+
+[node name="text" type="Label" parent="BG/ChangeGongNengList/zftp"]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 131.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(1, 0.466667, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.466667, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource( "3" )
+theme_override_font_sizes/font_size = 25
+text = "阵法突破"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="GetNeed" type="Label" parent="BG"]
+offset_left = -244.0
+offset_top = -180.0
+offset_right = -3.0
+offset_bottom = -160.0
+theme_override_colors/font_color = Color(0, 0.792157, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.792157, 1, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 7
+theme_override_fonts/font = ExtResource( "7" )
+text = "获得方式："
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="zhenfaname" type="Label" parent="BG"]
+offset_left = 188.0
+offset_top = -174.0
+offset_right = 303.0
+offset_bottom = -146.0
+theme_override_colors/font_color = Color(1, 0.552941, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "4" )
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="ZhenFaButton" type="ScrollContainer" parent="BG"]
+offset_left = -431.0
+offset_top = -205.0
+offset_right = -303.0
+offset_bottom = 248.0
+metadata/_edit_lock_ = true
+
+[node name="ZhenFaButtonList" type="VBoxContainer" parent="BG/ZhenFaButton"]
+layout_mode = 2
+
+[node name="zhenfaicon" type="TextureRect" parent="BG"]
+offset_left = -269.0
+offset_top = -140.0
+offset_right = 54.0
+offset_bottom = 183.0
+scale = Vector2(0.9, 0.9)
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="Use" type="Button" parent="BG"]
+offset_left = -199.0
+offset_top = 168.0
+offset_right = -41.0
+offset_bottom = 226.0
+theme_override_styles/normal = SubResource( "1" )
+theme_override_styles/hover = SubResource( "2" )
+theme_override_styles/pressed = SubResource( "3" )
+theme_override_styles/disabled = SubResource( "4" )
+theme_override_styles/focus = SubResource( "5" )
+icon = ExtResource( "8" )
+metadata/_edit_lock_ = true
+
+[node name="Close" type="TextureButton" parent="BG"]
+offset_left = 401.0
+offset_top = -269.0
+offset_right = 459.0
+offset_bottom = -213.0
+texture_normal = ExtResource( "9" )
+texture_pressed = ExtResource( "9" )
+texture_hover = ExtResource( "10" )
+texture_disabled = ExtResource( "9" )
+metadata/_edit_lock_ = true
+
+[node name="Button" type="Button" parent="BG"]
+offset_left = 376.0
+offset_top = -175.0
+offset_right = 407.0
+offset_bottom = -145.0
+theme_override_styles/normal = SubResource( "6" )
+theme_override_styles/hover = SubResource( "7" )
+theme_override_styles/pressed = SubResource( "8" )
+theme_override_styles/disabled = SubResource( "9" )
+theme_override_styles/focus = SubResource( "10" )
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="BG/ChangeGongNengList/zfxq" to="." method="_on_zfxq_pressed" flags=18]
+[connection signal="pressed" from="BG/ChangeGongNengList/zysj" to="." method="_on_zysj_pressed" flags=18]
+[connection signal="pressed" from="BG/ChangeGongNengList/zftp" to="." method="_on_zftp_pressed" flags=18]
+[connection signal="pressed" from="BG/Use" to="." method="_on_use_pressed" flags=18]
+[connection signal="pressed" from="BG/Close" to="." method="_on_close_pressed" flags=18]
+[connection signal="pressed" from="BG/Button" to="." method="_on_button_pressed" flags=18]

@@ -1,0 +1,327 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://Script/LDL/s_yn_help.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cokxtm12y1wbf" path="res://Art/Game_2/Ldl/154.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dnruq566a8bo1" path="res://Art/MagicWeapon/220.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://eqob07i5mlve" path="res://Art/MagicWeapon/222.png" id="4"]
+[ext_resource type="FontFile" uid="uid://bicgw4numqquw" path="res://Font/HYZhuZiMeiXinTiW.ttf" id="5"]
+[ext_resource type="Texture2D" uid="uid://biqe6khaeu786" path="res://Art/Game_2/Ldl/648.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://uk7vo2rspk64" path="res://Art/Game_2/Ldl/650.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://eq0iqbco1r23" path="res://Art/Game_2/Ldl/652.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://c3ji4m18wgchq" path="res://Art/Game_2/Ldl/653.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://bkdmxg83etbvk" path="res://Art/Game_2/Ldl/560.png" id="10"]
+
+[node name="SYn_help" type="Node2D"]
+scale = Vector2(0.8, 0.8)
+script = ExtResource( "1" )
+
+[node name="BG" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource( "2" )
+
+[node name="ColorRect" type="ColorRect" parent="BG"]
+offset_left = -166.0
+offset_top = -169.0
+offset_right = 180.0
+offset_bottom = 175.0
+color = Color(0, 0, 0, 0)
+metadata/_edit_lock_ = true
+
+[node name="Title__" type="Label" parent="BG"]
+offset_left = -57.3333
+offset_top = -139.333
+offset_right = 42.6667
+offset_bottom = -103.333
+theme_override_font_sizes/font_size = 25
+text = "合成帮助"
+
+[node name="Close" type="TextureButton" parent="BG"]
+offset_left = 107.333
+offset_top = -160.0
+offset_right = 148.333
+offset_bottom = -119.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( "3" )
+texture_pressed = ExtResource( "3" )
+texture_hover = ExtResource( "4" )
+texture_disabled = ExtResource( "3" )
+metadata/_edit_lock_ = true
+
+[node name="Title_" type="HBoxContainer" parent="BG"]
+offset_left = -148.667
+offset_top = -108.667
+offset_right = 126.333
+offset_bottom = -68.6666
+theme_override_constants/separation = 33
+
+[node name="Title_1" type="Label" parent="BG/Title_"]
+layout_mode = 2
+text = "材料一"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BG/Title_/Title_1"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 30.3333
+offset_right = 53.0
+offset_bottom = 139.333
+theme_override_constants/separation = 15
+
+[node name="cail_1_1" type="Label" parent="BG/Title_/Title_1/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "家传宝剑"
+
+[node name="cail_1_2" type="Label" parent="BG/Title_/Title_1/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "1级强化石"
+
+[node name="cail_1_3" type="Label" parent="BG/Title_/Title_1/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "2级强化石"
+
+[node name="cail_1_4" type="Label" parent="BG/Title_/Title_1/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "3级强化石"
+
+[node name="cail_1_5" type="Label" parent="BG/Title_/Title_1/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "阴之符文"
+
+[node name="cail_1_6" type="Label" parent="BG/Title_/Title_1/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "阴之符文"
+
+[node name="Title_2" type="Label" parent="BG/Title_"]
+layout_mode = 2
+text = "材料二"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BG/Title_/Title_2"]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 30.0
+offset_right = 51.0
+offset_bottom = 124.0
+theme_override_constants/separation = 15
+
+[node name="cail_1_1" type="Label" parent="BG/Title_/Title_2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "家传战甲"
+
+[node name="cail_1_2" type="Label" parent="BG/Title_/Title_2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "1级强化石"
+
+[node name="cail_1_3" type="Label" parent="BG/Title_/Title_2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "2级强化石"
+
+[node name="cail_1_4" type="Label" parent="BG/Title_/Title_2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "3级强化石"
+
+[node name="cail_1_5" type="Label" parent="BG/Title_/Title_2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "3级强化石"
+
+[node name="cail_1_6" type="Label" parent="BG/Title_/Title_2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "3级强化石"
+
+[node name="Title_3" type="Label" parent="BG/Title_"]
+layout_mode = 2
+text = "材料三"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BG/Title_/Title_3"]
+layout_mode = 0
+offset_left = -7.0
+offset_top = 30.0
+offset_right = 50.0
+offset_bottom = 124.0
+theme_override_constants/separation = 15
+
+[node name="cail_1_1" type="Label" parent="BG/Title_/Title_3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "家传手镯"
+
+[node name="cail_1_2" type="Label" parent="BG/Title_/Title_3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "1级强化石"
+
+[node name="cail_1_3" type="Label" parent="BG/Title_/Title_3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "2级强化石"
+
+[node name="cail_1_4" type="Label" parent="BG/Title_/Title_3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "3级强化石"
+
+[node name="cail_1_5" type="Label" parent="BG/Title_/Title_3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "3级强化石"
+
+[node name="cail_1_6" type="Label" parent="BG/Title_/Title_3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "3级强化石"
+
+[node name="Title_4" type="Label" parent="BG/Title_"]
+layout_mode = 2
+text = "成品"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BG/Title_/Title_4"]
+layout_mode = 0
+offset_left = -10.3333
+offset_top = 30.0
+offset_right = 46.6667
+offset_bottom = 139.0
+theme_override_constants/separation = 15
+metadata/_edit_lock_ = true
+
+[node name="cail_1_1" type="Label" parent="BG/Title_/Title_4/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "家传铃铛"
+
+[node name="cail_1_2" type="Label" parent="BG/Title_/Title_4/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "2级强化石"
+
+[node name="cail_1_3" type="Label" parent="BG/Title_/Title_4/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "3级强化石"
+
+[node name="cail_1_4" type="Label" parent="BG/Title_/Title_4/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "4级强化石"
+
+[node name="cail_1_5" type="Label" parent="BG/Title_/Title_4/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "4级强化石"
+
+[node name="cail_1_6" type="Label" parent="BG/Title_/Title_4/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.32549, 1)
+theme_override_fonts/font = ExtResource( "5" )
+theme_override_font_sizes/font_size = 12
+text = "4级强化石"
+
+[node name="CUre" type="TextureButton" parent="BG"]
+offset_left = 47.0
+offset_top = 117.0
+offset_right = 79.0
+offset_bottom = 149.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( "6" )
+texture_pressed = ExtResource( "6" )
+texture_hover = ExtResource( "7" )
+texture_disabled = ExtResource( "6" )
+metadata/_edit_lock_ = true
+
+[node name="Page" type="Label" parent="BG/CUre"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 3.0
+offset_right = 66.0
+offset_bottom = 29.0
+text = "1/1"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="reduce" type="TextureButton" parent="BG/CUre/Page"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = -3.0
+offset_right = 68.0
+offset_bottom = 29.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( "8" )
+texture_pressed = ExtResource( "8" )
+texture_hover = ExtResource( "9" )
+texture_disabled = ExtResource( "8" )
+metadata/_edit_lock_ = true
+
+[node name="fg_1" type="Sprite2D" parent="."]
+position = Vector2(-129, 3)
+texture = ExtResource( "10" )
+metadata/_edit_lock_ = true
+
+[node name="fg_2" type="Sprite2D" parent="."]
+position = Vector2(-7, 3)
+texture = ExtResource( "10" )
+metadata/_edit_lock_ = true
+
+[node name="fg_3" type="Sprite2D" parent="."]
+position = Vector2(110, 3)
+texture = ExtResource( "10" )
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="BG/Close" to="." method="_on_close_pressed" flags=18]
+[connection signal="pressed" from="BG/CUre" to="." method="_on_c_ure_pressed" flags=18]
+[connection signal="pressed" from="BG/CUre/Page/reduce" to="." method="_on_reduce_pressed" flags=18]

@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://Scene/OtherScene/load_scene.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dlxiypskohwbl" path="res://Art/set_menu/313.png" id="2"]
+[ext_resource type="FontFile" uid="uid://bicgw4numqquw" path="res://Font/HYZhuZiMeiXinTiW.ttf" id="3"]
+[ext_resource type="Texture2D" uid="uid://xcknkkjx7kuu" path="res://Art/set_menu/154.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://by4ahhjab3vcx" path="res://Art/set_menu/157.png" id="5"]
+[ext_resource type="FontFile" uid="uid://2rjpff4w8bmb" path="res://Font/华康海报体W12 &amp; 华康海报体W12(P).ttc" id="6"]
+
+[node name="LoadScene" type="Node2D"]
+process_mode = 3
+script = ExtResource( "1" )
+metadata/_edit_lock_ = true
+
+[node name="bg" type="Sprite2D" parent="."]
+position = Vector2(470, 294)
+texture = ExtResource( "2" )
+metadata/_edit_lock_ = true
+
+[node name="Tips" type="Label" parent="bg"]
+offset_left = -246.0
+offset_top = 127.0
+offset_right = 468.0
+offset_bottom = 296.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource( "3" )
+text = "Tips：每个小怪都有概率掉落强化石哦~"
+autowrap_mode = 1
+
+[node name="loading_bar" type="TextureProgressBar" parent="."]
+offset_left = 215.0
+offset_top = 373.0
+offset_right = 718.0
+offset_bottom = 414.0
+max_value = 1.0
+step = 0.0
+value = 1.0
+texture_under = ExtResource( "4" )
+texture_progress = ExtResource( "5" )
+metadata/_edit_lock_ = true
+
+[node name="loading_text" type="Label" parent="loading_bar"]
+layout_mode = 0
+offset_left = 203.0
+offset_top = 1.0
+offset_right = 347.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource( "6" )
+theme_override_font_sizes/font_size = 33
+text = "99%"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Tips_change" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[connection signal="timeout" from="Tips_change" to="." method="_on_tips_change_timeout" flags=18]

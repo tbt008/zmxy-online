@@ -1,0 +1,311 @@
+[gd_scene load_steps=19 format=3]
+
+[ext_resource type="PackedScene" uid="uid://dwe2ebyrwscgt" path="res://Scene/Base/BaseMagicWeapon.tscn" id="1"]
+[ext_resource type="Script" path="res://Script/MagicWeapon/PurpleGoldBell.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://dvtfl11xb45qn" path="res://Art/MagicWeapon/MagicWeapon10/zjd.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://b8xg5skjplxvm" path="res://Art/MagicWeapon/MagicWeapon10/tooth.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dcxivyw727b4a" path="res://Art/MagicWeapon/MagicWeapon10/SpecialEffet_2.png" id="5"]
+
+[sub_resource type="AtlasTexture" id="1"]
+atlas = ExtResource( "3" )
+region = Rect2(0, 0, 68, 85)
+script = null
+
+[sub_resource type="AtlasTexture" id="2"]
+atlas = ExtResource( "3" )
+region = Rect2(0, 0, 68, 85)
+script = null
+
+[sub_resource type="SpriteFrames" id="3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource( "1" )
+}, {
+"duration": 1.0,
+"texture": SubResource( "1" )
+}, {
+"duration": 1.0,
+"texture": SubResource( "1" )
+}, {
+"duration": 1.0,
+"texture": SubResource( "1" )
+}, {
+"duration": 1.0,
+"texture": SubResource( "1" )
+}, {
+"duration": 1.0,
+"texture": SubResource( "1" )
+}, {
+"duration": 1.0,
+"texture": SubResource( "1" )
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"hit",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource( "2" )
+}, {
+"duration": 1.0,
+"texture": SubResource( "2" )
+}, {
+"duration": 1.0,
+"texture": SubResource( "2" )
+}, {
+"duration": 1.0,
+"texture": SubResource( "2" )
+}, {
+"duration": 1.0,
+"texture": SubResource( "2" )
+}],
+"loop": false,
+"name": &"wait",
+"speed": 25.0
+}]
+script = null
+
+[sub_resource type="AtlasTexture" id="4"]
+atlas = ExtResource( "5" )
+region = Rect2(0, 0, 229, 222)
+script = null
+
+[sub_resource type="AtlasTexture" id="5"]
+atlas = ExtResource( "5" )
+region = Rect2(229, 0, 229, 222)
+script = null
+
+[sub_resource type="AtlasTexture" id="6"]
+atlas = ExtResource( "5" )
+region = Rect2(458, 0, 229, 222)
+script = null
+
+[sub_resource type="AtlasTexture" id="7"]
+atlas = ExtResource( "5" )
+region = Rect2(687, 0, 229, 222)
+script = null
+
+[sub_resource type="AtlasTexture" id="8"]
+atlas = ExtResource( "5" )
+region = Rect2(916, 0, 229, 222)
+script = null
+
+[sub_resource type="AtlasTexture" id="9"]
+atlas = ExtResource( "5" )
+region = Rect2(1145, 0, 229, 222)
+script = null
+
+[sub_resource type="SpriteFrames" id="10"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"Empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource( "4" )
+}, {
+"duration": 1.0,
+"texture": SubResource( "5" )
+}, {
+"duration": 1.0,
+"texture": SubResource( "6" )
+}, {
+"duration": 1.0,
+"texture": SubResource( "7" )
+}, {
+"duration": 1.0,
+"texture": SubResource( "8" )
+}, {
+"duration": 1.0,
+"texture": SubResource( "9" )
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"SP1",
+"speed": 14.0
+}]
+script = null
+
+[sub_resource type="Animation" id="11"]
+length = 0.571429
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MgAction:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0714286, 0.142857, 0.214286, 0.285714, 0.357143, 0.428571, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MgAction:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["hit"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MgAction/Tooth:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MgAction/Tooth2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SpecialEffect")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"SP1", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"ADDSuperArmor"
+}]
+}
+script = null
+
+[sub_resource type="Animation" id="12"]
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MgAction:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.04, 0.08, 0.12, 0.16),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MgAction:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["wait"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MgAction/Tooth:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MgAction/Tooth2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+script = null
+
+[sub_resource type="AnimationLibrary" id="13"]
+_data = {
+"hit": SubResource( "11" ),
+"wait": SubResource( "12" )
+}
+script = null
+
+[node name="PurpleGoldBell" instance=ExtResource( "1" )]
+script = ExtResource( "2" )
+
+[node name="MgAction" parent="." index="1"]
+sprite_frames = SubResource( "3" )
+flip_h = true
+metadata/_edit_lock_ = true
+
+[node name="Tooth" type="Sprite2D" parent="MgAction" index="0"]
+position = Vector2(15, 17)
+texture = ExtResource( "4" )
+metadata/_edit_lock_ = true
+
+[node name="Tooth2" type="Sprite2D" parent="MgAction" index="1"]
+position = Vector2(-24, 18)
+texture = ExtResource( "4" )
+flip_h = true
+metadata/_edit_lock_ = true
+
+[node name="SpecialEffect" type="AnimatedSprite2D" parent="." index="2"]
+position = Vector2(5, 7)
+sprite_frames = SubResource( "10" )
+animation = &"SP1"
+frame = 6
+frame_progress = 1.0
+
+[node name="MgPlayer" parent="." index="3"]
+libraries = {
+"": SubResource( "13" )
+}

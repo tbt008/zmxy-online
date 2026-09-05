@@ -1,0 +1,87 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://Script/Other_Menu/c_hange_clothes_jm.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dcrqm7eossius" path="res://Art/BackPack/ClothesChange/56.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://d2k3842dybokc" path="res://Art/BackPack/ClothesChange/53.png" id="3"]
+[ext_resource type="FontFile" uid="uid://bicgw4numqquw" path="res://Font/HYZhuZiMeiXinTiW.ttf" id="4"]
+[ext_resource type="PackedScene" uid="uid://b3qof5s6nwscy" path="res://Scene/BackPack/Box_1.tscn" id="5"]
+[ext_resource type="Texture2D" uid="uid://dv4doowpoy4s3" path="res://Art/BackPack/ClothesChange/58.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://e413jpxmlkiy" path="res://Art/BackPack/ClothesChange/64.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://c1p00p3misd5k" path="res://Art/BackPack/ClothesChange/62.png" id="8"]
+[ext_resource type="FontFile" uid="uid://ditoj1gsqibd3" path="res://Font/金桥简中圆.TTF" id="9"]
+[ext_resource type="Texture2D" uid="uid://di5lftui6pu6l" path="res://Art/BackPack/ClothesChange/68.png" id="10"]
+
+[node name="CHangeClothesJM" type="Node2D"]
+script = ExtResource( "1" )
+
+[node name="BG" type="Sprite2D" parent="."]
+texture = ExtResource( "2" )
+metadata/_edit_lock_ = true
+
+[node name="Box_wk" type="Sprite2D" parent="BG"]
+position = Vector2(0, -16)
+texture = ExtResource( "3" )
+metadata/_edit_lock_ = true
+
+[node name="Eq_name" type="Label" parent="BG"]
+offset_left = -54.0
+offset_top = -69.0
+offset_right = 59.0
+offset_bottom = -49.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "4" )
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="ShowBox" parent="BG" instance=ExtResource( "5" )]
+offset_left = -25.0
+offset_top = -41.0
+offset_right = 25.0
+offset_bottom = 9.0
+metadata/_edit_lock_ = true
+
+[node name="HaveOrNot" type="Label" parent="BG"]
+offset_left = -17.0
+offset_top = 12.0
+offset_right = 19.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="change" type="TextureButton" parent="BG"]
+offset_left = -30.0
+offset_top = 32.0
+offset_right = 32.0
+offset_bottom = 60.0
+texture_normal = ExtResource( "6" )
+texture_pressed = ExtResource( "7" )
+texture_hover = ExtResource( "8" )
+metadata/_edit_lock_ = true
+
+[node name="cdorxx" type="Label" parent="BG/change"]
+layout_mode = 0
+offset_right = 62.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource( "9" )
+theme_override_font_sizes/font_size = 13
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="cdinfor" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-40, -16)
+texture = ExtResource( "10" )
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="BG/change" to="." method="_on_change_pressed" flags=18]

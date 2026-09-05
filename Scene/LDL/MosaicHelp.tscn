@@ -1,0 +1,123 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://Script/LDL/MosaicHelp.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bdclfxssoh48n" path="res://Art/show_text/502.png" id="2"]
+[ext_resource type="FontFile" uid="uid://bicgw4numqquw" path="res://Font/HYZhuZiMeiXinTiW.ttf" id="3"]
+[ext_resource type="FontFile" uid="uid://ond0o3n8a00i" path="res://Font/华康宋体W3.ttc" id="4"]
+[ext_resource type="Texture2D" uid="uid://dnruq566a8bo1" path="res://Art/MagicWeapon/220.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://eqob07i5mlve" path="res://Art/MagicWeapon/222.png" id="6"]
+
+[node name="MosaicHelp" type="Node2D"]
+script = ExtResource( "1" )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -158.0
+offset_top = -55.0
+offset_right = 1072.0
+offset_bottom = 662.0
+color = Color(0, 0, 0, 0.0784314)
+metadata/_edit_lock_ = true
+
+[node name="502" type="Sprite2D" parent="."]
+position = Vector2(490, 288)
+texture = ExtResource( "2" )
+metadata/_edit_lock_ = true
+
+[node name="Title" type="Label" parent="502"]
+offset_left = -63.0
+offset_top = -172.0
+offset_right = 57.0
+offset_bottom = -138.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource( "3" )
+theme_override_font_sizes/font_size = 30
+text = "镶嵌帮助"
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="502"]
+offset_left = -323.0
+offset_top = -135.0
+offset_right = 324.0
+offset_bottom = 163.0
+theme_override_constants/separation = 15
+metadata/_edit_lock_ = true
+
+[node name="_1" type="Label" parent="502/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 12
+theme_override_fonts/font = ExtResource( "4" )
+theme_override_font_sizes/font_size = 17
+text = "1.只有武器，防具，饰品可以进行镶嵌！"
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="_2" type="Label" parent="502/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 12
+theme_override_fonts/font = ExtResource( "4" )
+theme_override_font_sizes/font_size = 17
+text = "2.根据强化等级，至多镶嵌4颗宝石，强化等级越高，可镶嵌宝石越多。"
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="_3" type="Label" parent="502/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 12
+theme_override_fonts/font = ExtResource( "4" )
+theme_override_font_sizes/font_size = 17
+text = "3.宝石可以提供大量属性，最高5级，同一属性的宝石至多镶嵌一颗。"
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="_4" type="Label" parent="502/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 12
+theme_override_fonts/font = ExtResource( "4" )
+theme_override_font_sizes/font_size = 17
+text = "4.单击装备后点击宝石即可镶嵌，点击宝石可以拆卸，无消耗。"
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="_5" type="Label" parent="502/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 12
+theme_override_fonts/font = ExtResource( "4" )
+theme_override_font_sizes/font_size = 17
+text = "5.宝石可通过高级品质装备分解，特殊活动获取。"
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="_6" type="Label" parent="502/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 12
+theme_override_fonts/font = ExtResource( "4" )
+theme_override_font_sizes/font_size = 17
+text = "6.宝石属性推荐：生命，攻击，回魔，暴击。"
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Close" type="TextureButton" parent="502"]
+offset_left = 299.0
+offset_top = -182.0
+offset_right = 340.0
+offset_bottom = -141.0
+texture_normal = ExtResource( "5" )
+texture_pressed = ExtResource( "5" )
+texture_hover = ExtResource( "6" )
+texture_disabled = ExtResource( "5" )
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="502/Close" to="." method="_on_close_pressed" flags=18]

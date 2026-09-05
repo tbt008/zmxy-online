@@ -1,0 +1,256 @@
+[gd_scene load_steps=18 format=3]
+
+[ext_resource type="Texture2D" uid="uid://c2vfl4clw7pa5" path="res://Art/set_menu/653.png" id="1"]
+[ext_resource type="Script" path="res://Script/Shop/CureTimesBox.gd" id="2"]
+[ext_resource type="FontFile" uid="uid://2rjpff4w8bmb" path="res://Font/华康海报体W12 &amp; 华康海报体W12(P).ttc" id="3"]
+[ext_resource type="Texture2D" uid="uid://dnruq566a8bo1" path="res://Art/MagicWeapon/220.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://eqob07i5mlve" path="res://Art/MagicWeapon/222.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://dpdtihxpfwn8k" path="res://Art/MagicWeapon/149.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://gw1iaqf6aii5" path="res://Art/MagicWeapon/145.png" id="7"]
+
+[sub_resource type="StyleBoxEmpty" id="1"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="2"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="3"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="4"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="5"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="6"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="7"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="8"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="9"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="10"]
+script = null
+
+[node name="CureTimesBox" type="TextureRect"]
+offset_left = 316.0
+offset_top = 104.0
+offset_right = 642.0
+offset_bottom = 445.0
+texture = ExtResource( "1" )
+script = ExtResource( "2" )
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -770.0
+offset_top = -443.0
+offset_right = 1201.0
+offset_bottom = 852.0
+color = Color(0, 0, 0, 0)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 46.0
+offset_right = 209.0
+offset_bottom = 75.0
+theme_override_fonts/font = ExtResource( "3" )
+theme_override_font_sizes/font_size = 25
+text = "兑换次数"
+metadata/_edit_lock_ = true
+
+[node name="Close" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 11.0
+offset_right = 313.0
+offset_bottom = 52.0
+texture_normal = ExtResource( "4" )
+texture_pressed = ExtResource( "4" )
+texture_hover = ExtResource( "5" )
+texture_disabled = ExtResource( "4" )
+metadata/_edit_lock_ = true
+
+[node name="LPDH" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 94.0
+offset_right = 206.0
+offset_bottom = 134.0
+metadata/_edit_lock_ = true
+
+[node name="Title" type="Label" parent="LPDH"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource( "3" )
+theme_override_font_sizes/font_size = 20
+text = "令牌兑换："
+
+[node name="Min" type="Button" parent="LPDH"]
+layout_mode = 2
+theme_override_styles/normal = SubResource( "1" )
+theme_override_styles/hover = SubResource( "2" )
+theme_override_styles/pressed = SubResource( "3" )
+theme_override_styles/disabled = SubResource( "4" )
+theme_override_styles/focus = SubResource( "5" )
+text = "最小"
+
+[node name="lpline" type="LineEdit" parent="LPDH"]
+layout_mode = 2
+placeholder_text = "次数"
+alignment = 1
+
+[node name="Max" type="Button" parent="LPDH"]
+layout_mode = 2
+theme_override_styles/normal = SubResource( "6" )
+theme_override_styles/hover = SubResource( "7" )
+theme_override_styles/pressed = SubResource( "8" )
+theme_override_styles/disabled = SubResource( "9" )
+theme_override_styles/focus = SubResource( "10" )
+text = "最大"
+
+[node name="Title2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 125.0
+offset_right = 203.0
+offset_bottom = 145.0
+theme_override_colors/font_color = Color(1, 0.752941, 0, 1)
+theme_override_fonts/font = ExtResource( "3" )
+theme_override_font_sizes/font_size = 16
+text = "1令牌 = 1次数"
+metadata/_edit_lock_ = true
+
+[node name="Title4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 146.0
+offset_right = 301.0
+offset_bottom = 166.0
+theme_override_colors/font_color = Color(1, 0.752941, 0, 1)
+theme_override_fonts/font = ExtResource( "3" )
+theme_override_font_sizes/font_size = 16
+text = "令牌当前次数："
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="LHDH" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 160.0
+offset_right = 268.0
+offset_bottom = 200.0
+metadata/_edit_lock_ = true
+
+[node name="Title" type="Label" parent="LHDH"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource( "3" )
+theme_override_font_sizes/font_size = 20
+text = "灵魂兑换："
+
+[node name="lhmin" type="Button" parent="LHDH"]
+layout_mode = 2
+theme_override_styles/normal = SubResource( "1" )
+theme_override_styles/hover = SubResource( "2" )
+theme_override_styles/pressed = SubResource( "3" )
+theme_override_styles/disabled = SubResource( "4" )
+theme_override_styles/focus = SubResource( "5" )
+text = "最小"
+
+[node name="lhline" type="LineEdit" parent="LHDH"]
+layout_mode = 2
+placeholder_text = "次数"
+alignment = 1
+
+[node name="lhmax" type="Button" parent="LHDH"]
+layout_mode = 2
+theme_override_styles/normal = SubResource( "6" )
+theme_override_styles/hover = SubResource( "7" )
+theme_override_styles/pressed = SubResource( "8" )
+theme_override_styles/disabled = SubResource( "9" )
+theme_override_styles/focus = SubResource( "10" )
+text = "最大"
+
+[node name="Title3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 202.0
+offset_right = 229.0
+offset_bottom = 222.0
+theme_override_colors/font_color = Color(1, 0.752941, 0, 1)
+theme_override_fonts/font = ExtResource( "3" )
+theme_override_font_sizes/font_size = 16
+text = "50000灵魂 = 1次数"
+metadata/_edit_lock_ = true
+
+[node name="Title5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 219.0
+offset_right = 311.0
+offset_bottom = 239.0
+theme_override_colors/font_color = Color(1, 0.752941, 0, 1)
+theme_override_fonts/font = ExtResource( "3" )
+theme_override_font_sizes/font_size = 16
+text = "灵魂当前次数："
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Title6" type="Label" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 245.0
+offset_right = 309.0
+offset_bottom = 265.0
+theme_override_colors/font_color = Color(1, 0.752941, 0, 1)
+theme_override_fonts/font = ExtResource( "3" )
+theme_override_font_sizes/font_size = 16
+text = "总次数："
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="dh" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 280.0
+offset_right = 211.0
+offset_bottom = 315.0
+texture_normal = ExtResource( "6" )
+texture_pressed = ExtResource( "6" )
+texture_hover = ExtResource( "7" )
+texture_disabled = ExtResource( "6" )
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="dh"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 91.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource( "3" )
+theme_override_font_sizes/font_size = 22
+text = "兑换"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed" flags=18]
+[connection signal="pressed" from="LPDH/Min" to="." method="_on_min_pressed" flags=18]
+[connection signal="text_changed" from="LPDH/lpline" to="." method="_on_lpline_text_changed" flags=18]
+[connection signal="pressed" from="LPDH/Max" to="." method="_on_max_pressed" flags=18]
+[connection signal="pressed" from="LHDH/lhmin" to="." method="_on_lhmin_pressed" flags=18]
+[connection signal="text_changed" from="LHDH/lhline" to="." method="_on_lhline_text_changed" flags=18]
+[connection signal="pressed" from="LHDH/lhmax" to="." method="_on_lhmax_pressed" flags=18]
+[connection signal="pressed" from="dh" to="." method="_on_dh_pressed" flags=18]

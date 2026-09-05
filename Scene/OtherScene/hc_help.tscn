@@ -1,0 +1,292 @@
+[gd_scene load_steps=16 format=3]
+
+[ext_resource type="Script" path="res://Scene/OtherScene/hc_help.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bdclfxssoh48n" path="res://Art/show_text/502.png" id="2"]
+[ext_resource type="FontFile" uid="uid://db4gwqvqgggtj" path="res://Font/Aa梦里掏花对月饮_mianfeiziti.com.ttf" id="3"]
+[ext_resource type="Texture2D" uid="uid://dpdtihxpfwn8k" path="res://Art/MagicWeapon/149.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://gw1iaqf6aii5" path="res://Art/MagicWeapon/145.png" id="5"]
+[ext_resource type="FontFile" uid="uid://0bcwbxanna5n" path="res://Font/Aa文徵明琴赋小楷_mianfeiziti.com.ttf" id="6"]
+[ext_resource type="Texture2D" uid="uid://bhuuqkucjss2t" path="res://Art/Level/Challenge/ui_beizhan_bmiaoshudi.png" id="7"]
+[ext_resource type="FontFile" uid="uid://bicgw4numqquw" path="res://Font/HYZhuZiMeiXinTiW.ttf" id="8"]
+[ext_resource type="Texture2D" uid="uid://53nfd2lciosi" path="res://Art/BackPack/ClothesChange/8.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://swh2omidwyei" path="res://Art/BackPack/ClothesChange/10.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://dt7vxap8fl7iy" path="res://Art/Shop/71.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://2bkwe0313xft" path="res://Art/Shop/69.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://cgv5nscxkgbwx" path="res://Art/Shop/76.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://clsv2vyhkdflj" path="res://Art/Shop/74.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://be4vhehdc4mkf" path="res://Art/MagicWeapon/68.png" id="15"]
+
+[node name="HcHelp" type="Node2D"]
+script = ExtResource( "1" )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -619.0
+offset_top = -405.0
+offset_right = 602.0
+offset_bottom = 361.0
+color = Color(0, 0, 0, 0.556863)
+metadata/_edit_lock_ = true
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(0, 21.25)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource( "2" )
+metadata/_edit_lock_ = true
+
+[node name="Title__" type="Label" parent="BG"]
+offset_left = -61.8333
+offset_top = -174.833
+offset_right = 66.1667
+offset_bottom = -129.833
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "3" )
+theme_override_font_sizes/font_size = 32
+text = "合成帮助"
+metadata/_edit_lock_ = true
+
+[node name="TotalFL" type="HBoxContainer" parent="BG"]
+offset_left = -290.833
+offset_top = -132.708
+offset_right = 314.167
+offset_bottom = -92.7083
+theme_override_constants/separation = 30
+metadata/_edit_lock_ = true
+
+[node name="Total" type="TextureButton" parent="BG/TotalFL"]
+layout_mode = 2
+texture_normal = ExtResource( "4" )
+texture_pressed = ExtResource( "4" )
+texture_hover = ExtResource( "5" )
+texture_disabled = ExtResource( "4" )
+
+[node name="Total" type="Label" parent="BG/TotalFL/Total"]
+layout_mode = 0
+offset_left = 0.166656
+offset_top = -4.16666
+offset_right = 90.1667
+offset_bottom = 32.8333
+theme_override_colors/font_color = Color(0.992157, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource( "6" )
+theme_override_font_sizes/font_size = 24
+text = "全部"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="zb" type="TextureButton" parent="BG/TotalFL"]
+layout_mode = 2
+texture_normal = ExtResource( "4" )
+texture_pressed = ExtResource( "4" )
+texture_hover = ExtResource( "5" )
+texture_disabled = ExtResource( "4" )
+
+[node name="zb" type="Label" parent="BG/TotalFL/zb"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.99999
+offset_right = 91.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0.992157, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource( "6" )
+theme_override_font_sizes/font_size = 24
+text = "装备"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="dj" type="TextureButton" parent="BG/TotalFL"]
+layout_mode = 2
+texture_normal = ExtResource( "4" )
+texture_pressed = ExtResource( "4" )
+texture_hover = ExtResource( "5" )
+texture_disabled = ExtResource( "4" )
+
+[node name="dj" type="Label" parent="BG/TotalFL/dj"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.99999
+offset_right = 91.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0.992157, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource( "6" )
+theme_override_font_sizes/font_size = 24
+text = "道具"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="fb" type="TextureButton" parent="BG/TotalFL"]
+layout_mode = 2
+texture_normal = ExtResource( "4" )
+texture_pressed = ExtResource( "4" )
+texture_hover = ExtResource( "5" )
+texture_disabled = ExtResource( "4" )
+
+[node name="fb" type="Label" parent="BG/TotalFL/fb"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.99999
+offset_right = 91.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0.992157, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource( "6" )
+theme_override_font_sizes/font_size = 24
+text = "法宝"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="sz" type="TextureButton" parent="BG/TotalFL"]
+layout_mode = 2
+texture_normal = ExtResource( "4" )
+texture_pressed = ExtResource( "4" )
+texture_hover = ExtResource( "5" )
+texture_disabled = ExtResource( "4" )
+
+[node name="sz" type="Label" parent="BG/TotalFL/sz"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.99999
+offset_right = 91.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0.992157, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource( "6" )
+theme_override_font_sizes/font_size = 24
+text = "时装"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="UiBeizhanBmiaoshudi" type="Sprite2D" parent="BG"]
+position = Vector2(-1, -75)
+scale = Vector2(0.9, 0.6)
+texture = ExtResource( "7" )
+metadata/_edit_lock_ = true
+
+[node name="Title2" type="HBoxContainer" parent="BG"]
+offset_left = -287.0
+offset_top = -96.0
+offset_right = 283.0
+offset_bottom = -56.0
+theme_override_constants/separation = 90
+metadata/_edit_lock_ = true
+
+[node name="cl1" type="Label" parent="BG/Title2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "8" )
+theme_override_font_sizes/font_size = 25
+text = "材料一"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="cl2" type="Label" parent="BG/Title2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "8" )
+theme_override_font_sizes/font_size = 25
+text = "材料二"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="cl3" type="Label" parent="BG/Title2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "8" )
+theme_override_font_sizes/font_size = 25
+text = "材料三"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="scw" type="Label" parent="BG/Title2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource( "8" )
+theme_override_font_sizes/font_size = 25
+text = "生成物"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Close" type="TextureButton" parent="BG"]
+offset_left = 281.0
+offset_top = -176.0
+offset_right = 339.0
+offset_bottom = -120.0
+texture_normal = ExtResource( "9" )
+texture_pressed = ExtResource( "9" )
+texture_hover = ExtResource( "10" )
+texture_disabled = ExtResource( "9" )
+metadata/_edit_lock_ = true
+
+[node name="ChangePage" type="HBoxContainer" parent="BG"]
+offset_left = -78.0
+offset_top = 136.0
+offset_right = 64.0
+offset_bottom = 169.0
+metadata/_edit_lock_ = true
+
+[node name="Last" type="TextureButton" parent="BG/ChangePage"]
+layout_mode = 2
+texture_normal = ExtResource( "11" )
+texture_pressed = ExtResource( "11" )
+texture_hover = ExtResource( "12" )
+texture_disabled = ExtResource( "11" )
+
+[node name="Page" type="Label" parent="BG/ChangePage"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource( "8" )
+theme_override_font_sizes/font_size = 18
+text = "1/10"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Next" type="TextureButton" parent="BG/ChangePage"]
+layout_mode = 2
+texture_normal = ExtResource( "13" )
+texture_pressed = ExtResource( "13" )
+texture_hover = ExtResource( "14" )
+texture_disabled = ExtResource( "13" )
+
+[node name="OtherHelp" type="TextureButton" parent="BG"]
+offset_left = 71.6667
+offset_top = -175.208
+offset_right = 111.667
+offset_bottom = -135.208
+texture_normal = ExtResource( "15" )
+texture_pressed = ExtResource( "15" )
+texture_hover = ExtResource( "15" )
+texture_disabled = ExtResource( "15" )
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="BG/TotalFL/Total" to="." method="_on_total_pressed" flags=18]
+[connection signal="pressed" from="BG/TotalFL/zb" to="." method="_on_zb_pressed" flags=18]
+[connection signal="pressed" from="BG/TotalFL/dj" to="." method="_on_dj_pressed" flags=18]
+[connection signal="pressed" from="BG/TotalFL/fb" to="." method="_on_fb_pressed" flags=18]
+[connection signal="pressed" from="BG/TotalFL/sz" to="." method="_on_sz_pressed" flags=18]
+[connection signal="pressed" from="BG/Close" to="." method="_on_close_pressed" flags=18]
+[connection signal="pressed" from="BG/ChangePage/Last" to="." method="_on_last_pressed" flags=18]
+[connection signal="pressed" from="BG/ChangePage/Next" to="." method="_on_next_pressed" flags=18]
+[connection signal="mouse_entered" from="BG/OtherHelp" to="." method="_on_other_help_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="BG/OtherHelp" to="." method="_on_other_help_mouse_exited" flags=18]

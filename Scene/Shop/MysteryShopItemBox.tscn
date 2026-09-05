@@ -1,0 +1,85 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Texture2D" uid="uid://md28s4io48fc" path="res://Art/Shop/ShopItemBox.png" id="1"]
+[ext_resource type="Script" path="res://Script/Shop/MysteryShopItemBox.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://b3qof5s6nwscy" path="res://Scene/BackPack/Box_1.tscn" id="3"]
+[ext_resource type="FontFile" uid="uid://ond0o3n8a00i" path="res://Font/华康宋体W3.ttc" id="4"]
+[ext_resource type="Texture2D" uid="uid://cm8c4rchui7u8" path="res://Art/Shop/Purchase.png" id="5"]
+
+[sub_resource type="StyleBoxEmpty" id="1"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="2"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="3"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="4"]
+script = null
+
+[sub_resource type="StyleBoxEmpty" id="5"]
+script = null
+
+[node name="MysteryShopItemBox" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource( "1" )
+script = ExtResource( "2" )
+metadata/_edit_lock_ = true
+
+[node name="ItemBox" parent="." instance=ExtResource( "3" )]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 18.0
+offset_right = 72.0
+offset_bottom = 68.0
+metadata/_edit_lock_ = true
+
+[node name="Num" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 75.0
+offset_right = 90.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource( "4" )
+theme_override_font_sizes/font_size = 13
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Need" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 92.0
+offset_right = 90.0
+offset_bottom = 112.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource( "4" )
+theme_override_font_sizes/font_size = 13
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Purchase" type="Button" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 111.0
+offset_right = 79.0
+offset_bottom = 136.0
+focus_mode = 0
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 0.682353)
+theme_override_styles/normal = SubResource( "1" )
+theme_override_styles/hover = SubResource( "2" )
+theme_override_styles/pressed = SubResource( "3" )
+theme_override_styles/disabled = SubResource( "4" )
+theme_override_styles/focus = SubResource( "5" )
+icon = ExtResource( "5" )
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="Purchase" to="." method="_on_purchase_pressed" flags=18]

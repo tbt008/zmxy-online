@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Script/AllSound/MonsterBeHit.gd" id="1"]
+
+[node name="MonsterBeHit" type="AudioStreamPlayer"]
+process_mode = 3
+script = ExtResource( "1" )
+
+[connection signal="finished" from="." to="." method="_on_finished" flags=18]
