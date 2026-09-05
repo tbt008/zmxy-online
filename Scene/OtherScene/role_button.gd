@@ -21,7 +21,7 @@ func _physics_process(delta: float) -> void:
 
 
 
-func _on_pressed() -> void:
+func _on_pressed(_pressed = null) -> void:
 	match MyName:
 		"swk":
 			MyFather.CurrentChoose = 1

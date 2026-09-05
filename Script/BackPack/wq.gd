@@ -10,7 +10,7 @@ func _physics_process(_delta: float) -> void:
 	pp = get_tree().get_root().get_mouse_position() - Vector2(430,250)
 	if add_equ_box != null:
 		add_equ_box.position = pp
-func _on_pressed() -> void:
+func _on_pressed(_pressed = null) -> void:
 	if PlayerData.CheckCanUsePage("装备列表") == 0:
 		Global.AddMessageShow(Global.get_parent_(self,5),"背包已满，无法卸下！！",1.5,Vector2(80,0))			
 		return

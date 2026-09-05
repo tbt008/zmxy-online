@@ -9,7 +9,7 @@ func _physics_process(delta: float) -> void:
 		texture_disabled = LoadPic(BossName,1)
 func LoadPic(Name,Type):
 	return load("res://Art/TwentyEightConstellations/" + str(Name) + '_' + str(Type) + ".png")
-func _on_pressed() -> void:
+func _on_pressed(_pressed = null) -> void:
 	if not IsOpen:
 		Global.AddMessageShow(Global.Windows_,"暂未开放！！",1.5,Vector2(500,305))
 		return

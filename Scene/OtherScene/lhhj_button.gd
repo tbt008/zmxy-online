@@ -6,6 +6,6 @@ func _physics_process(delta: float) -> void:
 	set_physics_process(false)
 
 
-func _on_pressed() -> void:
+func _on_pressed(_pressed = null) -> void:
 	Father.TargetBoss = selfName
 	Father.ShowProp()

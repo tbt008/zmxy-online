@@ -369,7 +369,7 @@ func _onPressWhenXQ():
 				"":
 					pass
 		return
-func _on_pressed() -> void:
+func _on_pressed(_pressed = null) -> void:
 #	if MainBack is MainBackPack:
 #		if MainBack.ChooseMs:
 #			if not IsChoose:

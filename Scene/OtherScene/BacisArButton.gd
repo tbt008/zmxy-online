@@ -91,7 +91,7 @@ func GeTroleNmae(cd_num):
 	return "空存档"
 
 
-func _on_pressed() -> void:
+func _on_pressed(_pressed = null) -> void:
 	Global.cd_path = "user://MyAr_" + str(MyNum) + ".json"
 	if not MemoryClass.读取游戏(Global.cd_path):
 		return

@@ -13,7 +13,7 @@ func _physics_process(delta: float) -> void:
 			pd.visible = true
 		else:
 			pd.visible = false
-func _on_pressed() -> void:
+func _on_pressed(_pressed = null) -> void:
 	match zhenfaName:
 		"slz":
 			RealName = "森罗阵"

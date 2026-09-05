@@ -18,5 +18,5 @@ func _physics_process(_delta: float) -> void:
 
 
 
-func _on_finished() -> void:
+func _on_finished(_stream = null) -> void:
 	queue_free()

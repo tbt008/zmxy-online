@@ -87,7 +87,7 @@ func CheckTaskFinish():
 		"DailyTask":
 			pass
 	return true
-func _on_pressed() -> void:
+func _on_pressed(_pressed = null) -> void:
 	MyFather.TaskIsFinish = Finish
 	MyFather.CurrentTaskName = TaskName
 	MyFather.ADDReward()
