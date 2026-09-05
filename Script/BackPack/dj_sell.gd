@@ -56,7 +56,7 @@ func _on_use_pressed(_pressed = null) -> void:#消耗品使用方法，到时候
 	#queue_free()
 
 
-func _on_panel_mouse_exited() -> void:
+func _on_panel_mouse_exited(_event = null) -> void:
 	queue_free()
 func UseMpyj():
 	for i in PlayerData.player_data["技能学习"]:

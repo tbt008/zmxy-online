@@ -219,76 +219,76 @@ func add_text(text,parent):
 func remove_text():
 	if message != null:
 		message.queue_free()
-func _on_hp_mouse_entered() -> void:
+func _on_hp_mouse_entered(_event = null) -> void:
 	if current_pro_page == 1:
 		#Global.AddBasicMonmentInfo(self,"生命：归零后角色死亡。")
 		add_text("生命：角色的健康力，归0后角色死亡。",hp)
 	else:
 		add_text("命中：与闪避以减法相抵扣。",hp)
-func _on_hp_mouse_exited() -> void:
+func _on_hp_mouse_exited(_event = null) -> void:
 	remove_text()
-func _on_mp_mouse_entered() -> void:
+func _on_mp_mouse_entered(_event = null) -> void:
 	if current_pro_page == 1:
 		add_text("魔法：角色使用技能所需消耗的能量，低于需求则无法释放技能。",mp)
 	else:
 		add_text("韧性：与幸运以减法相抵扣。",mp)
-func _on_mp_mouse_exited() -> void:
+func _on_mp_mouse_exited(_event = null) -> void:
 	remove_text()
-func _on_att_mouse_entered() -> void:
+func _on_att_mouse_entered(_event = null) -> void:
 	if current_pro_page == 1:
 		add_text("攻击：角色造成一切伤害的基本来源。",att)
 	else:
 		add_text("吸血：造成直接伤害时，恢复该倍率×最终伤害的生命值。",att)
-func _on_att_mouse_exited() -> void:
+func _on_att_mouse_exited(_event = null) -> void:
 	remove_text()
-func _on_lucky_mouse_entered() -> void:
+func _on_lucky_mouse_entered(_event = null) -> void:
 	if current_pro_page == 1:
 		add_text("幸运：提升角色造成暴击时的暴击伤害。",lucky)
 	else:
 		add_text("破甲：与物理防御以减法相抵扣。",lucky)
-func _on_lucky_mouse_exited() -> void:
+func _on_lucky_mouse_exited(_event = null) -> void:
 	remove_text()
-func _on_def_mouse_entered() -> void:
+func _on_def_mouse_entered(_event = null) -> void:
 	if current_pro_page == 1:
 		add_text("物防：减免角色受到的物理伤害。",def)
 	else:
 		add_text("暴免：与暴击以减法相抵扣。",def)
-func _on_def_mouse_exited() -> void:
+func _on_def_mouse_exited(_event = null) -> void:
 	remove_text()
-func _on_mdef_mouse_entered() -> void:
+func _on_mdef_mouse_entered(_event = null) -> void:
 	if current_pro_page == 1:
 		add_text("魔防：减免角色受到的魔法伤害。",mdef)
 	else:
 		add_text("破魔：与魔防以减法相抵扣。",mdef)
-func _on_mdef_mouse_exited() -> void:
+func _on_mdef_mouse_exited(_event = null) -> void:
 	remove_text()
-func _on_crit_mouse_entered() -> void:
+func _on_crit_mouse_entered(_event = null) -> void:
 	if current_pro_page == 1:
 		add_text("暴击：提升角色造成更高伤害的几率。",crit)
 	else:
 		pass
-func _on_crit_mouse_exited() -> void:
+func _on_crit_mouse_exited(_event = null) -> void:
 	remove_text()
-func _on_miss_mouse_entered() -> void:
+func _on_miss_mouse_entered(_event = null) -> void:
 	if current_pro_page == 1:
 		add_text("闪避：提升角色无视伤害的几率（闪避时视为霸体效果）。",miss)
 	else:
 		pass
-func _on_miss_mouse_exited() -> void:
+func _on_miss_mouse_exited(_event = null) -> void:
 	remove_text()
-func _on_ehp_mouse_entered() -> void:
+func _on_ehp_mouse_entered(_event = null) -> void:
 	if current_pro_page == 1:
 		add_text("回血：角色每秒恢复该数值的生命。",ehp)
 	else:
 		pass
-func _on_ehp_mouse_exited() -> void:
+func _on_ehp_mouse_exited(_event = null) -> void:
 	remove_text()
-func _on_emp_mouse_entered() -> void:
+func _on_emp_mouse_entered(_event = null) -> void:
 	if current_pro_page == 1:
 		add_text("回魔：角色每秒恢复该数值的魔法。",emp)
 	else:
 		pass
-func _on_emp_mouse_exited() -> void:
+func _on_emp_mouse_exited(_event = null) -> void:
 	remove_text()
 func get_icon_name(obj):
 	var name_ = str(obj.icon.resource_path.split("AllItems/")[1].split(".")[0])

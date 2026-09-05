@@ -343,18 +343,18 @@ func GetName(num):
 	return Skill_nbname
 
 
-func _on_ski_1_mouse_entered() -> void:
+func _on_ski_1_mouse_entered(_event = null) -> void:
 	var Hero = BaseHero.new()
 	var Old = Hero.get_need_mp(GetName(0),false)
 	var New =Hero.get_need_mp(GetName(0),true)
 	var RoleID = PlayerData.player_data["Myself"]
 	SkillInfo = Global.addRoleMagicNeed(self,get_local_mouse_position(),str(Skill_Name["角色" + str(RoleID)][0]),Old,New)
-func _on_ski_1_mouse_exited() -> void:
+func _on_ski_1_mouse_exited(_event = null) -> void:
 	if SkillInfo != null:
 		SkillInfo.queue_free()
 
 
-func _on_ski_2_mouse_entered() -> void:
+func _on_ski_2_mouse_entered(_event = null) -> void:
 	var Hero = BaseHero.new()
 	var Old = Hero.get_need_mp(GetName(1),false)
 	var New =Hero.get_need_mp(GetName(1),true)
@@ -362,12 +362,12 @@ func _on_ski_2_mouse_entered() -> void:
 	SkillInfo = Global.addRoleMagicNeed(self,get_local_mouse_position(),str(Skill_Name["角色" + str(RoleID)][1]),Old,New)
 
 
-func _on_ski_2_mouse_exited() -> void:
+func _on_ski_2_mouse_exited(_event = null) -> void:
 	if SkillInfo != null:
 		SkillInfo.queue_free()
 
 
-func _on_ski_3_mouse_entered() -> void:
+func _on_ski_3_mouse_entered(_event = null) -> void:
 	var Hero = BaseHero.new()
 	var Old = Hero.get_need_mp(GetName(2),false)
 	var New =Hero.get_need_mp(GetName(2),true)
@@ -375,12 +375,12 @@ func _on_ski_3_mouse_entered() -> void:
 	SkillInfo = Global.addRoleMagicNeed(self,get_local_mouse_position(),str(Skill_Name["角色" + str(RoleID)][2]),Old,New)
 
 
-func _on_ski_3_mouse_exited() -> void:
+func _on_ski_3_mouse_exited(_event = null) -> void:
 	if SkillInfo != null:
 		SkillInfo.queue_free()
 
 
-func _on_ski_4_mouse_entered() -> void:
+func _on_ski_4_mouse_entered(_event = null) -> void:
 	var Hero = BaseHero.new()
 	var Old = Hero.get_need_mp(GetName(3),false)
 	var New =Hero.get_need_mp(GetName(3),true)
@@ -388,12 +388,12 @@ func _on_ski_4_mouse_entered() -> void:
 	SkillInfo = Global.addRoleMagicNeed(self,get_local_mouse_position(),str(Skill_Name["角色" + str(RoleID)][3]),Old,New)
 
 
-func _on_ski_4_mouse_exited() -> void:
+func _on_ski_4_mouse_exited(_event = null) -> void:
 	if SkillInfo != null:
 		SkillInfo.queue_free()
 
 
-func _on_ski_5_mouse_entered() -> void:
+func _on_ski_5_mouse_entered(_event = null) -> void:
 	var Hero = BaseHero.new()
 	var Old = Hero.get_need_mp(GetName(4),false)
 	var New =Hero.get_need_mp(GetName(4),true)
@@ -401,12 +401,12 @@ func _on_ski_5_mouse_entered() -> void:
 	SkillInfo = Global.addRoleMagicNeed(self,get_local_mouse_position(),str(Skill_Name["角色" + str(RoleID)][4]),Old,New)
 
 
-func _on_ski_5_mouse_exited() -> void:
+func _on_ski_5_mouse_exited(_event = null) -> void:
 	if SkillInfo != null:
 		SkillInfo.queue_free()
 
 
-func _on_ski_6_mouse_entered() -> void:
+func _on_ski_6_mouse_entered(_event = null) -> void:
 	var Hero = BaseHero.new()
 	var Old = Hero.get_need_mp(GetName(5),false)
 	var New =Hero.get_need_mp(GetName(5),true)
@@ -414,12 +414,12 @@ func _on_ski_6_mouse_entered() -> void:
 	SkillInfo = Global.addRoleMagicNeed(self,get_local_mouse_position(),str(Skill_Name["角色" + str(RoleID)][5]),Old,New)
 
 
-func _on_ski_6_mouse_exited() -> void:
+func _on_ski_6_mouse_exited(_event = null) -> void:
 	if SkillInfo != null:
 		SkillInfo.queue_free()
 
 
-func _on_ski_7_mouse_entered() -> void:
+func _on_ski_7_mouse_entered(_event = null) -> void:
 	var Hero = BaseHero.new()
 	var Old = Hero.get_need_mp(GetName(6),false)
 	var New = Hero.get_need_mp(GetName(6),true)
@@ -427,12 +427,12 @@ func _on_ski_7_mouse_entered() -> void:
 	SkillInfo = Global.addRoleMagicNeed(self,get_local_mouse_position(),str(Skill_Name["角色" + str(RoleID)][6]),Old,New)
 
 
-func _on_ski_7_mouse_exited() -> void:
+func _on_ski_7_mouse_exited(_event = null) -> void:
 	if SkillInfo != null:
 		SkillInfo.queue_free()
 
 
-func _on_ski_8_mouse_entered() -> void:
+func _on_ski_8_mouse_entered(_event = null) -> void:
 	var Hero = BaseHero.new()
 	var Old = Hero.get_need_mp(GetName(7),false)
 	var New =Hero.get_need_mp(GetName(7),true)
@@ -440,12 +440,12 @@ func _on_ski_8_mouse_entered() -> void:
 	SkillInfo = Global.addRoleMagicNeed(self,get_local_mouse_position(),str(Skill_Name["角色" + str(RoleID)][7]),Old,New)
 
 
-func _on_ski_8_mouse_exited() -> void:
+func _on_ski_8_mouse_exited(_event = null) -> void:
 	if SkillInfo != null:
 		SkillInfo.queue_free()
 
 
-func _on_ski_9_mouse_entered() -> void:
+func _on_ski_9_mouse_entered(_event = null) -> void:
 	var Hero = BaseHero.new()
 	var Old = Hero.get_need_mp(GetName(8),false)
 	var New =Hero.get_need_mp(GetName(8),true)
@@ -453,6 +453,6 @@ func _on_ski_9_mouse_entered() -> void:
 	SkillInfo = Global.addRoleMagicNeed(self,get_local_mouse_position(),str(Skill_Name["角色" + str(RoleID)][8]),Old,New)
 
 
-func _on_ski_9_mouse_exited() -> void:
+func _on_ski_9_mouse_exited(_event = null) -> void:
 	if SkillInfo != null:
 		SkillInfo.queue_free()

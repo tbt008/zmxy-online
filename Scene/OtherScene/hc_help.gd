@@ -353,9 +353,9 @@ func remove_text():
 	if message != null:
 		message.queue_free()
 
-func _on_other_help_mouse_entered() -> void:
+func _on_other_help_mouse_entered(_event = null) -> void:
 	add_text("同类型的装备均可以参与法宝合成！",get_parent())
 
 
-func _on_other_help_mouse_exited() -> void:
+func _on_other_help_mouse_exited(_event = null) -> void:
 	remove_text()

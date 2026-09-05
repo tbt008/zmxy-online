@@ -139,7 +139,7 @@ func state_hurt():
 		is_be_attacking = false
 		return
 	super.state_hurt()
-func _on_buttonlist_mouse_entered() -> void:
+func _on_buttonlist_mouse_entered(_event = null) -> void:
 	ShowBox = true
 
 
@@ -163,7 +163,7 @@ func _on_bt_3_pressed(_pressed = null) -> void:
 		CanAttack = false
 	else:
 		CanAttack = true
-func _on_buttonlist_mouse_exited() -> void:
+func _on_buttonlist_mouse_exited(_event = null) -> void:
 	ShowBox = false
 func HurtReduceHp(value,target):
 	IsAttacking = true

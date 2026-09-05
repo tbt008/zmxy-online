@@ -939,6 +939,8 @@ func call_hero(who: String,parent,position: Vector2,_dir: bool):
 		target = instance_scene(load("res://Scene/Hero/Role_4/Role_4.tscn"),parent)
 	elif who == "role_5":
 		target = instance_scene(load("res://Scene/Hero/Role_5/Role_5.tscn"),parent)
+	if target == null:
+		return null
 	target.position = position
 	get_player = target
 	return target

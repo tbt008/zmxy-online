@@ -107,6 +107,8 @@ func set_value_Hp(value):
 		return
 	create_tween().tween_property($roleLayer/role_hp_mp_exp/hp_bar/hp_bar2,"value",value,0.6)
 func SetBuffIconInfo(Name):
+	if RoleProp.SourcePlayer == null:
+		return
 	var IsHave: bool#是否拥有
 	var Count: int = 1#拥有个数
 	var BuffInfo = {

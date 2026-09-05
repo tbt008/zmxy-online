@@ -195,12 +195,12 @@ func _on_mouse_exited() -> void:
 	#queue_free()
 
 
-func _on_v_box_container_mouse_exited() -> void:
+func _on_v_box_container_mouse_exited(_event = null) -> void:
 	pass
 	#queue_free()
 
 
-func _on_panel_mouse_exited() -> void:
+func _on_panel_mouse_exited(_event = null) -> void:
 	pass
 	#queue_free()
 func CheckCanEquipment(EquipmentName):#检测某装备是否属于该玩家

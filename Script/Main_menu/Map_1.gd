@@ -225,87 +225,87 @@ func PlayAn(Level):
 				level.play("level10")
 			else:
 				level_10.material = null
-func _on_level_1_mouse_entered() -> void:
+func _on_level_1_mouse_entered(_event = null) -> void:
 	pass
-func _on_level_1_mouse_exited() -> void:
+func _on_level_1_mouse_exited(_event = null) -> void:
 	if not level_1.disabled:
 		PlayAn(1)
-func _on_level_2_mouse_entered() -> void:
+func _on_level_2_mouse_entered(_event = null) -> void:
 	pass
-func _on_level_2_mouse_exited() -> void:
+func _on_level_2_mouse_exited(_event = null) -> void:
 	if not level_2.disabled:
 		PlayAn(2)
 
 
-func _on_level_3_mouse_entered() -> void:
+func _on_level_3_mouse_entered(_event = null) -> void:
 	pass # Replace with function body.
 
 
-func _on_level_3_mouse_exited() -> void:
+func _on_level_3_mouse_exited(_event = null) -> void:
 	if not level_3.disabled:
 		PlayAn(3)
 
 
-func _on_level_4_mouse_entered() -> void:
+func _on_level_4_mouse_entered(_event = null) -> void:
 	pass # Replace with function body.
 
 
-func _on_level_4_mouse_exited() -> void:
+func _on_level_4_mouse_exited(_event = null) -> void:
 	if not level_4.disabled:
 		PlayAn(4)
 
 
-func _on_level_5_mouse_entered() -> void:
+func _on_level_5_mouse_entered(_event = null) -> void:
 	pass # Replace with function body.
 
 
-func _on_level_5_mouse_exited() -> void:
+func _on_level_5_mouse_exited(_event = null) -> void:
 	if not level_5.disabled:
 		PlayAn(5)
 
 
-func _on_level_6_mouse_entered() -> void:
+func _on_level_6_mouse_entered(_event = null) -> void:
 	pass # Replace with function body.
 
 
-func _on_level_6_mouse_exited() -> void:
+func _on_level_6_mouse_exited(_event = null) -> void:
 	if not level_6.disabled:
 		PlayAn(6)
 
 
-func _on_level_7_mouse_entered() -> void:
+func _on_level_7_mouse_entered(_event = null) -> void:
 	pass # Replace with function body.
 
 
-func _on_level_7_mouse_exited() -> void:
+func _on_level_7_mouse_exited(_event = null) -> void:
 	if not level_7.disabled:
 		PlayAn(7)
 
 
-func _on_level_8_mouse_entered() -> void:
+func _on_level_8_mouse_entered(_event = null) -> void:
 	pass # Replace with function body.
 
 
-func _on_level_8_mouse_exited() -> void:
+func _on_level_8_mouse_exited(_event = null) -> void:
 	if not level_8.disabled:
 		PlayAn(8)
 
 
-func _on_level_9_mouse_entered() -> void:
+func _on_level_9_mouse_entered(_event = null) -> void:
 	if not level_9.disabled:
 		level2.play("szwl2")
 
 
-func _on_level_9_mouse_exited() -> void:
+func _on_level_9_mouse_exited(_event = null) -> void:
 	if not level_9.disabled:
 		level2.play("szwl")
 
 
-func _on_level_10_mouse_entered() -> void:
+func _on_level_10_mouse_entered(_event = null) -> void:
 	pass
 
 
-func _on_level_10_mouse_exited() -> void:
+func _on_level_10_mouse_exited(_event = null) -> void:
 	if not level_8.disabled:
 		PlayAn(10)
 
