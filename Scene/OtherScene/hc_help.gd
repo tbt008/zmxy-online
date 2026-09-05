@@ -304,36 +304,36 @@ func RemoveItem():
 			i.queue_free()
 
 
-func _on_last_pressed() -> void:
+func _on_last_pressed(_pressed = null) -> void:
 	if CurrentPage > 1:
 		CurrentPage -= 1
 
 
-func _on_next_pressed() -> void:
+func _on_next_pressed(_pressed = null) -> void:
 	if CurrentPage < MaxPage:
 		CurrentPage += 1
 
 
-func _on_total_pressed() -> void:
+func _on_total_pressed(_pressed = null) -> void:
 	CurrentType = 0
 
 
-func _on_zb_pressed() -> void:
+func _on_zb_pressed(_pressed = null) -> void:
 	CurrentType = 1
 
 
-func _on_dj_pressed() -> void:
+func _on_dj_pressed(_pressed = null) -> void:
 	CurrentType = 2
 
 
-func _on_fb_pressed() -> void:
+func _on_fb_pressed(_pressed = null) -> void:
 	CurrentType = 3
 
-func _on_sz_pressed() -> void:
+func _on_sz_pressed(_pressed = null) -> void:
 	CurrentType = 4
 	
 	
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	self.queue_free()
 
 #func SetList(Name_List,SCW):

@@ -250,15 +250,15 @@ func _physics_process(_delta: float) -> void:
 	infor.text = str(currentpage) + '/' + str(maxpage)
 	#Global.CollectNum = int(Num)
 	collect_value.text = str(CurrentType) + '收集进度：(' + str(Num) + '/' + str(GetCurrentTypeList().size()) + ")"
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()
 
 
-func _on_last_pressed() -> void:
+func _on_last_pressed(_pressed = null) -> void:
 	if currentpage > 1:
 		currentpage -= 1
 		AddBox()
-func _on_next_pressed() -> void:
+func _on_next_pressed(_pressed = null) -> void:
 	if currentpage < maxpage:
 		currentpage += 1
 		AddBox()
@@ -318,23 +318,23 @@ func ChangeTx():
 	else:
 		tx.play(PlayerData.player_data["幻化列表"]["头衔"])
 
-func _on_total_pressed() -> void:
+func _on_total_pressed(_pressed = null) -> void:
 	CurrentType = "全部"
 
-func _on_wq_pressed() -> void:
+func _on_wq_pressed(_pressed = null) -> void:
 	CurrentType = "武器"
 
-func _on_fj_pressed() -> void:
+func _on_fj_pressed(_pressed = null) -> void:
 	CurrentType = "防具"
 
-func _on_cb_pressed() -> void:
+func _on_cb_pressed(_pressed = null) -> void:
 	CurrentType = "翅膀"
 	
-func _on_sz_pressed() -> void:
+func _on_sz_pressed(_pressed = null) -> void:
 	CurrentType = "时装"
 
 
-func _on_tx_pressed() -> void:
+func _on_tx_pressed(_pressed = null) -> void:
 	CurrentType = "头衔"
 func SetWingsOffset():
 	var CurrentWingsName: String

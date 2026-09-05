@@ -8,7 +8,7 @@ func _physics_process(delta: float) -> void:
 			csm.texture = load("res://Art/Game_3/OtherMapButton/jjtj_.png")
 		elif Parent is Map4:
 			csm.texture = load("res://Art/Game_3/OtherMapButton/hdtt.png")
-func _on_ttzstz_pressed() -> void:
+func _on_ttzstz_pressed(_pressed = null) -> void:
 	if PlayerData.ChekEqzb("头衔","xczg"):
 		Global.AddMessageShow(get_parent(),"本副本不允许使用修成正果头衔！",1.5,Vector2(470,300))
 		return
@@ -23,7 +23,7 @@ func _on_ttzstz_pressed() -> void:
 		return
 	get_tree().change_scene_to_file("res://Scene/Level/Level_hdzm.tscn")
 
-func _on_csm_pressed() -> void:
+func _on_csm_pressed(_pressed = null) -> void:
 	if Parent == null:
 		return
 	if Parent is Map3:
@@ -49,7 +49,7 @@ func challenge():
 	get_tree().change_scene_to_file("res://Scene/Main_menu/Map_4.tscn")
 	MemoryClass.保存游戏(Global.cd_path)
 
-func _on_hdgq_pressed() -> void:
+func _on_hdgq_pressed(_pressed = null) -> void:
 	if PlayerData.ChekEqzb("头衔","xczg"):
 		Global.AddMessageShow(get_parent(),"本副本不允许使用修成正果头衔！",1.5,Vector2(470,300))
 		return
@@ -64,5 +64,5 @@ func _on_hdgq_pressed() -> void:
 		return
 	Global.Addhdgqmap(self,Vector2(0,0))
 
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()

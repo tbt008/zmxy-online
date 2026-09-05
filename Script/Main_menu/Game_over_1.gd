@@ -79,18 +79,18 @@ func _ready() -> void:
 		Global.addBGM_(self,"res://Music/level/2_bg4.mp3")
 		Over_Player.play("Over_1")
 
-func _on_tiaoguo_pressed() -> void:
+func _on_tiaoguo_pressed(_pressed = null) -> void:
 	get_tree().change_scene_to_file("res://Scene/Level/victory.tscn")
 
 
-func _on_beisu_pressed() -> void:
+func _on_beisu_pressed(_pressed = null) -> void:
 	if int($beisu/beisu_l.text) > 0:
 		Over_Player.speed_scale = int($beisu/beisu_l.text)
 	else:
 		Global.add_moment_text(self,Vector2(470,300),"请正确输入速度！！",2)
 
 
-func _on_bg_1_pressed() -> void:
+func _on_bg_1_pressed(_pressed = null) -> void:
 	Over_Player.play("Over_2")
 
 func ChangeTomap():

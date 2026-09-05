@@ -145,7 +145,7 @@ func load_(name_):
 	var abc = load("res://Art/Monster/MonsterHead/" + str(name_) + ".png")
 	return abc
 
-func _on_monster_name_pressed() -> void:
+func _on_monster_name_pressed(_pressed = null) -> void:
 	if MonsterInfo == null:
 		MonsterInfo = Global.AddMonsterInfo(Global.get_parent_(self,0),MonsterName,Vector2(550,450))
 		MonsterInfo.z_index = 999

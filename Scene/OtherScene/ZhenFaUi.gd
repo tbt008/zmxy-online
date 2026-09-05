@@ -97,24 +97,24 @@ func OnChangeName():
 	SetRightInfo()
 
 
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()
 
 
-func _on_zfxq_pressed() -> void:
+func _on_zfxq_pressed(_pressed = null) -> void:
 	CurrentUseType = "阵法详情"
 	SetRightInfo()
 
-func _on_zysj_pressed() -> void:
+func _on_zysj_pressed(_pressed = null) -> void:
 	CurrentUseType = "阵眼升级"
 	SetRightInfo()
 	
-func _on_zftp_pressed() -> void:
+func _on_zftp_pressed(_pressed = null) -> void:
 	CurrentUseType = "阵法突破"
 	SetRightInfo()
 
 
-func _on_use_pressed() -> void:
+func _on_use_pressed(_pressed = null) -> void:
 	var Name_
 	match CurrentZhenFaName:
 		"slz":
@@ -153,5 +153,5 @@ func _on_use_pressed() -> void:
 			cur_name.text = ""
 
 
-func _on_button_pressed() -> void:
+func _on_button_pressed(_pressed = null) -> void:
 	Global.AddZhenFaHelp(self,Vector2(0,0))

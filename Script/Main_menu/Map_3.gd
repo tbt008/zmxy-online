@@ -169,138 +169,138 @@ func check_pass_level():
 		tzhy.disabled = true
 
 
-func _on_level_21_pressed() -> void:
+func _on_level_21_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"九重天",Vector2(0,0),"res://Scene/Level/Level_22.tscn")
 
 
-func _on_level_22_pressed() -> void:
+func _on_level_22_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"天宫道",Vector2(0,0),"res://Scene/Level/Level_23.tscn")
 
 
-func _on_level_23_pressed() -> void:
+func _on_level_23_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"南天门",Vector2(0,0),"res://Scene/Level/Level_24.tscn")
 
 
-func _on_level_24_pressed() -> void:
+func _on_level_24_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"南天王殿",Vector2(0,0),"res://Scene/Level/Level_25.tscn")
 
 
-func _on_level_25_pressed() -> void:
+func _on_level_25_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"西天王殿",Vector2(0,0),"res://Scene/Level/Level_26.tscn")
 
 
-func _on_level_26_pressed() -> void:
+func _on_level_26_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"北天王殿",Vector2(0,0),"res://Scene/Level/Level_27.tscn")
 
 
-func _on_level_27_pressed() -> void:
+func _on_level_27_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"彩虹楼",Vector2(0,0),"res://Scene/Level/Level_28.tscn")
 
-func _on_level_28_pressed() -> void:
+func _on_level_28_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"朝会殿",Vector2(0,0),"res://Scene/Level/Level_29.tscn")
 
 
-func _on_level_29_pressed() -> void:
+func _on_level_29_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"凌霄宝殿",Vector2(0,0),"res://Scene/Level/Level_30.tscn")
 
 
-func _on_level_30_pressed() -> void:
+func _on_level_30_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"玲珑宝塔",Vector2(0,0),"res://Scene/Level/Level_llbt.tscn")
 
-func _on_level_stz_pressed() -> void:
+func _on_level_stz_pressed(_pressed = null) -> void:
 	Global.AddMessageShow(get_parent(),"敬请期待！！！！",1.5,Vector2(470,300))
 
 
-func _on_level_dsg_pressed() -> void:
+func _on_level_dsg_pressed(_pressed = null) -> void:
 	if PlayerData.player_data.兜率宫 == 0:
 		Global.AddMessageShow(get_parent(),"需通关玲珑宝塔！",1.5,Vector2(470,300))
 	else:
 		Global.AddLevelInfo(self,"兜率宫",Vector2(0,0),"兜率宫")
 
-func _on_level_hdzm_pressed() -> void:
+func _on_level_hdzm_pressed(_pressed = null) -> void:
 	if PlayerData.player_data.截教天镜 == false:
 		Global.AddMessageShow(get_parent(),"需通关兜率宫！",1.5,Vector2(470,300))
 	else:
 		Global.AddHDZM(self,self)
-func _on_level_sssl_pressed() -> void:
+func _on_level_sssl_pressed(_pressed = null) -> void:
 	Global.AddMessageShow(get_parent(),"敬请期待！！！！",1.5,Vector2(470,300))
 
 
-func _on_smdp_pressed() -> void:
+func _on_smdp_pressed(_pressed = null) -> void:
 	Global.AddMysteryShop(self,Vector2(0,0))
 
 
-func _on_lsh_pressed() -> void:
+func _on_lsh_pressed(_pressed = null) -> void:
 	Global.AddMessageShow(get_parent(),"敬请期待！！！！",1.5,Vector2(470,300))
 
 
-func _on_kls_pressed() -> void:
+func _on_kls_pressed(_pressed = null) -> void:
 	get_tree().change_scene_to_file("res://Scene/Level/Level_kls.tscn")
 
 
-func _on_ghg_pressed() -> void:
+func _on_ghg_pressed(_pressed = null) -> void:
 	Global.AddMessageShow(get_parent(),"敬请期待！！！！",1.5,Vector2(470,300))
 
 
-func _on_tzhy_pressed() -> void:
+func _on_tzhy_pressed(_pressed = null) -> void:
 	if PlayerData.player_data["玩家等级"] < 40:
 		Global.AddMessageShow(get_parent(),"需要角色等级大于等于40级！",1.5,Vector2(470,300))
 		return
 	Global.change_secen("res://Scene/Level/Level_tzhy.tscn")
 
 
-func _on_memory_game_pressed() -> void:
+func _on_memory_game_pressed(_pressed = null) -> void:
 	MemoryClass.保存游戏(Global.cd_path)
 	Global.AddMessageShow(get_parent(),"保存成功！本作品完全免费，谨防受骗上当！",1.5,Vector2(470,300))
 
 
-func _on_shop_pressed() -> void:
+func _on_shop_pressed(_pressed = null) -> void:
 	Global.add_SHOP(self,Vector2(0,0))
 
 
-func _on_ldl_pressed() -> void:
+func _on_ldl_pressed(_pressed = null) -> void:
 	Global.add_ldl(self,Vector2(0,0))
 
 
-func _on_learn_skill_pressed() -> void:
+func _on_learn_skill_pressed(_pressed = null) -> void:
 	if skill_target == null:
 		skill_target = Global.add_learn_skill(self,Vector2(0,0))
 	else:
 		skill_target.queue_free()
 
 
-func _on_actity_pressed() -> void:
+func _on_actity_pressed(_pressed = null) -> void:
 	Global.AddMessageShow(get_parent(),"敬请期待！！！！",1.5,Vector2(470,300))
 
 
-func _on_task_pressed() -> void:
+func _on_task_pressed(_pressed = null) -> void:
 	Global.AddBasicTask_(self,Vector2(0,0))
 
 
-func _on_return_to_main_menu_pressed() -> void:
+func _on_return_to_main_menu_pressed(_pressed = null) -> void:
 	get_tree().change_scene_to_file("res://Scene/Main_menu/Main_Menu.tscn")
 
 
-func _on_game_set_pressed() -> void:
+func _on_game_set_pressed(_pressed = null) -> void:
 	Global.Add_GameSet_(self,Vector2(0,0))
 
 
-func _on_next_pressed() -> void:
+func _on_next_pressed(_pressed = null) -> void:
 	get_tree().change_scene_to_file("res://Scene/Main_menu/Map_1.tscn")
 
 
 
 
 
-func _on_button_pressed() -> void:
+func _on_button_pressed(_pressed = null) -> void:
 	get_tree().change_scene_to_file("res://Scene/Main_menu/Map_2.tscn")
 
 
-func _on_game_an_pressed() -> void:
+func _on_game_an_pressed(_pressed = null) -> void:
 	Global.AddGameAnnouncement(self,Vector2(0,0))
 
 
-func _on_pellet_pressed() -> void:
+func _on_pellet_pressed(_pressed = null) -> void:
 	Global.AddBasicPellet_(self,Vector2(0,0))
 func PlayAn(Level):
 	
@@ -360,5 +360,5 @@ func PlayAn(Level):
 				level_29.material = null
 
 
-func _on_level_lhhj_pressed() -> void:
+func _on_level_lhhj_pressed(_pressed = null) -> void:
 	Global.Addlhhj(self,Vector2(0,0))

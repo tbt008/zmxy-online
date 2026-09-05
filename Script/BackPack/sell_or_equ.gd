@@ -13,7 +13,7 @@ func _physics_process(_delta: float) -> void:
 	await get_tree().create_timer(1.8).timeout
 	if jm == null:
 		queue_free()
-func _on_equ_pressed() -> void:
+func _on_equ_pressed(_pressed = null) -> void:
 	var new_list = PlayerData.GetzbData(page,number)
 	if not CheckCanEquipment(new_list["名字"]):
 		return
@@ -134,7 +134,7 @@ func _on_equ_pressed() -> void:
 	queue_free()
 
 
-func _on_sell_pressed() -> void:
+func _on_sell_pressed(_pressed = null) -> void:
 	if EQ_prop == null:
 		PlayerData.remove_zb(page,number)
 		return

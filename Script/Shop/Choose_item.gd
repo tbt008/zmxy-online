@@ -72,7 +72,7 @@ func _on_item_list_item_selected(index: int) -> void:
 	current_choose = int(index)
 
 
-func _on_qd_pressed() -> void:
+func _on_qd_pressed(_pressed = null) -> void:
 	if current_choose >= 0:
 		var names
 		names = list_[current_choose]["名字"]
@@ -128,9 +128,9 @@ func get_wx_():
 		return new_list
 
 
-func _on_qx_pressed() -> void:
+func _on_qx_pressed(_pressed = null) -> void:
 	queue_free()
 
 
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()

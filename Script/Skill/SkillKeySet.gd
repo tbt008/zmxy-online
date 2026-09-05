@@ -53,30 +53,30 @@ var NameList = {
 }
 func _physics_process(delta: float) -> void:
 	label.text = "设置技能 “" + str(NameList[need_name]) + "” 按键"
-func _on_y_pressed() -> void:
+func _on_y_pressed(_pressed = null) -> void:
 	PlayerData.player_data["技能学习"]["技能键位"]["Y"] = str(need_name)
 	MemoryClass.保存游戏(Global.cd_path)
 	queue_free()
 
-func _on_u_pressed() -> void:
+func _on_u_pressed(_pressed = null) -> void:
 	PlayerData.player_data["技能学习"]["技能键位"]["U"] = str(need_name)
 	MemoryClass.保存游戏(Global.cd_path)
 	queue_free()
 
-func _on_i_pressed() -> void:
+func _on_i_pressed(_pressed = null) -> void:
 	PlayerData.player_data["技能学习"]["技能键位"]["I"] = str(need_name)
 	MemoryClass.保存游戏(Global.cd_path)
 	queue_free()
 
-func _on_o_pressed() -> void:
+func _on_o_pressed(_pressed = null) -> void:
 	PlayerData.player_data["技能学习"]["技能键位"]["O"] = str(need_name)
 	MemoryClass.保存游戏(Global.cd_path)
 	queue_free()
 
-func _on_l_pressed() -> void:
+func _on_l_pressed(_pressed = null) -> void:
 	PlayerData.player_data["技能学习"]["技能键位"]["L"] = str(need_name)
 	MemoryClass.保存游戏(Global.cd_path)
 	queue_free()
 
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()

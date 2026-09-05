@@ -22,14 +22,14 @@ func _on_lpline_text_changed(new_text: String) -> void:
 			lpTimes = int(PlayerData.get_item_data("smlp"))
 
 
-func _on_min_pressed() -> void:
+func _on_min_pressed(_pressed = null) -> void:
 	if int(PlayerData.get_item_data("smlp")) >= 1:
 		lpTimes = 1
 	else:
 		lpTimes = 0
 
 
-func _on_max_pressed() -> void:
+func _on_max_pressed(_pressed = null) -> void:
 	lpTimes = int(PlayerData.get_item_data("smlp"))
 
 
@@ -42,18 +42,18 @@ func _on_lhline_text_changed(new_text: String) -> void:
 			lhTimes = int(new_text)
 
 
-func _on_lhmin_pressed() -> void:
+func _on_lhmin_pressed(_pressed = null) -> void:
 	if int(PlayerData.player_data["coin_num"] / Lhdhvalue) >= 1:
 		lhTimes = 1
 	else:
 		lhTimes = 0
 
 
-func _on_lhmax_pressed() -> void:
+func _on_lhmax_pressed(_pressed = null) -> void:
 	lhTimes = int(PlayerData.player_data["coin_num"] / Lhdhvalue)
 
 
-func _on_dh_pressed() -> void:
+func _on_dh_pressed(_pressed = null) -> void:
 	
 	if TotalTimes > 0:
 		
@@ -72,5 +72,5 @@ func _on_dh_pressed() -> void:
 		Global.AddMessageShow(Global.Windows_,"兑换次数为0！！",1.5,Vector2(470,300))
 
 
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()

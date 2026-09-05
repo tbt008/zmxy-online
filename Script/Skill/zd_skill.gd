@@ -163,51 +163,51 @@ func UpLevel():#目标技能号
 			Global.AddMessageShow(self,"灵魂不足！！",1.5,Vector2(395,180))
 	RefreshInfor()
 
-func _on_skill_1_pressed() -> void:
+func _on_skill_1_pressed(_pressed = null) -> void:
 	TargetSkill = 1
 	Signals.ConnectChooseBoxSignal(self,"UpLevel")
 	Global.add_choose_text(Global.get_parent_(self,4),Vector2(0,0),"确定要升级技能" + str(GetSkillName(TargetSkill)) +"吗？" + '魔耗：' + str(GetNeedMp()[0]) + '→' + str(GetNeedMp()[1]),0)
 
 
-func _on_skill_2_pressed() -> void:
+func _on_skill_2_pressed(_pressed = null) -> void:
 	TargetSkill = 2
 	Signals.ConnectChooseBoxSignal(self,"UpLevel")
 	Global.add_choose_text(Global.get_parent_(self,4),Vector2(0,0),"确定要升级技能" + str(GetSkillName(TargetSkill)) +"吗？" + '魔耗：' + str(GetNeedMp()[0]) + '→' + str(GetNeedMp()[1]),0)
-func _on_skill_3_pressed() -> void:
+func _on_skill_3_pressed(_pressed = null) -> void:
 	TargetSkill = 3
 	Signals.ConnectChooseBoxSignal(self,"UpLevel")
 	Global.add_choose_text(Global.get_parent_(self,4),Vector2(0,0),"确定要升级技能" + str(GetSkillName(TargetSkill)) +"吗？" + '魔耗：' + str(GetNeedMp()[0]) + '→' + str(GetNeedMp()[1]),0)
-func _on_skill_4_pressed() -> void:
+func _on_skill_4_pressed(_pressed = null) -> void:
 	TargetSkill = 4
 	Signals.ConnectChooseBoxSignal(self,"UpLevel")
 	Global.add_choose_text(Global.get_parent_(self,4),Vector2(0,0),"确定要升级技能" + str(GetSkillName(TargetSkill)) +"吗？" + '魔耗：' + str(GetNeedMp()[0]) + '→' + str(GetNeedMp()[1]),0)
 
-func _on_skill_5_pressed() -> void:
+func _on_skill_5_pressed(_pressed = null) -> void:
 	TargetSkill = 5
 	Signals.ConnectChooseBoxSignal(self,"UpLevel")
 	Global.add_choose_text(Global.get_parent_(self,4),Vector2(0,0),"确定要升级技能" + str(GetSkillName(TargetSkill)) +"吗？" + '魔耗：' + str(GetNeedMp()[0]) + '→' + str(GetNeedMp()[1]),0)
 
-func _on_skill_6_pressed() -> void:
+func _on_skill_6_pressed(_pressed = null) -> void:
 	TargetSkill = 6
 	Signals.ConnectChooseBoxSignal(self,"UpLevel")
 	Global.add_choose_text(Global.get_parent_(self,4),Vector2(0,0),"确定要升级技能" + str(GetSkillName(TargetSkill)) +"吗？" + '魔耗：' + str(GetNeedMp()[0]) + '→' + str(GetNeedMp()[1]),0)
 
-func _on_skill_7_pressed() -> void:
+func _on_skill_7_pressed(_pressed = null) -> void:
 	TargetSkill = 7
 	Signals.ConnectChooseBoxSignal(self,"UpLevel")
 	Global.add_choose_text(Global.get_parent_(self,4),Vector2(0,0),"确定要升级技能" + str(GetSkillName(TargetSkill)) +"吗？" + '魔耗：' + str(GetNeedMp()[0]) + '→' + str(GetNeedMp()[1]),0)
 
-func _on_skill_8_pressed() -> void:
+func _on_skill_8_pressed(_pressed = null) -> void:
 	TargetSkill = 8
 	Signals.ConnectChooseBoxSignal(self,"UpLevel")
 	Global.add_choose_text(Global.get_parent_(self,4),Vector2(0,0),"确定要升级技能" + str(GetSkillName(TargetSkill)) +"吗？" + '魔耗：' + str(GetNeedMp()[0]) + '→' + str(GetNeedMp()[1]),0)
 
-func _on_skill_9_pressed() -> void:
+func _on_skill_9_pressed(_pressed = null) -> void:
 	TargetSkill = 9
 	Signals.ConnectChooseBoxSignal(self,"UpLevel")
 	Global.add_choose_text(Global.get_parent_(self,4),Vector2(0,0),"确定要升级技能" + str(GetSkillName(TargetSkill)) +"吗？" + '魔耗：' + str(GetNeedMp()[0]) + '→' + str(GetNeedMp()[1]),0)
 
-func _on_skill_10_pressed() -> void:
+func _on_skill_10_pressed(_pressed = null) -> void:
 	TargetSkill = 10
 	Signals.ConnectChooseBoxSignal(self,"UpLevel")
 	Global.add_choose_text(Global.get_parent_(self,4),Vector2(0,0),"确定要升级技能" + str(GetSkillName(TargetSkill)) +"吗？" + '魔耗：' + str(GetNeedMp()[0]) + '→' + str(GetNeedMp()[1]),0)
@@ -242,7 +242,7 @@ func Skill10XZ(Level):
 		10:
 			return 45
 	return 0
-func _on_ski_1_pressed() -> void:
+func _on_ski_1_pressed(_pressed = null) -> void:
 	var level = PlayerData.player_data["技能学习"]["技能1"]["等级"]
 	if level == 0:
 		Global.AddMessageShow(self,"先学习技能才能设置按键！！",1.5,Vector2(395,180))
@@ -252,7 +252,7 @@ func _on_ski_1_pressed() -> void:
 	Global.addSkillKeySet(self,Vector2(350,140),Skill_nbname)
 
 
-func _on_ski_2_pressed() -> void:
+func _on_ski_2_pressed(_pressed = null) -> void:
 	var level = PlayerData.player_data["技能学习"]["技能2"]["等级"]
 	if level == 0:
 		Global.AddMessageShow(self,"先学习技能才能设置按键！！",1.5,Vector2(395,180))
@@ -262,7 +262,7 @@ func _on_ski_2_pressed() -> void:
 	Global.addSkillKeySet(self,Vector2(350,140),Skill_nbname)
 
 
-func _on_ski_3_pressed() -> void:
+func _on_ski_3_pressed(_pressed = null) -> void:
 	var level = PlayerData.player_data["技能学习"]["技能3"]["等级"]
 	if level == 0:
 		Global.AddMessageShow(self,"先学习技能才能设置按键！！",1.5,Vector2(395,180))
@@ -272,7 +272,7 @@ func _on_ski_3_pressed() -> void:
 	Global.addSkillKeySet(self,Vector2(350,140),Skill_nbname)
 
 
-func _on_ski_4_pressed() -> void:
+func _on_ski_4_pressed(_pressed = null) -> void:
 	var level = PlayerData.player_data["技能学习"]["技能4"]["等级"]
 	if level == 0:
 		Global.AddMessageShow(self,"先学习技能才能设置按键！！",1.5,Vector2(395,180))
@@ -282,7 +282,7 @@ func _on_ski_4_pressed() -> void:
 	Global.addSkillKeySet(self,Vector2(350,140),Skill_nbname)
 
 
-func _on_ski_5_pressed() -> void:
+func _on_ski_5_pressed(_pressed = null) -> void:
 	var level = PlayerData.player_data["技能学习"]["技能5"]["等级"]
 	if level == 0:
 		Global.AddMessageShow(self,"先学习技能才能设置按键！！",1.5,Vector2(395,180))
@@ -292,7 +292,7 @@ func _on_ski_5_pressed() -> void:
 	Global.addSkillKeySet(self,Vector2(350,140),Skill_nbname)
 
 
-func _on_ski_6_pressed() -> void:
+func _on_ski_6_pressed(_pressed = null) -> void:
 	var level = PlayerData.player_data["技能学习"]["技能6"]["等级"]
 	if level == 0:
 		Global.AddMessageShow(self,"先学习技能才能设置按键！！",1.5,Vector2(395,180))
@@ -302,7 +302,7 @@ func _on_ski_6_pressed() -> void:
 	Global.addSkillKeySet(self,Vector2(350,140),Skill_nbname)
 
 
-func _on_ski_7_pressed() -> void:
+func _on_ski_7_pressed(_pressed = null) -> void:
 	var level = PlayerData.player_data["技能学习"]["技能7"]["等级"]
 	if level == 0:
 		Global.AddMessageShow(self,"先学习技能才能设置按键！！",1.5,Vector2(395,180))
@@ -312,7 +312,7 @@ func _on_ski_7_pressed() -> void:
 	Global.addSkillKeySet(self,Vector2(350,140),Skill_nbname)
 
 
-func _on_ski_8_pressed() -> void:
+func _on_ski_8_pressed(_pressed = null) -> void:
 	var level = PlayerData.player_data["技能学习"]["技能8"]["等级"]
 	if level == 0:
 		Global.AddMessageShow(self,"先学习技能才能设置按键！！",1.5,Vector2(395,180))
@@ -322,7 +322,7 @@ func _on_ski_8_pressed() -> void:
 	Global.addSkillKeySet(self,Vector2(350,140),Skill_nbname)
 
 
-func _on_ski_9_pressed() -> void:
+func _on_ski_9_pressed(_pressed = null) -> void:
 	var level = PlayerData.player_data["技能学习"]["技能9"]["等级"]
 	if level == 0:
 		Global.AddMessageShow(self,"先学习技能才能设置按键！！",1.5,Vector2(395,180))
@@ -332,7 +332,7 @@ func _on_ski_9_pressed() -> void:
 	Global.addSkillKeySet(self,Vector2(350,140),Skill_nbname)
 
 
-func _on_ski_10_pressed() -> void:
+func _on_ski_10_pressed(_pressed = null) -> void:
 	Global.AddMessageShow(self,"被动技能不可以设置按键！！",1.5,Vector2(395,180))
 
 

@@ -25,7 +25,7 @@ func _physics_process(_delta: float) -> void:
 	page = int($MarginContainer/VBoxContainer/page_.text)
 	SetbuttonDisabled()
 
-func _on_qd_pressed() -> void:
+func _on_qd_pressed(_pressed = null) -> void:
 #	if MainBack.ChooseMs:
 #		var TotalValue: int = 0
 #		var TotalNum: int
@@ -73,35 +73,35 @@ func _on_qd_pressed() -> void:
 		Global.AddMessageShow(get_parent(),"卖出成功！!获得：" + str(coin_number) + "灵魂。",1.5,Vector2(-240,150))
 	MemoryClass.保存游戏(Global.cd_path)
 
-func _on_pt_pressed() -> void:
+func _on_pt_pressed(_pressed = null) -> void:
 	if not pt_is_choose:
 		pt_is_choose = true
 		sell_pz.push_back("普通")
 	else:
 		pt_is_choose = false
 		sell_pz.erase("普通")
-func _on_yx_pressed() -> void:
+func _on_yx_pressed(_pressed = null) -> void:
 	if not yx_is_choose:
 		yx_is_choose = true
 		sell_pz.push_back("优秀")
 	else:
 		yx_is_choose = false
 		sell_pz.erase("优秀")
-func _on_jl_pressed() -> void:
+func _on_jl_pressed(_pressed = null) -> void:
 	if not jl_is_choose:
 		jl_is_choose = true
 		sell_pz.push_back("精良")
 	else:
 		jl_is_choose = false
 		sell_pz.erase("精良")
-func _on_ss_pressed() -> void:
+func _on_ss_pressed(_pressed = null) -> void:
 	if not ss_is_choose:
 		ss_is_choose = true
 		sell_pz.push_back("史诗")
 	else:
 		ss_is_choose = false
 		sell_pz.erase("史诗")
-func _on_cs_pressed() -> void:
+func _on_cs_pressed(_pressed = null) -> void:
 	if not cs_is_choose:
 		cs_is_choose = true
 		sell_pz.push_back("传说")
@@ -109,7 +109,7 @@ func _on_cs_pressed() -> void:
 		cs_is_choose = false
 		sell_pz.erase("传说")
 
-func _on_hq_pressed() -> void:
+func _on_hq_pressed(_pressed = null) -> void:
 	if not hq_is_choose:
 		hq_is_choose = true
 		sell_pz.push_back("魂器")
@@ -117,14 +117,14 @@ func _on_hq_pressed() -> void:
 		hq_is_choose = false
 		sell_pz.erase("魂器")
 
-func _on_xl_pressed() -> void:
+func _on_xl_pressed(_pressed = null) -> void:
 	if not xl_is_choose:
 		xl_is_choose = true
 		sell_pz.push_back("邪灵")
 	else:
 		xl_is_choose = false
 		sell_pz.erase("邪灵")
-func _on_sq_pressed() -> void:
+func _on_sq_pressed(_pressed = null) -> void:
 	if not sq_is_choose:
 		sq_is_choose = true
 		sell_pz.push_back("神器")
@@ -139,7 +139,7 @@ func remove_text():
 		message.queue_free()
 
 
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()
 
 
@@ -171,7 +171,7 @@ func SetbuttonDisabled():
 
 
 
-#func _on_gxms_pressed() -> void:
+#func _on_gxms_pressed(_pressed = null) -> void:
 #	if not MainBack.ChooseMs:
 #		MainBack.ChooseMs = true
 #	else:

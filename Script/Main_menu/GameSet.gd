@@ -73,7 +73,7 @@ func _physics_process(_delta: float) -> void:
 		gm_2_slider.value = MainSet.set_data["MusicFB_2"]
 		is_set = true
 
-func _on_gm_open_or_close_pressed() -> void:#游戏音乐开关
+func _on_gm_open_or_close_pressed(_pressed = null) -> void:#游戏音乐开关
 	if MainSet.set_data["BackGroundMusic"] == true:
 		MainSet.set_data["BackGroundMusic"] = false
 	else:
@@ -81,7 +81,7 @@ func _on_gm_open_or_close_pressed() -> void:#游戏音乐开关
 	MemoryClass.main_bc()
 
 
-func _on_gm_2_open_or_close_pressed() -> void:#游戏音效开关
+func _on_gm_2_open_or_close_pressed(_pressed = null) -> void:#游戏音效开关
 	if MainSet.set_data["RoleOrMonsterHit"] == true:
 		MainSet.set_data["RoleOrMonsterHit"] = false
 	else:
@@ -93,7 +93,7 @@ func _on_h_slider_value_changed(value: float) -> void:
 	MainSet.set_data["MusicFB"] = value
 	MemoryClass.main_bc()
 
-func _on_return_pressed() -> void:
+func _on_return_pressed(_pressed = null) -> void:
 	queue_free()
 
 
@@ -102,21 +102,21 @@ func _on_gm_2_slider_value_changed(value: float) -> void:
 	MemoryClass.main_bc()
 
 
-func _on_mbt_open_or_close_pressed() -> void:
+func _on_mbt_open_or_close_pressed(_pressed = null) -> void:
 	if MainSet.set_data["MonsterBloodTextSHow"]:
 		MainSet.set_data["MonsterBloodTextSHow"] = false
 	else:
 		MainSet.set_data["MonsterBloodTextSHow"] = true
 	MemoryClass.main_bc()
 
-func _on_mbs_open_or_close_pressed() -> void:
+func _on_mbs_open_or_close_pressed(_pressed = null) -> void:
 	if MainSet.set_data["MonsterBloodSHow"]:
 		MainSet.set_data["MonsterBloodSHow"] = false
 	else:
 		MainSet.set_data["MonsterBloodSHow"] = true
 	MemoryClass.main_bc()
 
-func _on_mbs_2_open_or_close_pressed() -> void:
+func _on_mbs_2_open_or_close_pressed(_pressed = null) -> void:
 	if MainSet.set_data["MonsterLittleBlood"]:
 		MainSet.set_data["MonsterLittleBlood"] = false
 	else:
@@ -124,13 +124,13 @@ func _on_mbs_2_open_or_close_pressed() -> void:
 	MemoryClass.main_bc()
 
 
-func _on_g_mzm_1_pressed() -> void:
+func _on_g_mzm_1_pressed(_pressed = null) -> void:
 	MainSet.set_data["music"] = 1
 	MemoryClass.main_bc()
 	MusicIsChange = true
 
 
-func _on_g_mzm_2_pressed() -> void:
+func _on_g_mzm_2_pressed(_pressed = null) -> void:
 	if MainSet.set_data["CurrentLevelPage"] >= 2:
 		MainSet.set_data["music"] = 2
 		MemoryClass.main_bc()
@@ -139,7 +139,7 @@ func _on_g_mzm_2_pressed() -> void:
 		Global.AddMessageShow(Global.Windows_,"到达二图解锁二图背景音乐",1.5,Vector2(470,300))
 
 
-func _on_g_mzm_3_pressed() -> void:
+func _on_g_mzm_3_pressed(_pressed = null) -> void:
 	if MainSet.set_data["CurrentLevelPage"] >= 3:
 		MainSet.set_data["music"] = 3
 		MemoryClass.main_bc()
@@ -147,19 +147,19 @@ func _on_g_mzm_3_pressed() -> void:
 	else:
 		Global.AddMessageShow(Global.Windows_,"到达三图解锁三图背景音乐",1.5,Vector2(470,300))
 
-func _on_gm_2_zm_1_pressed() -> void:
+func _on_gm_2_zm_1_pressed(_pressed = null) -> void:
 	MainSet.set_data["MainMenuBG"] = 1
 	MemoryClass.main_bc()
 
 
-func _on_gm_2_zm_2_pressed() -> void:
+func _on_gm_2_zm_2_pressed(_pressed = null) -> void:
 	if MainSet.set_data["CurrentLevelPage"] >= 2:
 		MainSet.set_data["MainMenuBG"] = 2
 		MemoryClass.main_bc()
 	else:
 		Global.AddMessageShow(Global.Windows_,"到达二图解锁二图封面",1.5,Vector2(470,300))
 
-func _on_gm_2_zm_3_pressed() -> void:
+func _on_gm_2_zm_3_pressed(_pressed = null) -> void:
 	if MainSet.set_data["CurrentLevelPage"] >= 3:
 		MainSet.set_data["MainMenuBG"] = 3
 		MemoryClass.main_bc()
@@ -168,7 +168,7 @@ func _on_gm_2_zm_3_pressed() -> void:
 
 
 
-func _on_yes_or_no_pressed() -> void:
+func _on_yes_or_no_pressed(_pressed = null) -> void:
 	if MainSet.set_data["NoShowMonsterBody"]:
 		MainSet.set_data["NoShowMonsterBody"] = false
 	else:
@@ -176,7 +176,7 @@ func _on_yes_or_no_pressed() -> void:
 	MemoryClass.main_bc()
 
 
-func _on_yes_or_not_pressed() -> void:
+func _on_yes_or_not_pressed(_pressed = null) -> void:
 	if MainSet.set_data["HpBarDelay"]:
 		MainSet.set_data["HpBarDelay"] = false
 	else:
@@ -184,7 +184,7 @@ func _on_yes_or_not_pressed() -> void:
 	MemoryClass.main_bc()
 
 
-func _on_yes_or_nots_pressed() -> void:
+func _on_yes_or_nots_pressed(_pressed = null) -> void:
 	if MainSet.set_data["AutomaticallyPickUpItems"]:
 		MainSet.set_data["AutomaticallyPickUpItems"] = false
 	else:
@@ -192,7 +192,7 @@ func _on_yes_or_nots_pressed() -> void:
 	MemoryClass.main_bc()
 
 
-func _on_g_mzm_4_pressed() -> void:
+func _on_g_mzm_4_pressed(_pressed = null) -> void:
 	if MainSet.set_data["Music4"]:
 		MainSet.set_data["music"] = 4
 		MemoryClass.main_bc()
@@ -205,7 +205,7 @@ func _on_g_mzm_4_pressed() -> void:
 #if MainSet.set_data["PickUpItemsMusic"]:
 
 
-func _on_ornot_pressed() -> void:
+func _on_ornot_pressed(_pressed = null) -> void:
 	if MainSet.set_data["PickUpItemsMusic"]:
 		MainSet.set_data["PickUpItemsMusic"] = false
 	else:
@@ -213,7 +213,7 @@ func _on_ornot_pressed() -> void:
 	MemoryClass.main_bc()
 
 
-func _on_open_close_pressed() -> void:
+func _on_open_close_pressed(_pressed = null) -> void:
 	if MainSet.set_data["LevelInfo"]:
 		MainSet.set_data["LevelInfo"] = false
 	else:
@@ -221,7 +221,7 @@ func _on_open_close_pressed() -> void:
 	MemoryClass.main_bc()
 
 
-func _on_show_close_2_pressed() -> void:
+func _on_show_close_2_pressed(_pressed = null) -> void:
 	if MainSet.set_data["NotShowRoleEQ"]:
 		MainSet.set_data["NotShowRoleEQ"] = false
 	else:
@@ -229,7 +229,7 @@ func _on_show_close_2_pressed() -> void:
 	MemoryClass.main_bc()
 
 
-func _on_show_close_pressed() -> void:
+func _on_show_close_pressed(_pressed = null) -> void:
 	if MainSet.set_data["NotShowRoleBody"]:
 		MainSet.set_data["NotShowRoleBody"] = false
 	else:

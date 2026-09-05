@@ -133,7 +133,7 @@ func checkISchoose():
 		ChooseButton.visible = true
 		ChooseButton.disabled = true
 		ChooseIcon.visible = false
-func _on_choose_pressed() -> void:
+func _on_choose_pressed(_pressed = null) -> void:
 	if Global.FB_CD <= 0:
 		PlayerData.player_data["实战法宝"] = wp_name
 		Global.should_change = true

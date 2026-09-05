@@ -182,7 +182,7 @@ func RemoveAll():
 		RemoveZZSBox()
 		RemoveMaterialBox()
 		
-func _on_froge_pressed() -> void:
+func _on_froge_pressed(_pressed = null) -> void:
 	if zzs.get_children().size() == 0:
 		Global.AddMessageShow(Global.Windows_,"请先放入制作书！！",1.5,Vector2(500,305))
 		return
@@ -237,5 +237,5 @@ func GetEqProp():
 	pass
 
 
-func _on_help_pressed() -> void:
+func _on_help_pressed(_pressed = null) -> void:
 	Global.AddForgeHelp(Global.get_parent_(self,3),Vector2(455,265))

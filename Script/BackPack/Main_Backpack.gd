@@ -98,12 +98,12 @@ func load_(name_):
 	var abc = load("res://Art/BackPack/AllItems/" + str(name_) + ".png")
 	return abc
 
-func _on_button_pressed() -> void:
+func _on_button_pressed(_pressed = null) -> void:
 	randomize()
-func _on_add_xhp_pressed() -> void:
+func _on_add_xhp_pressed(_pressed = null) -> void:
 	pass
 
-func _on_add_dj_pressed() -> void:
+func _on_add_dj_pressed(_pressed = null) -> void:
 	randomize()
 	PlayerData.add_dj("qhs_1",2)
 	
@@ -118,17 +118,17 @@ func _on_批量出售_pressed() -> void:
 func RemoveChoose():
 	ChooseMs = false
 	ChooseList.clear()
-func _on_zb_pressed() -> void:
+func _on_zb_pressed(_pressed = null) -> void:
 	current_fl = 0
 	PlayerData.zl_zb()
 	PlayerData.zl_dj()
 	PlayerData.zl_xhp()
-func _on_dj_pressed() -> void:
+func _on_dj_pressed(_pressed = null) -> void:
 	current_fl = 1
 	PlayerData.zl_zb()
 	PlayerData.zl_dj()
 	PlayerData.zl_xhp()
-func _on_xhp_pressed() -> void:
+func _on_xhp_pressed(_pressed = null) -> void:
 	current_fl = 2
 	PlayerData.zl_zb()
 	PlayerData.zl_dj()
@@ -143,14 +143,14 @@ func remove_message():
 		message.queue_free()
 
 
-func _on_last_page_pressed() -> void:
+func _on_last_page_pressed(_pressed = null) -> void:
 	if current_page > 1:
 		current_page -= 1
 	if current_page <= 1:
 		current_page = 1
 	set_box_data()
 
-func _on_next_page_pressed() -> void:
+func _on_next_page_pressed(_pressed = null) -> void:
 	if current_page < max_page:
 		current_page += 1
 	if current_page >= max_page:

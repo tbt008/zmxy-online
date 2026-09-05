@@ -60,30 +60,30 @@ func _ready() -> void:
 		MainMusic.ADDMusic()
 	check_pass_level()
 
-func _on_level_1_pressed() -> void:
+func _on_level_1_pressed(_pressed = null) -> void:
 	#Global.Addlhhj(self,Vector2(0,0))
 	#get_tree().change_scene_to_file("res://Scene/Level/Level_32.tscn")
 	#Global.AddLevelInfo(self,"兜率宫",Vector2(0,0),"兜率宫")
 	#Global.AddLevelInfo(self,"玲珑宝塔",Vector2(0,0),"res://Scene/Level/Level_llbt.tscn")
 	#Global.AddLevelInfo(self,"花果山",Vector2(0,0),"res://Scene/Level/Level_wxzw.tscn")
 	Global.AddLevelInfo(self,"花果山",Vector2(0,0),"res://Scene/Level/Level_1.tscn")
-func _on_level_2_pressed() -> void:
+func _on_level_2_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"水帘洞",Vector2(0,0),"res://Scene/Level/Level_2.tscn")
-func _on_level_3_pressed() -> void:
+func _on_level_3_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"桃花源",Vector2(0,0),"res://Scene/Level/Level_3.tscn")
-func _on_level_4_pressed() -> void:
+func _on_level_4_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"蝙蝠窟",Vector2(0,0),"res://Scene/Level/Level_4.tscn")
-func _on_level_5_pressed() -> void:
+func _on_level_5_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"七星洞",Vector2(0,0),"res://Scene/Level/Level_5.tscn")
-func _on_level_6_pressed() -> void:
+func _on_level_6_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"迦楼罗之穴",Vector2(0,0),"res://Scene/Level/Level_6.tscn")
-func _on_level_7_pressed() -> void:
+func _on_level_7_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"浅岸",Vector2(0,0),"res://Scene/Level/Level_7.tscn")
-func _on_level_8_pressed() -> void:
+func _on_level_8_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"东海",Vector2(0,0),"res://Scene/Level/Level_8.tscn")
-func _on_level_9_pressed() -> void:
+func _on_level_9_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"鲨之涡流",Vector2(0,0),"res://Scene/Level/Level_9.tscn")
-func _on_level_10_pressed() -> void:
+func _on_level_10_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"牛魔谷",Vector2(0,0),"res://Scene/Level/Level_10.tscn")
 func check_music():
 	if MainSet.set_data["music"] == 1:
@@ -103,10 +103,10 @@ func check_music():
 			my_music.queue_free()
 		my_music = Global.addBGM_(self,"res://Music/MainSceneMusic/zmxy4bg.mp3")
 
-func _on_bc_game_pressed() -> void:
+func _on_bc_game_pressed(_pressed = null) -> void:
 	MemoryClass.保存游戏(Global.cd_path)
 	Global.AddMessageShow(get_parent(),"保存成功！本作品完全免费，谨防受骗上当！",1.5,Vector2(470,300))
-func _on_skill_learn_pressed() -> void:
+func _on_skill_learn_pressed(_pressed = null) -> void:
 	if skill_target == null:
 		skill_target = Global.add_learn_skill(self,Vector2(0,0))
 	else:
@@ -156,16 +156,16 @@ func check_pass_level():
 		$next.visible = false
 
 
-func _on_ldl_pressed() -> void:
+func _on_ldl_pressed(_pressed = null) -> void:
 		Global.add_ldl(self,Vector2(0,0))
-func _on_next_pressed() -> void:
+func _on_next_pressed(_pressed = null) -> void:
 	get_tree().change_scene_to_file("res://Scene/Main_menu/Map_2.tscn")
 
-func _on_turn_mainmenu_pressed() -> void:
+func _on_turn_mainmenu_pressed(_pressed = null) -> void:
 	get_tree().change_scene_to_file("res://Scene/Main_menu/Main_Menu.tscn")
 
 
-func _on_shop_pressed() -> void:
+func _on_shop_pressed(_pressed = null) -> void:
 	Global.add_SHOP(self,Vector2(0,0))
 
 func add_text(text,parent):
@@ -310,13 +310,13 @@ func _on_level_10_mouse_exited() -> void:
 		PlayAn(10)
 
 
-func _on_task_pressed() -> void:
+func _on_task_pressed(_pressed = null) -> void:
 	Global.AddBasicTask_(self,Vector2(0,0))
 
 
-func _on_game_an_pressed() -> void:
+func _on_game_an_pressed(_pressed = null) -> void:
 	Global.AddGameAnnouncement(self,Vector2(0,0))
 
 
-func _on_level_lhhj_pressed() -> void:
+func _on_level_lhhj_pressed(_pressed = null) -> void:
 	Global.Addlhhj(self,Vector2(0,0))

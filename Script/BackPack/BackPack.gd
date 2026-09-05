@@ -197,18 +197,18 @@ func load_(name_):
 	#res://Art/BackPack/AllItems/
 	var abc = load("res://Art/BackPack/AllItems/" + str(name_) + ".png")
 	return abc
-func _on_first_pressed() -> void:
+func _on_first_pressed(_pressed = null) -> void:
 	current_pro_page = 1
 
 
-func _on_second_pressed() -> void:
+func _on_second_pressed(_pressed = null) -> void:
 	current_pro_page = 2
 
 
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()
 
-func _on_show_backpack_pressed() -> void:
+func _on_show_backpack_pressed(_pressed = null) -> void:
 	if show_back_pack == false:
 		show_back_pack = true
 	elif show_back_pack == true:
@@ -370,7 +370,7 @@ func IniShowWingTxButton():
 	else:
 		head_show.text = "不显示"
 		HeadShowButton.set_button_icon(load("res://Art/BackPack/NoChoose.png"))
-func _on_wings_show_pressed() -> void:
+func _on_wings_show_pressed(_pressed = null) -> void:
 	if PlayerData.player_data["翅膀显示"]:
 		PlayerData.player_data["翅膀显示"] = false
 		MemoryClass.保存游戏(Global.cd_path)
@@ -382,7 +382,7 @@ func _on_wings_show_pressed() -> void:
 		wing_show.text = "显示"
 		WingsShowButton.set_button_icon(load("res://Art/BackPack/IsChoose.png"))
 
-func _on_head_show_pressed() -> void:
+func _on_head_show_pressed(_pressed = null) -> void:
 	if PlayerData.player_data["头衔显示"]:
 		HeadShowButton.set_button_icon(load("res://Art/BackPack/NoChoose.png"))
 		PlayerData.player_data["头衔显示"] = false

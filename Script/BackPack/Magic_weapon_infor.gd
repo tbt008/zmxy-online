@@ -39,7 +39,7 @@ func _physics_process(_delta: float) -> void:
 	m_def.text = str(get_fb_pro(PlayerData.player_data["法宝"][0]["名字"],"Def"))
 	m_m_def.text = str(get_fb_pro(PlayerData.player_data["法宝"][0]["名字"],"Mdef"))
 	icon_player.play(str(nn_name))
-func _on_up_level_pressed() -> void:
+func _on_up_level_pressed(_pressed = null) -> void:
 	if PlayerData.player_data["法宝"][0]["强化等级"] < 10:
 		if PlayerData.player_data["coin_num"] >= get_need_lh():	
 			PlayerData.player_data["coin_num"] -= get_need_lh()
@@ -120,7 +120,7 @@ func set_skill_info():
 				PaTitle_.text = ""
 				magic_weapon_skill_2.text = ""
 
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()
 
 func get_need_lh():
@@ -166,10 +166,10 @@ func get_wx():
 	return a			
 
 
-func _on_szfb_pressed() -> void:
+func _on_szfb_pressed(_pressed = null) -> void:
 	Global.addUseMagicWeapon($".",Vector2(0,0))
 
-func _on_tips_pressed() -> void:
+func _on_tips_pressed(_pressed = null) -> void:
 	Global.addMagicHelp($".",Vector2(0,0))
 func LowWX():
 	if PlayerData.get_item_data("wxxls") >= 1:
@@ -203,16 +203,16 @@ func CZL():
 	else:
 		Global.AddMessageShow(get_parent(),"成长率洗炼石数量不足！",1.5,Vector2(490,280))
 
-func _on_wxxl_pressed() -> void:
+func _on_wxxl_pressed(_pressed = null) -> void:
 	Signals.ConnectChooseBoxSignal(self,"LowWX")
 	Global.add_choose_text(get_parent(),Vector2(0,0),"确定要使用1颗五行洗炼石洗炼法宝的五行吗？",0)
 
-func _on_gjwx_pressed() -> void:
+func _on_gjwx_pressed(_pressed = null) -> void:
 	Signals.ConnectChooseBoxSignal(self,"HighWX")
 	var wx_num = PlayerData.player_data["法宝"][0]["五行"].size() * 5
 	Global.add_choose_text(get_parent(),Vector2(0,0),"确定要使用" + str(wx_num) + "颗五行洗炼石高级洗炼一次法宝的五行吗？",0)
 
-func _on_czlxl_pressed() -> void:
+func _on_czlxl_pressed(_pressed = null) -> void:
 	Signals.ConnectChooseBoxSignal(self,"CZL")
 	Global.add_choose_text(get_parent(),Vector2(0,0),"确定要使用1颗成长率洗炼石洗炼法宝的成长率吗？",0)
 

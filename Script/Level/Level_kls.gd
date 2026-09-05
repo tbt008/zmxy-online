@@ -35,7 +35,7 @@ func _physics_process(delta: float) -> void:
 
 
 
-func _on_wxzw_pressed() -> void:
+func _on_wxzw_pressed(_pressed = null) -> void:
 	if RoleProp.baseroleprop.Level < 50:
 		Signals.ConnectChooseBoxSignal(self,"ToWXZWFB")
 		if wxzw == null:

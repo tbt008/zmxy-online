@@ -536,7 +536,7 @@ func load_2(name_):
 	var abc = load("res://Art/LevelInfoBg/" + str(name_) + ".png")
 	return abc
 
-func _on_challenge_pressed() -> void:
+func _on_challenge_pressed(_pressed = null) -> void:
 	if TargetStagePath != "":
 		if TargetStagePath == "res://Scene/Level/Level_llbt.tscn":
 			Global.AddllbtChallenge(self,Vector2(0,0))
@@ -549,11 +549,11 @@ func _on_challenge_pressed() -> void:
 		Global.AddMessageShow(Global.Windows_,"获取关卡信息时出现错误，请手动更换关卡！！",1.5,Vector2(470,300))
 
 
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	self.queue_free()
 
 
-func _on_speed_pressed() -> void:
+func _on_speed_pressed(_pressed = null) -> void:
 	if MainSet.set_data["CreateMonsterSpeed"] > 0.3:
 		MainSet.set_data["CreateMonsterSpeed"] = MainSet.set_data["CreateMonsterSpeed"] / 2
 	else:

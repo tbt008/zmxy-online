@@ -81,7 +81,7 @@ func AddStar(Num):
 	for i in range(5 - CaoZuo[CurrentChoose]):
 		Global.AddStar(caozuo,1)	
 
-func _on_return_main_menu_pressed() -> void:
+func _on_return_main_menu_pressed(_pressed = null) -> void:
 	Global.cd_path = ""
 	get_tree().change_scene_to_file("res://Scene/Main_menu/Main_Menu.tscn")
 	
@@ -109,7 +109,7 @@ func get_time():
 	return last_time
 
 
-func _on_qued_pressed() -> void:
+func _on_qued_pressed(_pressed = null) -> void:
 	if PlayerData.player_data["Myself"] != 0:
 		if CurrentChoose != PlayerData.player_data["Myself"]:
 			Global.AddMessageShow(Global.Windows_,"角色ID不匹配！！",1.5,Vector2(485,295))

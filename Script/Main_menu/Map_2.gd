@@ -56,13 +56,13 @@ func _ready() -> void:
 	if MainMusic.MyMainMusic == null:
 		MainMusic.ADDMusic()
 	check_pass_level()
-func _on_changetomain_pressed() -> void:
+func _on_changetomain_pressed(_pressed = null) -> void:
 	get_tree().change_scene_to_file("res://Scene/Main_menu/Main_Menu.tscn")
 
-func _on_ld_l_pressed() -> void:
+func _on_ld_l_pressed(_pressed = null) -> void:
 	Global.add_ldl(self,Vector2(0,0))
 
-func _on_memory_game_pressed() -> void:
+func _on_memory_game_pressed(_pressed = null) -> void:
 	MemoryClass.保存游戏(Global.cd_path)
 	Global.AddMessageShow(get_parent(),"保存成功！本作品完全免费，谨防受骗上当！",1.5,Vector2(470,300))
 func check_music():
@@ -146,62 +146,62 @@ func check_pass_level():
 		$Tianting.visible = false
 		$Tianting/Changetott.disabled = true
 
-func _on_button_pressed() -> void:
+func _on_button_pressed(_pressed = null) -> void:
 	get_tree().change_scene_to_file("res://Scene/Main_menu/Map_1.tscn")
 
 
-func _on_level_11_pressed() -> void:
+func _on_level_11_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"鬼城",Vector2(0,0),"res://Scene/Level/Level_11.tscn")
 
-func _on_level_12_pressed() -> void:
+func _on_level_12_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"无常巷",Vector2(0,0),"res://Scene/Level/Level_12.tscn")
 
 
-func _on_level_13_pressed() -> void:
+func _on_level_13_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"鬼门关",Vector2(0,0),"res://Scene/Level/Level_13.tscn")
 
 
-func _on_level_14_pressed() -> void:
+func _on_level_14_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"接引院",Vector2(0,0),"res://Scene/Level/Level_14.tscn")
 
 
-func _on_level_15_pressed() -> void:
+func _on_level_15_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"判官府",Vector2(0,0),"res://Scene/Level/Level_15.tscn")
 
 
-func _on_level_16_pressed() -> void:
+func _on_level_16_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"阎罗殿",Vector2(0,0),"res://Scene/Level/Level_16.tscn")
 
-func _on_level_17_pressed() -> void:
+func _on_level_17_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"忘川河",Vector2(0,0),"res://Scene/Level/Level_17.tscn")
 
 
-func _on_level_18_pressed() -> void:
+func _on_level_18_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"奈何桥",Vector2(0,0),"res://Scene/Level/Level_18.tscn")
 
 
-func _on_level_19_pressed() -> void:
+func _on_level_19_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"望乡台",Vector2(0,0),"res://Scene/Level/Level_19.tscn")
 
 
-func _on_level_20_pressed() -> void:
+func _on_level_20_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"转轮殿",Vector2(0,0),"res://Scene/Level/Level_21.tscn")
 
 
-func _on_level_nmg_pressed() -> void:
+func _on_level_nmg_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"火焰山",Vector2(0,0),"res://Scene/Level/Level_nmg.tscn")
 
-func _on_level_lxdy_pressed() -> void:
+func _on_level_lxdy_pressed(_pressed = null) -> void:
 	Global.AddMessageShow(get_parent(),"螺旋地狱不开放！！",1.5,Vector2(470,300))
 
-func _on_shop_pressed() -> void:
+func _on_shop_pressed(_pressed = null) -> void:
 	Global.add_SHOP(self,Vector2(0,0))
 
 
-func _on_activity_pressed() -> void:
+func _on_activity_pressed(_pressed = null) -> void:
 	Global.AddBasicTask_(self,Vector2(0,0))
 
-func _on_learn_skill_pressed() -> void:
+func _on_learn_skill_pressed(_pressed = null) -> void:
 	if skill_target == null:
 		skill_target = Global.add_learn_skill(self,Vector2(0,0))
 	else:
@@ -266,7 +266,7 @@ func PlayAn(Level):
 				level.play("level20")
 			else:
 				level_19.material = null
-func _on_changetott_pressed() -> void:
+func _on_changetott_pressed(_pressed = null) -> void:
 
 	if PlayerData.CheckPass("天庭"):
 		get_tree().change_scene_to_file("res://Scene/Main_menu/Map_3.tscn")
@@ -277,9 +277,9 @@ func _on_changetott_pressed() -> void:
 			Global.AddMessageShow(get_parent(),"需要通天令牌！！",1.5,Vector2(470,300))
 
 
-func _on_game_an_pressed() -> void:
+func _on_game_an_pressed(_pressed = null) -> void:
 	Global.AddGameAnnouncement(self,Vector2(0,0))
 
 
-func _on_level_lhhj_pressed() -> void:
+func _on_level_lhhj_pressed(_pressed = null) -> void:
 	Global.Addlhhj(self,Vector2(0,0))

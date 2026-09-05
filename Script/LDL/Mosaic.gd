@@ -76,5 +76,5 @@ func load_(name_):
 	return abc
 
 
-func _on_help_pressed() -> void:
+func _on_help_pressed(_pressed = null) -> void:
 	Global.AddMosaicHelp(Global.get_parent_(self,3),Vector2(0,0))

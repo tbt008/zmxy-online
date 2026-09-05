@@ -40,7 +40,7 @@ func load_(name_):
 	return abc
 
 
-func _on_change_pressed() -> void:
+func _on_change_pressed(_pressed = null) -> void:
 	var Lx = AE.AllEquipment_[SelfName_]["类型"]
 	var Name = AE.AllEquipment_[SelfName_]["名字"]
 

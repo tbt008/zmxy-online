@@ -56,7 +56,7 @@ func AddItemToBackPack():#将物品添加到背包内
 				PlayerData.add_xhp(ItemName,Value)
 	MemoryClass.保存游戏(Global.cd_path)
 
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	#AddItemToBackPack()
 #	if UseItemName != null and UseNum != null:
 #		PlayerData.remove_xhp(UseItemName,PlayerData.get_xhp_page(UseItemName),UseNum)

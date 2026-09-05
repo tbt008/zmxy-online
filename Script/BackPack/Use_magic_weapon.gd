@@ -30,18 +30,18 @@ func remove_infor():
 		i.queue_free()
 	InforList.clear()
 
-func _on_last_pressed() -> void:
+func _on_last_pressed(_pressed = null) -> void:
 	if current_page > 1:
 		current_page -= 1
 		remove_infor()
 		add_infor()
 
-func _on_next_pressed() -> void:
+func _on_next_pressed(_pressed = null) -> void:
 	if current_page < max_page:
 		current_page += 1
 		remove_infor()
 		add_infor()
 
 
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()

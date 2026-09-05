@@ -54,7 +54,7 @@ func _physics_process(_delta: float) -> void:
 		get_tree().paused = false
 
 
-func _on_backpack_pressed() -> void:
+func _on_backpack_pressed(_pressed = null) -> void:
 	if back_target == null:
 		if bp_c == 0:
 			back_target = Global.add_back_pack(backpack,Vector2(430,270))
@@ -62,7 +62,7 @@ func _on_backpack_pressed() -> void:
 		back_target.queue_free()
 
 
-func _on_set_pressed() -> void:
+func _on_set_pressed(_pressed = null) -> void:
 	if set_target == null:
 		if bp_c == 0:
 			set_target = Global.add_set_menu(backpack,Vector2(485,270))
@@ -70,7 +70,7 @@ func _on_set_pressed() -> void:
 		set_target.queue_free()
 
 
-func _on_skill_pressed() -> void:
+func _on_skill_pressed(_pressed = null) -> void:
 	if skill_target == null:
 		if bp_c == 0:
 			skill_target = Global.add_learn_skill(backpack,Vector2(0,0))
@@ -78,7 +78,7 @@ func _on_skill_pressed() -> void:
 		skill_target.queue_free()
 
 
-func _on_magic_weapon_pressed() -> void:
+func _on_magic_weapon_pressed(_pressed = null) -> void:
 	if PlayerData.player_data["法宝"].size() == 0:
 		Global.AddMessageShow(base_through_level.canvas_layer,"您还未装备法宝！！！",1.5,Vector2(460,255))
 		return
@@ -88,5 +88,5 @@ func _on_magic_weapon_pressed() -> void:
 	else:
 		magic_weapon_target.queue_free()
 
-func _on_pet_pressed() -> void:
+func _on_pet_pressed(_pressed = null) -> void:
 	Global.AddMessageShow(base_through_level.canvas_layer,"暂未开启",1.5,Vector2(460,255))

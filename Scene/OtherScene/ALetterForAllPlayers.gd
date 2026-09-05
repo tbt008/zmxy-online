@@ -78,15 +78,15 @@ func _physics_process(delta: float) -> void:
 			title_12.visible = true
 			title_13.visible = true
 			
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()
 
 
-func _on_last_page_pressed() -> void:
+func _on_last_page_pressed(_pressed = null) -> void:
 	if CurrentPage > 1:
 		CurrentPage -= 1
 
 
-func _on_next_page_pressed() -> void:
+func _on_next_page_pressed(_pressed = null) -> void:
 	if CurrentPage < MaxPage:
 		CurrentPage += 1

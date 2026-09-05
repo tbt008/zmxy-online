@@ -149,12 +149,12 @@ func set_RoleName():
 			role.text = "角色： 沙僧"
 		5:
 			role.text = "角色： 白龙"	
-func _on_last_pressed() -> void:
+func _on_last_pressed(_pressed = null) -> void:
 	if current_page > 1:
 		current_page -= 1
 		page.text = str(current_page) + '/' + str(max_page)
 
-func _on_next_pressed() -> void:
+func _on_next_pressed(_pressed = null) -> void:
 	if current_page < max_page:
 		current_page += 1
 		page.text = str(current_page) + '/' + str(max_page)
@@ -165,27 +165,27 @@ func change_page():
 	add_shop_item()
 
 
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()
 
 
-func _on_charge_pressed() -> void:
+func _on_charge_pressed(_pressed = null) -> void:
 	Global.AddMessageShow(Global.Windows_,"充值渠道已关闭，无法充值，请用灵魂购买商品！",1.5,Vector2(485,295))
 
 
-func _on_total_pressed() -> void:
+func _on_total_pressed(_pressed = null) -> void:
 	CurrentType = "全部"
 
-func _on_zb_pressed() -> void:
+func _on_zb_pressed(_pressed = null) -> void:
 	CurrentType = "装备"
 
-func _on_dj_pressed() -> void:
+func _on_dj_pressed(_pressed = null) -> void:
 	CurrentType = "道具"
 
-func _on_sz_pressed() -> void:
+func _on_sz_pressed(_pressed = null) -> void:
 	CurrentType = "时装"
 
-func _on_cb_pressed() -> void:
+func _on_cb_pressed(_pressed = null) -> void:
 	CurrentType = "翅膀"
 
 
@@ -193,5 +193,5 @@ func _on_line_edit_text_changed(new_text: String) -> void:
 	GET_ItemName = new_text
 
 
-func _on_qd_pressed() -> void:
+func _on_qd_pressed(_pressed = null) -> void:
 	change_page()

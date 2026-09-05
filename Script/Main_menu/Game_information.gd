@@ -30,7 +30,7 @@ func _physics_process(_delta: float) -> void:
 		yxxq.visible = false
 
 
-func _on_czzn_pressed() -> void:
+func _on_czzn_pressed(_pressed = null) -> void:
 	Global.AddSomeMonsterHelp(self,Vector2(0,0))
 	return
 	show_czzn = true
@@ -39,19 +39,19 @@ func _on_czzn_pressed() -> void:
 	
 
 
-func _on_yxxq_pressed() -> void:
+func _on_yxxq_pressed(_pressed = null) -> void:
 	return
 	show_czzn = false
 	show_yxxq = true
 	show_yxgg = false
 
 
-func _on_yxgg_pressed() -> void:
+func _on_yxgg_pressed(_pressed = null) -> void:
 	return
 	show_czzn = false
 	show_yxxq = false
 	show_yxgg = true
 
 
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()

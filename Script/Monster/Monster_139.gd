@@ -144,21 +144,21 @@ func _on_buttonlist_mouse_entered() -> void:
 
 
 
-func _on_bt_pressed() -> void:
+func _on_bt_pressed(_pressed = null) -> void:
 	if BigBody:
 		BigBody = false
 	else:
 		BigBody = true
 
 
-func _on_bt_2_pressed() -> void:
+func _on_bt_2_pressed(_pressed = null) -> void:
 	if CanMove:
 		CanMove = false
 	else:
 		CanMove = true
 
 
-func _on_bt_3_pressed() -> void:
+func _on_bt_3_pressed(_pressed = null) -> void:
 	if CanAttack:
 		CanAttack = false
 	else:

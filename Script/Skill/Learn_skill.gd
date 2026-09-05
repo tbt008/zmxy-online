@@ -19,14 +19,14 @@ func _physics_process(_delta: float) -> void:
 		Title.text = "被动技能"
 	Lh_value.text = str(PlayerData.player_data["coin_num"])
 
-func _on_zd_skill_pressed() -> void:
+func _on_zd_skill_pressed(_pressed = null) -> void:
 	is_zd = true
 	is_bd = false
 	if zd_sk == null:
 		zd_sk = Global.add_zd_skillscene(front_bg,Vector2(40,50))
 	if bd_sk != null:
 		bd_sk.queue_free()
-func _on_bd_skill_pressed() -> void:
+func _on_bd_skill_pressed(_pressed = null) -> void:
 	is_zd = false
 	is_bd = true
 	if bd_sk == null:
@@ -35,5 +35,5 @@ func _on_bd_skill_pressed() -> void:
 		zd_sk.queue_free()
 	
 
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()

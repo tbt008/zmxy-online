@@ -9,15 +9,15 @@ func _physics_process(_delta: float) -> void:
 		$bg/box/RoleOrMonsterControl.text = "关闭音效"
 	else:
 		$bg/box/RoleOrMonsterControl.text = "打开音效"
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()
 
 
-func _on_continue_game_pressed() -> void:
+func _on_continue_game_pressed(_pressed = null) -> void:
 	queue_free()
 
 
-func _on_continue_game_2_pressed() -> void:
+func _on_continue_game_2_pressed(_pressed = null) -> void:
 	get_tree().paused = false
 	match int(PlayerData.player_data["Map_num"]):
 		1:
@@ -38,19 +38,19 @@ func _on_continue_game_2_pressed() -> void:
 			else:
 				get_tree().change_scene_to_file("res://Scene/Main_menu/Map_1.tscn")
 
-func _on_continue_game_4_pressed() -> void:
+func _on_continue_game_4_pressed(_pressed = null) -> void:
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://Scene/Main_menu/Main_Menu.tscn")
 
 
-func _on_bgm_control_pressed() -> void:
+func _on_bgm_control_pressed(_pressed = null) -> void:
 	if MainSet.set_data["BackGroundMusic"] == true:
 		MainSet.set_data["BackGroundMusic"] = false
 	else:
 		MainSet.set_data["BackGroundMusic"] = true
 	MemoryClass.main_bc()
 
-func _on_role_or_monster_control_pressed() -> void:
+func _on_role_or_monster_control_pressed(_pressed = null) -> void:
 	if MainSet.set_data["RoleOrMonsterHit"] == true:
 		MainSet.set_data["RoleOrMonsterHit"] = false
 	else:

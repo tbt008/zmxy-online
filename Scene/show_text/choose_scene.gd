@@ -19,12 +19,12 @@ func _physics_process(_delta: float) -> void:
 		calm.text = "(" + str(snapped($think_time.get_time_left(),0)) + "s)"
 	if $think_time.get_time_left() <= 0:
 		calm.text = ""
-func _on_qx_pressed() -> void:
+func _on_qx_pressed(_pressed = null) -> void:
 	is_qx = true
 	queue_free()
 
 
-func _on_qd_pressed() -> void:
+func _on_qd_pressed(_pressed = null) -> void:
 	Signals.emit_signal("_on_Choose_pressed")
 	is_qd = true
 	queue_free()

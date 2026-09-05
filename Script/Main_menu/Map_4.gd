@@ -59,56 +59,56 @@ func _ready() -> void:
 	RoleProp.ws_value = 0
 	MemoryClass.main_dq()
 	check_pass_level()
-func _on_level_31_pressed() -> void:
+func _on_level_31_pressed(_pressed = null) -> void:
 	Global.AddLevelInfo(self,"火龙岛",Vector2(0,0),"res://Scene/Level/Level_31.tscn")
 
 
-func _on_level_32_pressed() -> void:
+func _on_level_32_pressed(_pressed = null) -> void:
 	Global.AddMessageShow(get_parent(),"敬请期待！！！！",1.5,Vector2(470,300))
 	return
 
 
-func _on_level_33_pressed() -> void:
+func _on_level_33_pressed(_pressed = null) -> void:
 	Global.AddMessageShow(get_parent(),"敬请期待！！！！",1.5,Vector2(470,300))
 	return
 
 
-func _on_level_34_pressed() -> void:
+func _on_level_34_pressed(_pressed = null) -> void:
 	Global.AddMessageShow(get_parent(),"敬请期待！！！！",1.5,Vector2(470,300))
 	return
 
 
-func _on_level_35_pressed() -> void:
+func _on_level_35_pressed(_pressed = null) -> void:
 	Global.AddMessageShow(get_parent(),"敬请期待！！！！",1.5,Vector2(470,300))
 	return
 
 
-func _on_level_36_pressed() -> void:
+func _on_level_36_pressed(_pressed = null) -> void:
 	Global.AddMessageShow(get_parent(),"敬请期待！！！！",1.5,Vector2(470,300))
 	return
 
 
-func _on_level_37_pressed() -> void:
+func _on_level_37_pressed(_pressed = null) -> void:
 	Global.AddMessageShow(get_parent(),"敬请期待！！！！",1.5,Vector2(470,300))
 	return
 
 
-func _on_level_38_pressed() -> void:
+func _on_level_38_pressed(_pressed = null) -> void:
 	Global.AddMessageShow(get_parent(),"敬请期待！！！！",1.5,Vector2(470,300))
 	return
 
 
-func _on_level_39_pressed() -> void:
+func _on_level_39_pressed(_pressed = null) -> void:
 	Global.AddMessageShow(get_parent(),"敬请期待！！！！",1.5,Vector2(470,300))
 	return
 
 
-func _on_level_byg_pressed() -> void:
+func _on_level_byg_pressed(_pressed = null) -> void:
 	Global.AddMessageShow(get_parent(),"敬请期待！！！！",1.5,Vector2(470,300))
 	return
 
 
-func _on_level_esbxx_pressed() -> void:
+func _on_level_esbxx_pressed(_pressed = null) -> void:
 	Global.AddMessageShow(get_parent(),"敬请期待！！！！",1.5,Vector2(470,300))
 	return
 	if PlayerData.player_data["玩家等级"] < 60:
@@ -119,54 +119,54 @@ func _on_level_esbxx_pressed() -> void:
 		return
 #	Global.Add_28Ui(self,Vector2(0,0))
 
-func _on_level_znyy_pressed() -> void:
+func _on_level_znyy_pressed(_pressed = null) -> void:
 	Global.AddMessageShow(get_parent(),"敬请期待！！！！",1.5,Vector2(470,300))
 	return
 
 
-func _on_hdzm_pressed() -> void:
+func _on_hdzm_pressed(_pressed = null) -> void:
 	Global.AddHDZM(self,self)
-func _on_memory_class_pressed() -> void:
+func _on_memory_class_pressed(_pressed = null) -> void:
 	MemoryClass.保存游戏(Global.cd_path)
 	Global.AddMessageShow(get_parent(),"保存成功！本作品完全免费，谨防受骗上当！",1.5,Vector2(470,300))
 
 
-func _on_shop_pressed() -> void:
+func _on_shop_pressed(_pressed = null) -> void:
 	Global.add_SHOP(self,Vector2(0,0))
 
 
-func _on_ldl_2_pressed() -> void:
+func _on_ldl_2_pressed(_pressed = null) -> void:
 	Global.add_ldl(self,Vector2(0,0))
 
 
-func _on_skill_pressed() -> void:
+func _on_skill_pressed(_pressed = null) -> void:
 	if skill_target == null:
 		skill_target = Global.add_learn_skill(self,Vector2(0,0))
 	else:
 		skill_target.queue_free()
 
 
-func _on_activity_pressed() -> void:
+func _on_activity_pressed(_pressed = null) -> void:
 	Global.AddMessageShow(get_parent(),"敬请期待！！！！",1.5,Vector2(470,300))
 
 
-func _on_task_pressed() -> void:
+func _on_task_pressed(_pressed = null) -> void:
 	Global.AddBasicTask_(self,Vector2(0,0))
 
 
-func _on_return_pressed() -> void:
+func _on_return_pressed(_pressed = null) -> void:
 	get_tree().change_scene_to_file("res://Scene/Main_menu/Main_Menu.tscn")
 
 
-func _on_game_set_pressed() -> void:
+func _on_game_set_pressed(_pressed = null) -> void:
 	Global.Add_GameSet_(self,Vector2(0,0))
 
 
-func _on_game_an_pressed() -> void:
+func _on_game_an_pressed(_pressed = null) -> void:
 	Global.AddGameAnnouncement(self,Vector2(0,0))
 
 
-func _on_pellet_pressed() -> void:
+func _on_pellet_pressed(_pressed = null) -> void:
 	Global.AddBasicPellet_(self,Vector2(0,0))
 	
 func check_pass_level():
@@ -277,5 +277,5 @@ func PlayAn(Level):
 				level_39.material = null
 
 
-func _on_level_lhhj_pressed() -> void:
+func _on_level_lhhj_pressed(_pressed = null) -> void:
 	Global.Addlhhj(self,Vector2(0,0))

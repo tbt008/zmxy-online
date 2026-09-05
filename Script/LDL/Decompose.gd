@@ -173,7 +173,7 @@ func set_remove_itemsProperies():
 	remove_items.qh_level = PlayerData.player_data["分解列表"][0]["强化等级"]
 	remove_items.EQ_prop = PlayerData.player_data["分解列表"][0]["Data"]
 	
-func _on_decompose_button_pressed() -> void:
+func _on_decompose_button_pressed(_pressed = null) -> void:
 	
 	if not CanDe:
 		Global.AddMessageShow(Global.Windows_,"点击过快！",1.5,Vector2(500,305))
@@ -264,7 +264,7 @@ func load_(name_):
 	return abc
 
 
-func _on_help_pressed() -> void:
+func _on_help_pressed(_pressed = null) -> void:
 	Global.Add_Decompose_Help(Global.get_parent_(self,3),Vector2(485,290))
 
 

@@ -92,7 +92,7 @@ func SetBox():
 	ItemBox.EQ_prop = AE.AllEquipment_[NewList["Name"]]
 	ItemBox.set_button_icon(load_(NewList["Name"]))
 
-func _on_purchase_pressed() -> void:
+func _on_purchase_pressed(_pressed = null) -> void:
 	if PlayerData.player_data["购买次数"] <= 0:
 		Global.AddMessageShow(Global.Windows_,"购买次数不足！！",1.5,Vector2(470,300))
 		return

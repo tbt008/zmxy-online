@@ -415,245 +415,245 @@ func RefreshInfo():
 				else:
 					Global.ADDFont_(monster_info,i,"res://Font/华康宋体W3.ttc",15,"FFFFFF",1,"FFFFFF")
 
-func _on_dxx_pressed() -> void:
+func _on_dxx_pressed(_pressed = null) -> void:
 	MonsterName = "dxx"
 
 
-func _on_mhw_pressed() -> void:
+func _on_mhw_pressed(_pressed = null) -> void:
 	MonsterName = "mhw"
 
 
-func _on_yrw_pressed() -> void:
+func _on_yrw_pressed(_pressed = null) -> void:
 	MonsterName = "yrw"
 
 
-func _on_bfsx_pressed() -> void:
+func _on_bfsx_pressed(_pressed = null) -> void:
 	MonsterName = "bfsx"
 
 
-func _on_stw_pressed() -> void:
+func _on_stw_pressed(_pressed = null) -> void:
 	MonsterName = "stw"
 
 
-func _on_pmw_pressed() -> void:
+func _on_pmw_pressed(_pressed = null) -> void:
 	MonsterName = "pmw"
 
 
-func _on_gcx_pressed() -> void:
+func _on_gcx_pressed(_pressed = null) -> void:
 	MonsterName = "gcx"
 
 
-func _on_jmw_pressed() -> void:
+func _on_jmw_pressed(_pressed = null) -> void:
 	MonsterName = "jmw"
 
 
-func _on_smw_pressed() -> void:
+func _on_smw_pressed(_pressed = null) -> void:
 	MonsterName = "smw"
 
 
-func _on_nmw_1_pressed() -> void:
+func _on_nmw_1_pressed(_pressed = null) -> void:
 	MonsterName = "nmw1"
 
 
-func _on_nmw_2_pressed() -> void:
+func _on_nmw_2_pressed(_pressed = null) -> void:
 	MonsterName = "nmw2"
 
 
-func _on_nmw_3_pressed() -> void:
+func _on_nmw_3_pressed(_pressed = null) -> void:
 	MonsterName = "nmw3"
 
 
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()
 
 
-func _on_lw_pressed() -> void:
+func _on_lw_pressed(_pressed = null) -> void:
 	MonsterName = "lw"
 
 
-func _on_hhe_pressed() -> void:
+func _on_hhe_pressed(_pressed = null) -> void:
 	MonsterName = "hhe"
 
 
-func _on_syr_pressed() -> void:
+func _on_syr_pressed(_pressed = null) -> void:
 	MonsterName = "syr"
 
 
-func _on_hbwc_pressed() -> void:
+func _on_hbwc_pressed(_pressed = null) -> void:
 	MonsterName = "hbwc"
 
 
-func _on_bgj_pressed() -> void:
+func _on_bgj_pressed(_pressed = null) -> void:
 	MonsterName = "bgj"
 
 
-func _on_klw_pressed() -> void:
+func _on_klw_pressed(_pressed = null) -> void:
 	MonsterName = "klw"
 
 
-func _on_qgw_pressed() -> void:
+func _on_qgw_pressed(_pressed = null) -> void:
 	MonsterName = "qgw"
 
 
-func _on_pg_pressed() -> void:
+func _on_pg_pressed(_pressed = null) -> void:
 	MonsterName = "pg"
 
 
-func _on_ylw_pressed() -> void:
+func _on_ylw_pressed(_pressed = null) -> void:
 	MonsterName = "ylw"
 
 
-func _on_sdw_pressed() -> void:
+func _on_sdw_pressed(_pressed = null) -> void:
 	MonsterName = "sdw"
 
 
-func _on_yc_pressed() -> void:
+func _on_yc_pressed(_pressed = null) -> void:
 	MonsterName = "yc"
 
 
-func _on_xt_pressed() -> void:
+func _on_xt_pressed(_pressed = null) -> void:
 	MonsterName = "xt"
 
 
-func _on_mp_pressed() -> void:
+func _on_mp_pressed(_pressed = null) -> void:
 	MonsterName = "mp"
 
 
-func _on_zlw_1_pressed() -> void:
+func _on_zlw_1_pressed(_pressed = null) -> void:
 	MonsterName = "zlw1"
 
 
-func _on_zlw_2_pressed() -> void:
+func _on_zlw_2_pressed(_pressed = null) -> void:
 	MonsterName = "zlw2"
 
 
-func _on_zlw_3_pressed() -> void:
+func _on_zlw_3_pressed(_pressed = null) -> void:
 	MonsterName = "zlw3"
 
 
-func _on_zsxt_pressed() -> void:
+func _on_zsxt_pressed(_pressed = null) -> void:
 	MonsterName = "zsxt"
 
 
-func _on_xtq_pressed() -> void:
+func _on_xtq_pressed(_pressed = null) -> void:
 	MonsterName = "xtq"
 
 
-func _on_qly_pressed() -> void:
+func _on_qly_pressed(_pressed = null) -> void:
 	MonsterName = "qly"
 
 
-func _on_sfe_pressed() -> void:
+func _on_sfe_pressed(_pressed = null) -> void:
 	MonsterName = "sfe"
 
 
-func _on_mhwtf_pressed() -> void:
+func _on_mhwtf_pressed(_pressed = null) -> void:
 	MonsterName = "mhwtf"
 
 
-func _on_jls_pressed() -> void:
+func _on_jls_pressed(_pressed = null) -> void:
 	MonsterName = "jls"
 
 
-func _on_zztw_pressed() -> void:
+func _on_zztw_pressed(_pressed = null) -> void:
 	MonsterName = "zztw"
 
 
-func _on_gmtw_pressed() -> void:
+func _on_gmtw_pressed(_pressed = null) -> void:
 	MonsterName = "gmtw"
 
 
-func _on_dwtw_pressed() -> void:
+func _on_dwtw_pressed(_pressed = null) -> void:
 	MonsterName = "dwtw"
 
 
-func _on_mtj_pressed() -> void:
+func _on_mtj_pressed(_pressed = null) -> void:
 	MonsterName = "mtj"
 
 
-func _on_cgtw_pressed() -> void:
+func _on_cgtw_pressed(_pressed = null) -> void:
 	MonsterName = "cgtw"
 
 
-func _on_zzz_pressed() -> void:
+func _on_zzz_pressed(_pressed = null) -> void:
 	MonsterName = "zzz"
 
 
-func _on_yh_pressed() -> void:
+func _on_yh_pressed(_pressed = null) -> void:
 	MonsterName = "yh"
 
 
-func _on_tslj_pressed() -> void:
+func _on_tslj_pressed(_pressed = null) -> void:
 	MonsterName = "tslj"
 
 
-func _on_tbjx_pressed() -> void:
+func _on_tbjx_pressed(_pressed = null) -> void:
 	MonsterName = "tbjx"
 
 
-func _on_jjdw_pressed() -> void:
+func _on_jjdw_pressed(_pressed = null) -> void:
 	MonsterName = "jjdw"
 
 
-func _on_yjdw_pressed() -> void:
+func _on_yjdw_pressed(_pressed = null) -> void:
 	MonsterName = "yjdw"
 
 
-func _on_tttw_pressed() -> void:
+func _on_tttw_pressed(_pressed = null) -> void:
 	MonsterName = "tttw"
 
 
-func _on_nz_pressed() -> void:
+func _on_nz_pressed(_pressed = null) -> void:
 	MonsterName = "nz"
 
 
-func _on_lzz_pressed() -> void:
+func _on_lzz_pressed(_pressed = null) -> void:
 	MonsterName = "lzz"
 
 
-func _on_txs_pressed() -> void:
+func _on_txs_pressed(_pressed = null) -> void:
 	MonsterName = "txs"
 
 
-func _on_els_pressed() -> void:
+func _on_els_pressed(_pressed = null) -> void:
 	MonsterName = "els"
 
 
-func _on_qnj_pressed() -> void:
+func _on_qnj_pressed(_pressed = null) -> void:
 	MonsterName = "qnj"
 
 
-func _on_cjw_pressed() -> void:
+func _on_cjw_pressed(_pressed = null) -> void:
 	MonsterName = "cjw"
 
 
-func _on_fyj_pressed() -> void:
+func _on_fyj_pressed(_pressed = null) -> void:
 	MonsterName = "fyj"
 
 
-func _on_wll_pressed() -> void:
+func _on_wll_pressed(_pressed = null) -> void:
 	MonsterName = "wll"
 
 
-func _on_yzx_pressed() -> void:
+func _on_yzx_pressed(_pressed = null) -> void:
 	MonsterName = "yzx"
 
 
-func _on_nmw_4_pressed() -> void:
+func _on_nmw_4_pressed(_pressed = null) -> void:
 	MonsterName = "nmw4"
 
 
-func _on_zlw_4_pressed() -> void:
+func _on_zlw_4_pressed(_pressed = null) -> void:
 	MonsterName = "zlw4"
 
 
-func _on_wxzw_pressed() -> void:
+func _on_wxzw_pressed(_pressed = null) -> void:
 	MonsterName = "wxzw"
 
 
-func _on_hy_pressed() -> void:
+func _on_hy_pressed(_pressed = null) -> void:
 	MonsterName = "hy"
 
 
-func _on_ttzs_pressed() -> void:
+func _on_ttzs_pressed(_pressed = null) -> void:
 	MonsterName = "ttzs"

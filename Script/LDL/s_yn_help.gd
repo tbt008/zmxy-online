@@ -94,16 +94,16 @@ func set_material_():
 	ma4_4.text = str(material_4List[0]["page_" + str(current_page)][3])
 	ma4_5.text = str(material_4List[0]["page_" + str(current_page)][4])
 	ma4_6.text = str(material_4List[0]["page_" + str(current_page)][5])
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()
 
 
-func _on_c_ure_pressed() -> void:
+func _on_c_ure_pressed(_pressed = null) -> void:
 	if current_page > 1:
 		current_page -= 1
 
 
-func _on_reduce_pressed() -> void:
+func _on_reduce_pressed(_pressed = null) -> void:
 	if current_page < max_page:
 		current_page += 1
 

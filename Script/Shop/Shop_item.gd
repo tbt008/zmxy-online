@@ -22,11 +22,11 @@ func _physics_process(_delta: float) -> void:
 		items.wx = []
 		items.EQ_prop = AE.AllEquipment_[item_name_]
 	lh_need.text = str(need_lh)
-func _on_cure_num_pressed() -> void:
+func _on_cure_num_pressed(_pressed = null) -> void:
 	total_num += 1
 	need_num.text = str(total_num)
 
-func _on_reduce_num_pressed() -> void:
+func _on_reduce_num_pressed(_pressed = null) -> void:
 	if total_num > 1:
 		total_num -= 1
 		need_num.text = str(total_num)
@@ -38,7 +38,7 @@ func _on_num__text_changed(new_text: String) -> void:
 		total_num = int(new_text)
 
 
-func _on_goumai_pressed() -> void:
+func _on_goumai_pressed(_pressed = null) -> void:
 	Signals.ConnectChooseBoxSignal(self,"GM")
 	var parent_ = Global.get_parent_(self,3)
 	choose_jm = Global.add_choose_text(parent_,Vector2(0,0),"确定花费" + str(need_lh * total_num) + '灵魂购买' + str(total_num) + "个" + str(item_name.text) +  "吗？",0)

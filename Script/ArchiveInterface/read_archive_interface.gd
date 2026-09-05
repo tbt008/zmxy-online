@@ -17,11 +17,11 @@ func AddAr():
 	for i in range(GetNeedBox()):
 		Global.AddBasicArButton(all_ar,i + 1)
 
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()
 
 
-func _on_delete_pressed() -> void:
+func _on_delete_pressed(_pressed = null) -> void:
 	if int(cd_number.text) > GetNeedBox() or int(cd_number.text) <= 0:
 		Global.AddMessageShow(self,"找不到存档" + str(cd_number.text) + "的信息，请确保正确输入了存档号！！",1.5,Vector2(470,300))
 		return
@@ -57,13 +57,13 @@ func get_time():
 	return last_time
 
 
-func _on_addcd_pressed() -> void:
+func _on_addcd_pressed(_pressed = null) -> void:
 	MainSet.set_data["CdNum"] += 1
 	Global.AddMessageShow(self,"添加成功，不要添加过多，以防卡顿！！",1.5,Vector2(470,300))
 	MemoryClass.main_bc()
 	AddAr()
 
-func _on_removecd_pressed() -> void:
+func _on_removecd_pressed(_pressed = null) -> void:
 	if MainSet.set_data["CdNum"] <= 6:
 		Global.AddMessageShow(self,"最少保留6个存档格子！！！",1.5,Vector2(470,300))
 		return

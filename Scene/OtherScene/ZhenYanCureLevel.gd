@@ -62,7 +62,7 @@ func SetBoxInfo():
 	down_button.LocNum = Father.CurrentNum
 	down_button.NotShow = true
 
-func _on_cure_level_pressed() -> void:
+func _on_cure_level_pressed(_pressed = null) -> void:
 	var Level = int(PlayerData.player_data[RealName][str(Father.CurrentNum)]["Level"])
 	var Name = PlayerData.player_data[RealName][str(Father.CurrentNum)]["InName"]
 	var MaterialNeedValue = int(Level / 5) + 1

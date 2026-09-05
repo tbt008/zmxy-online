@@ -62,32 +62,32 @@ func RemoveBox():
 			for u in Parent.get_children():
 				u.queue_free()
 
-func _on_hp_dy_pressed() -> void:
+func _on_hp_dy_pressed(_pressed = null) -> void:
 	CurrentPelletType = "生命"
 	CurrentInType = "smd_"
 	set_Info()
-func _on_mp_dy_pressed() -> void:
+func _on_mp_dy_pressed(_pressed = null) -> void:
 	CurrentPelletType = "魔法"
 	CurrentInType = "fld_"
 	set_Info()
-func _on_att_dy_pressed() -> void:
+func _on_att_dy_pressed(_pressed = null) -> void:
 	CurrentPelletType = "攻击"
 	CurrentInType = "gjd_"
 	set_Info()
-func _on_crit_dy_pressed() -> void:
+func _on_crit_dy_pressed(_pressed = null) -> void:
 	CurrentPelletType = "暴击"
 	CurrentInType = "bjd_"
 	set_Info()
-func _on_lucky_dy_pressed() -> void:
+func _on_lucky_dy_pressed(_pressed = null) -> void:
 	CurrentPelletType = "幸运"
 	CurrentInType = "xyd_"
 	set_Info()
-func _on_emp_dy_pressed() -> void:
+func _on_emp_dy_pressed(_pressed = null) -> void:
 	CurrentPelletType = "回魔"
 	CurrentInType = "hmd_"
 	set_Info()
 
-func _on_eat_1_pressed() -> void:
+func _on_eat_1_pressed(_pressed = null) -> void:
 	if PlayerData.player_data[CurrentPelletType + "丹1"] < 5:
 		if PlayerData.get_dj_page(str(CurrentInType) + "1") != 0:
 			PlayerData.player_data[CurrentPelletType + "丹1"] += 1
@@ -100,7 +100,7 @@ func _on_eat_1_pressed() -> void:
 	set_Info()
 
 
-func _on_eat_2_pressed() -> void:
+func _on_eat_2_pressed(_pressed = null) -> void:
 	if PlayerData.player_data[CurrentPelletType + "丹1"] < 5:
 		Global.AddMessageShow(Global.Windows_,"请先服用完一品" + str(CurrentPelletType) + "丹！！",1.5,Vector2(500,305))
 		return
@@ -116,7 +116,7 @@ func _on_eat_2_pressed() -> void:
 		
 	set_Info()
 
-func _on_eat_3_pressed() -> void:
+func _on_eat_3_pressed(_pressed = null) -> void:
 	if PlayerData.player_data[CurrentPelletType + "丹2"] < 5:
 		Global.AddMessageShow(Global.Windows_,"请先服用完二品" + str(CurrentPelletType) + "丹！！",1.5,Vector2(500,305))
 		return
@@ -132,7 +132,7 @@ func _on_eat_3_pressed() -> void:
 		
 	set_Info()
 
-func _on_eat_4_pressed() -> void:
+func _on_eat_4_pressed(_pressed = null) -> void:
 	if PlayerData.player_data[CurrentPelletType + "丹3"] < 5:
 		Global.AddMessageShow(Global.Windows_,"请先服用完三品" + str(CurrentPelletType) + "丹！！",1.5,Vector2(500,305))
 		return
@@ -149,7 +149,7 @@ func _on_eat_4_pressed() -> void:
 		
 	set_Info()
 
-func _on_eat_5_pressed() -> void:
+func _on_eat_5_pressed(_pressed = null) -> void:
 	if PlayerData.player_data[CurrentPelletType + "丹4"] < 5:
 		Global.AddMessageShow(Global.Windows_,"请先服用完四品" + str(CurrentPelletType) + "丹！！",1.5,Vector2(500,305))
 		return
@@ -166,7 +166,7 @@ func _on_eat_5_pressed() -> void:
 		
 	set_Info()
 
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()
 func load_(name_):
 	var abc = load("res://Art/BackPack/AllItems/" + str(name_) + ".png")

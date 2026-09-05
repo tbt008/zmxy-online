@@ -36,7 +36,7 @@ func AddTotalList():
 			BossList.push_back(i)
 	for i in BossList:
 		Global.Addlistbutton(boss_list_1,i["Name"],self,i["Num"])
-func _on_challenge_pressed() -> void:
+func _on_challenge_pressed(_pressed = null) -> void:
 	if Global.LHHJBossList.size() <= 0:
 		Global.AddMessageShow(get_parent(),"请至少添加一个boss！！",1.5,Vector2(470,300))
 		return
@@ -81,7 +81,7 @@ func ShowProp():
 					if TargetOBJ != null:
 						TargetOBJ.text = str(Global.LHHJBossList[TargetBoss][i])
 						
-func _on_remove_boss_pressed() -> void:
+func _on_remove_boss_pressed(_pressed = null) -> void:
 	if TargetBoss != null:
 		if TargetBoss != "":
 			Global.LHHJBossList.erase(TargetBoss)
@@ -99,9 +99,9 @@ func _on_remove_boss_pressed() -> void:
 				i.queue_free()
 	TargetBoss = ""
 
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()
-func _on_remove_all_pressed() -> void:
+func _on_remove_all_pressed(_pressed = null) -> void:
 	Global.LHHJBossList.clear()
 	for i in boss_list.get_children():
 		if i != null:
@@ -110,7 +110,7 @@ func _on_remove_all_pressed() -> void:
 	TargetBoss = ""
 	Global.AddMessageShow(get_parent(),"目标召唤列表已全部清除！！",1.5,Vector2(470,300))
 
-func _on_remove_prop_pressed() -> void:
+func _on_remove_prop_pressed(_pressed = null) -> void:
 	if TargetBoss == null:
 		Global.AddMessageShow(get_parent(),"请选择要清除属性的boss！",1.5,Vector2(470,300))
 		return
@@ -298,11 +298,11 @@ func _on_self_rhp_text_changed(new_text: String) -> void:
 	SetProp("self_rhp",int(new_text))
 
 
-func _on_help_pressed() -> void:
+func _on_help_pressed(_pressed = null) -> void:
 	Global.Addlhhjhelp(self,Vector2(0,0))
 
 
-func _on_add_all_pressed() -> void:
+func _on_add_all_pressed(_pressed = null) -> void:
 	for i in BossList:
 		AddBoss(i["Name"],i["Num"])
 

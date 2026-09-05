@@ -31,9 +31,9 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	all_times.text = "购买次数：" + str(PlayerData.player_data["购买次数"])
 	all_lh.text = "剩余灵魂：" + str(PlayerData.player_data["coin_num"])
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()
 
 
-func _on_purchase_purchase_times_pressed() -> void:
+func _on_purchase_purchase_times_pressed(_pressed = null) -> void:
 	Global.AddCureTimesBox(self,Vector2(350,130))

@@ -64,7 +64,7 @@ func set_color():
 		num_b2.add_theme_color_override("font_color",Color("FF0000"))
 	else:
 		num_b2.add_theme_color_override("font_color",Color("00FF00"))
-func _on_qh__pressed() -> void:
+func _on_qh__pressed(_pressed = null) -> void:
 	if old_zb_name == "empty" or new_zb_name == "empty":
 		Global.AddMessageShow(Global.Windows_,"请先选择一件装备！！！",1.5,Vector2(470,295))
 		return

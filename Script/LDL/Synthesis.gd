@@ -73,7 +73,7 @@ func get_name_():
 		name_.text = ""
 		need_lh.text = ""
 		item_4.set_button_icon(load_(str("empty")))
-func _on_syn_pressed() -> void:
+func _on_syn_pressed(_pressed = null) -> void:
 	var name_1: String
 	var name_2: String
 	var name_3: String
@@ -107,7 +107,7 @@ func _on_syn_pressed() -> void:
 	else:
 		Global.AddMessageShow(get_parent(),"合成公式错误！",1.5,Vector2(15,-45))
 	MemoryClass.保存游戏(Global.cd_path)
-func _on_help_pressed() -> void:
+func _on_help_pressed(_pressed = null) -> void:
 	Global.AddHc_Help(Global.get_parent_(self,3),Vector2(455,265))
 func set_cailiao_pic():
 	var List_1 = PlayerData.player_data["放入列表"]["物品1"]

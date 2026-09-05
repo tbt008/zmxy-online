@@ -23,7 +23,7 @@ func _physics_process(_delta: float) -> void:
 func _on_sell_number_text_change_rejected(rejected_substring: String) -> void:
 	be_number = int(rejected_substring)
 
-func _on_sell_pressed() -> void:
+func _on_sell_pressed(_pressed = null) -> void:
 	var Type = AE.AllEquipment_[my_name]["类型"]
 	match Type:
 		"道具":
@@ -45,7 +45,7 @@ func _on_sell_pressed() -> void:
 			MemoryClass.保存游戏(Global.cd_path)
 			queue_free()
 
-func _on_use_pressed() -> void:#消耗品使用方法，到时候一点一点家里面就行了
+func _on_use_pressed(_pressed = null) -> void:#消耗品使用方法，到时候一点一点家里面就行了
 	if be_number <= 1:
 		be_number = 1
 		

@@ -48,7 +48,7 @@ func _ready() -> void:
 	box_1.qh_level = 0
 	box_1.wx = []
 	box_1.EQ_prop = AE.AllEquipment_["xczg"]
-func _on_return_map_pressed() -> void:
+func _on_return_map_pressed(_pressed = null) -> void:
 	RoleProp.ws_value = 0
 	Global.is_DeadLink = false
 	match int(PlayerData.player_data["Map_num"]):
@@ -72,7 +72,7 @@ func _on_return_map_pressed() -> void:
 	MemoryClass.保存游戏(Global.cd_path)
 
 
-func _on_re_challenge_pressed() -> void:
+func _on_re_challenge_pressed(_pressed = null) -> void:
 	if Global.LastLevelPath == "":
 		Global.AddMessageShow(Global.Windows_,"获取关卡信息时出现错误，请手动更换关卡！！",1.5,Vector2(470,300))
 	else:	
@@ -82,24 +82,24 @@ func load_(name_):
 	return abc
 
 
-func _on_js_pressed() -> void:
+func _on_js_pressed(_pressed = null) -> void:
 	text.text = str(textlist4[randi_range(0,textlist4.size() - 1)])
 	PlayerData.add_zb("xczg",0,{})
 	MemoryClass.保存游戏(Global.cd_path)
 	player.play("dh_2")
-func _on_yjjj_pressed() -> void:
+func _on_yjjj_pressed(_pressed = null) -> void:
 	PlayerData.player_data["zyforever"] = true
 	MemoryClass.保存游戏(Global.cd_path)
 	text.text = str(textlist3[randi_range(0,textlist3.size() - 1)])
 	player.play("dh_3")
 
 
-func _on_jj_pressed() -> void:
+func _on_jj_pressed(_pressed = null) -> void:
 	text.text = str(textlist2[randi_range(0,textlist2.size() - 1)])
 	player.play("dh_2")
 
 
-func _on_lqjl_pressed() -> void:
+func _on_lqjl_pressed(_pressed = null) -> void:
 	if lq:
 		return
 	PlayerData.add_dj("bsd_5",1)

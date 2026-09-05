@@ -120,7 +120,7 @@ func CheckFullLevel():
 				return false
 	return true
 
-func _on_tupo_pressed() -> void:
+func _on_tupo_pressed(_pressed = null) -> void:
 	var Level = PlayerData.player_data[RealName]["Level"]
 	var Name = "zftps"
 	var MaterialNeedValue = int(Level) * 10 + 10

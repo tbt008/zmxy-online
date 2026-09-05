@@ -237,19 +237,19 @@ func RemoveList():
 	for i in task_list.get_children():
 		i.queue_free()
 		#task_list.remove_child(i)
-func _on_lqjl_pressed() -> void:
+func _on_lqjl_pressed(_pressed = null) -> void:
 	PlayerData.player_data[CurrentTaskName] = true
 	var list = AllActivityList[CurrentTaskName]["TaskReward"]
 	Global.AddRewardInfo(Global.get_parent_(self,1),Vector2(0,0),list,null,null)
 	MemoryClass.保存游戏(Global.cd_path)
 
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()
 
 
-func _on_hd_task_pressed() -> void:
+func _on_hd_task_pressed(_pressed = null) -> void:
 	CurrentTaskType = 1
 	ADDTaskList()
-func _on_rc_task_pressed() -> void:
+func _on_rc_task_pressed(_pressed = null) -> void:
 	CurrentTaskType = 2
 	ADDTaskList()

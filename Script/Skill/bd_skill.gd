@@ -75,26 +75,26 @@ func up_level(name_):
 		Global.add_moment_text(get_parent(),Vector2(0,0),"已经无法再升级了！！",1)
 
 
-func _on_up_1_pressed() -> void:
+func _on_up_1_pressed(_pressed = null) -> void:
 	up_level("热血")
 	MemoryClass.保存游戏(Global.cd_path)
 
-func _on_up_2_pressed() -> void:
+func _on_up_2_pressed(_pressed = null) -> void:
 	up_level("魔泉")
 	MemoryClass.保存游戏(Global.cd_path)
 
-func _on_up_3_pressed() -> void:
+func _on_up_3_pressed(_pressed = null) -> void:
 	up_level("狂暴")
 	MemoryClass.保存游戏(Global.cd_path)
 
-func _on_up_4_pressed() -> void:
+func _on_up_4_pressed(_pressed = null) -> void:
 	up_level("永恒")
 	MemoryClass.保存游戏(Global.cd_path)
 
-func _on_up_5_pressed() -> void:
+func _on_up_5_pressed(_pressed = null) -> void:
 	up_level("辉煌")
 	MemoryClass.保存游戏(Global.cd_path)
 
-func _on_up_6_pressed() -> void:
+func _on_up_6_pressed(_pressed = null) -> void:
 	up_level("敏锐")
 	MemoryClass.保存游戏(Global.cd_path)

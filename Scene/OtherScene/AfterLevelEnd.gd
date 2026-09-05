@@ -31,5 +31,5 @@ func _ready() -> void:
 	total_miss_count.text = "累计闪避次数：" + str(Global.TotalMissCount)
 
 
-func _on_glose_pressed() -> void:
+func _on_glose_pressed(_pressed = null) -> void:
 	queue_free()

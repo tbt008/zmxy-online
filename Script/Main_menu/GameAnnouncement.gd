@@ -264,34 +264,34 @@ func RemoveAllTextInfo():
 	for i in text_list.get_children():
 		i.queue_free()
 		#text_list.remove_child(i)
-func _on_v_0_1_pressed() -> void:
+func _on_v_0_1_pressed(_pressed = null) -> void:
 	VerisionsName = "V1_0"
 	Verisions = "V1.0"
 	ADDTextInfo()
 
-func _on_v_0_2_pressed() -> void:
+func _on_v_0_2_pressed(_pressed = null) -> void:
 	VerisionsName = "V1_1"
 	Verisions = "V1.1"
 	ADDTextInfo()
 
 
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()
 
 
-func _on_v_0_3_pressed() -> void:
+func _on_v_0_3_pressed(_pressed = null) -> void:
 	VerisionsName = "V1_1_0_1"
 	Verisions = "V1.1.0.1"
 	ADDTextInfo()
 
 
-func _on_v_0_4_pressed() -> void:
+func _on_v_0_4_pressed(_pressed = null) -> void:
 	VerisionsName = "V1_2"
 	Verisions = "V1.2"
 	ADDTextInfo()
 
 
-func _on_v_0_5_pressed() -> void:
+func _on_v_0_5_pressed(_pressed = null) -> void:
 	VerisionsName = "V1_2_0_1"
 	Verisions = "V1.2.0.1"
 	ADDTextInfo()

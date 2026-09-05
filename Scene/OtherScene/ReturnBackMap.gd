@@ -12,25 +12,25 @@ func _ready() -> void:
 	stage_info.text = IniText
 
 
-func _on_return_nmg_pressed() -> void:
+func _on_return_nmg_pressed(_pressed = null) -> void:
 	TargetMap = "nmg"
 	stage_info.text = TextList[TargetMap]
 
-func _on_return_zld_pressed() -> void:
+func _on_return_zld_pressed(_pressed = null) -> void:
 	TargetMap = "zld"
 	stage_info.text = TextList[TargetMap]
 
 
-func _on_return_sssl_pressed() -> void:
+func _on_return_sssl_pressed(_pressed = null) -> void:
 	TargetMap = "sssl"
 	stage_info.text = TextList[TargetMap]
 
 
-func _on_close_pressed() -> void:
+func _on_close_pressed(_pressed = null) -> void:
 	queue_free()
 
 
-func _on_challenge_pressed() -> void:
+func _on_challenge_pressed(_pressed = null) -> void:
 	if TargetMap == null or TargetMap == "":
 		Global.AddMessageShow(Global.Windows_,"请先选择穿越地点！！",1.5,Vector2(500,305))
 		return

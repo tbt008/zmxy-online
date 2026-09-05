@@ -45,7 +45,7 @@ func _ready() -> void:
 				MemoryClass.保存游戏(Global.cd_path)
 	grades_s_how.play("Show")
 	
-func _on_return_map_pressed() -> void:
+func _on_return_map_pressed(_pressed = null) -> void:
 	RoleProp.ws_value = 0
 	match int(PlayerData.player_data["Map_num"]):
 		1:
@@ -80,11 +80,11 @@ func get_lasttime(Num):
 	
 
 
-func _on_more_informaition_pressed() -> void:
+func _on_more_informaition_pressed(_pressed = null) -> void:
 	Global.addAfterLevelEnd(self,Vector2(0,0))
 
 
-func _on_rechallenge_pressed() -> void:
+func _on_rechallenge_pressed(_pressed = null) -> void:
 	if Global.LastLevelPath == "":
 		Global.AddMessageShow(Global.Windows_,"获取关卡信息时出现错误，请手动更换关卡！！",1.5,Vector2(470,300))
 	else:	

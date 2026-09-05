@@ -39,7 +39,7 @@ func load_(name_):
 func AlreadyHave(Name):
 	return PlayerData.player_data["幻化拥有列表"].has(SelfName_)
 
-func _on_change_pressed() -> void:
+func _on_change_pressed(_pressed = null) -> void:
 	var Lx = AE.AllEquipment_[SelfName_]["类型"]
 	if Lx == "时装":
 		Lx = "防具"

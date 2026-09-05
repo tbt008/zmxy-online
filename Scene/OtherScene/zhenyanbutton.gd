@@ -40,5 +40,5 @@ func load_(name_):
 	return abc
 
 
-func _on_button_pressed() -> void:
+func _on_button_pressed(_pressed = null) -> void:
 	Father.CurrentNum = int(LocNum)

@@ -13,7 +13,7 @@ func _physics_process(_delta: float) -> void:
 func _ready() -> void:#进炼丹炉为true，强化界面为true，
 	Global.is_in_ldl = true
 	add_qh_jm()
-func _on_hc_pressed() -> void:#添加上合成的添加，其他的清理
+func _on_hc_pressed(_pressed = null) -> void:#添加上合成的添加，其他的清理
 	#if PlayerData.player_data["鲨之涡流"] == 1:
 		MLdl.loc_ = "合成"
 		remove_xq_jm()
@@ -23,7 +23,7 @@ func _on_hc_pressed() -> void:#添加上合成的添加，其他的清理
 		add_hc_jm()
 	#else:
 		#Global.AddMessageShow(Global.Windows_,"通关东海后开启合成功能！",1.5,Vector2(470,285))
-func _on_qh_pressed() -> void:#添加上强化的添加，其他的清理
+func _on_qh_pressed(_pressed = null) -> void:#添加上强化的添加，其他的清理
 
 	MLdl.loc_ = "强化"
 	remove_xq_jm()
@@ -32,7 +32,7 @@ func _on_qh_pressed() -> void:#添加上强化的添加，其他的清理
 	remove_dz_jm()
 	add_qh_jm()
 
-func _on_xq_pressed() -> void:
+func _on_xq_pressed(_pressed = null) -> void:
 	if PlayerData.player_data["南天王殿"] == 1:
 		MLdl.loc_ = "镶嵌"
 		remove_qh_jm()
@@ -43,7 +43,7 @@ func _on_xq_pressed() -> void:
 	else:
 		Global.AddMessageShow(Global.Windows_,"通关南天门后开启镶嵌功能！",1.5,Vector2(470,285))
 
-func _on_return_pressed() -> void:#添加上每一个界面的清理
+func _on_return_pressed(_pressed = null) -> void:#添加上每一个界面的清理
 	MLdl.loc_ = "强化"
 	remove_qh_jm()#清理强化数据
 	remove_hc_jm()#清理合成数据
@@ -85,11 +85,11 @@ func remove_xq_jm():
 
 
 
-func _on_hh_pressed() -> void:
+func _on_hh_pressed(_pressed = null) -> void:
 	Global.addHHjm(self,Vector2(0,0))
 
 #==========分解============
-func _on_fj_pressed() -> void:
+func _on_fj_pressed(_pressed = null) -> void:
 	MLdl.loc_ = "分解"
 	add_fj_jm()
 func add_fj_jm():
@@ -108,7 +108,7 @@ func remove_fj_jm():
 		Decompose_.queue_free()
 
 
-func _on_dz_pressed() -> void:
+func _on_dz_pressed(_pressed = null) -> void:
 	MLdl.loc_ = "打造"
 	add_dz_jm()
 	
